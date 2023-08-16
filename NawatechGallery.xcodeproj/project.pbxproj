@@ -13,22 +13,13 @@
 		E1A6D7BC2A8C8F1F0094F71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BA2A8C8F1F0094F71C /* Main.storyboard */; };
 		E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */; };
 		E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */; };
-		E1A6D7CC2A8C8F200094F71C /* NawatechGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7CB2A8C8F200094F71C /* NawatechGalleryTests.swift */; };
-		E1A6D7D62A8C8F200094F71C /* NawatechGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7D52A8C8F200094F71C /* NawatechGalleryUITests.swift */; };
-		E1A6D7D82A8C8F200094F71C /* NawatechGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7D72A8C8F200094F71C /* NawatechGalleryUITestsLaunchTests.swift */; };
 		E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */; };
 		E1A6D7E82A8C90780094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7E72A8C90780094F71C /* FirebaseFirestore */; };
+		E1A6D7EB2A8C94C20094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7EA2A8C94C20094F71C /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E1A6D7C82A8C8F200094F71C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1A6D7A92A8C8F1F0094F71C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1A6D7B02A8C8F1F0094F71C;
-			remoteInfo = NawatechGallery;
-		};
-		E1A6D7D22A8C8F200094F71C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1A6D7A92A8C8F1F0094F71C /* Project object */;
 			proxyType = 1;
@@ -47,10 +38,6 @@
 		E1A6D7C02A8C8F200094F71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A6D7C22A8C8F200094F71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A6D7C72A8C8F200094F71C /* NawatechGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NawatechGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A6D7CB2A8C8F200094F71C /* NawatechGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NawatechGalleryTests.swift; sourceTree = "<group>"; };
-		E1A6D7D12A8C8F200094F71C /* NawatechGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NawatechGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A6D7D52A8C8F200094F71C /* NawatechGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NawatechGalleryUITests.swift; sourceTree = "<group>"; };
-		E1A6D7D72A8C8F200094F71C /* NawatechGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NawatechGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,13 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1A6D7CE2A8C8F200094F71C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				E1A6D7EB2A8C94C20094F71C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +66,8 @@
 			children = (
 				E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */,
 				E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */,
-				E1A6D7D42A8C8F200094F71C /* NawatechGalleryUITests */,
 				E1A6D7B22A8C8F1F0094F71C /* Products */,
+				E1A6D7E92A8C94C20094F71C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +76,6 @@
 			children = (
 				E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */,
 				E1A6D7C72A8C8F200094F71C /* NawatechGalleryTests.xctest */,
-				E1A6D7D12A8C8F200094F71C /* NawatechGalleryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,18 +98,15 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1A6D7CB2A8C8F200094F71C /* NawatechGalleryTests.swift */,
 			);
 			path = NawatechGalleryTests;
 			sourceTree = "<group>";
 		};
-		E1A6D7D42A8C8F200094F71C /* NawatechGalleryUITests */ = {
+		E1A6D7E92A8C94C20094F71C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E1A6D7D52A8C8F200094F71C /* NawatechGalleryUITests.swift */,
-				E1A6D7D72A8C8F200094F71C /* NawatechGalleryUITestsLaunchTests.swift */,
 			);
-			path = NawatechGalleryUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,27 +146,12 @@
 				E1A6D7C92A8C8F200094F71C /* PBXTargetDependency */,
 			);
 			name = NawatechGalleryTests;
+			packageProductDependencies = (
+				E1A6D7EA2A8C94C20094F71C /* FirebaseFirestore */,
+			);
 			productName = NawatechGalleryTests;
 			productReference = E1A6D7C72A8C8F200094F71C /* NawatechGalleryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E1A6D7D02A8C8F200094F71C /* NawatechGalleryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E1A6D7E12A8C8F200094F71C /* Build configuration list for PBXNativeTarget "NawatechGalleryUITests" */;
-			buildPhases = (
-				E1A6D7CD2A8C8F200094F71C /* Sources */,
-				E1A6D7CE2A8C8F200094F71C /* Frameworks */,
-				E1A6D7CF2A8C8F200094F71C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E1A6D7D32A8C8F200094F71C /* PBXTargetDependency */,
-			);
-			name = NawatechGalleryUITests;
-			productName = NawatechGalleryUITests;
-			productReference = E1A6D7D12A8C8F200094F71C /* NawatechGalleryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -205,10 +167,6 @@
 						CreatedOnToolsVersion = 14.0;
 					};
 					E1A6D7C62A8C8F200094F71C = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = E1A6D7B02A8C8F1F0094F71C;
-					};
-					E1A6D7D02A8C8F200094F71C = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = E1A6D7B02A8C8F1F0094F71C;
 					};
@@ -232,7 +190,6 @@
 			targets = (
 				E1A6D7B02A8C8F1F0094F71C /* NawatechGallery */,
 				E1A6D7C62A8C8F200094F71C /* NawatechGalleryTests */,
-				E1A6D7D02A8C8F200094F71C /* NawatechGalleryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,13 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1A6D7CF2A8C8F200094F71C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,16 +230,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1A6D7CC2A8C8F200094F71C /* NawatechGalleryTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1A6D7CD2A8C8F200094F71C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1A6D7D82A8C8F200094F71C /* NawatechGalleryUITestsLaunchTests.swift in Sources */,
-				E1A6D7D62A8C8F200094F71C /* NawatechGalleryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,11 +240,6 @@
 			isa = PBXTargetDependency;
 			target = E1A6D7B02A8C8F1F0094F71C /* NawatechGallery */;
 			targetProxy = E1A6D7C82A8C8F200094F71C /* PBXContainerItemProxy */;
-		};
-		E1A6D7D32A8C8F200094F71C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1A6D7B02A8C8F1F0094F71C /* NawatechGallery */;
-			targetProxy = E1A6D7D22A8C8F200094F71C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,42 +473,6 @@
 			};
 			name = Release;
 		};
-		E1A6D7E22A8C8F200094F71C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YKPQ92PAK3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reynaldiwijaya.NawatechGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NawatechGallery;
-			};
-			name = Debug;
-		};
-		E1A6D7E32A8C8F200094F71C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = YKPQ92PAK3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.reynaldiwijaya.NawatechGalleryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NawatechGallery;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -604,15 +503,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1A6D7E12A8C8F200094F71C /* Build configuration list for PBXNativeTarget "NawatechGalleryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E1A6D7E22A8C8F200094F71C /* Debug */,
-				E1A6D7E32A8C8F200094F71C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -628,6 +518,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		E1A6D7E72A8C90780094F71C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1A6D7E62A8C90780094F71C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E1A6D7EA2A8C94C20094F71C /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1A6D7E62A8C90780094F71C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
