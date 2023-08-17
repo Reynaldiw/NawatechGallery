@@ -8,11 +8,6 @@
 import XCTest
 import NawatechGallery
 
-struct AuthenticationUserBody {
-    let username: String
-    let password: String
-}
-
 struct StoredUserAccount: Decodable {
     
     enum CodingKeys: String, CodingKey {
