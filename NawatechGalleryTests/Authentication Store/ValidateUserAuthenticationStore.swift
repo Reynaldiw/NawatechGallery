@@ -87,41 +87,29 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     func test_validate_deliversErrorOnErrorStore() {
-        let user = makeAnyUserBody()
         let errorStore = NSError(domain: "any error", code: 0)
         let (sut, _) = makeSUT(errorStore: errorStore)
         
-        do {
-            try sut.validate(user)
-            XCTFail("Expected to get failure, but got success instead")
-        } catch {
-            XCTAssertEqual(error as NSError, errorStore)
-        }
+        expect(sut, toCompleteWith: .failure(errorStore))
     }
     
     func test_validate_withAGivenUsername_deliversErrorNotFoundOnEmptyUsers() {
-        let user = makeAnyUserBody()
         let (sut, _) = makeSUT(storedUsers: [])
         
-        do {
-            try sut.validate(user)
-            XCTFail("Expected to get failure, but got success instead")
-        } catch {
-            XCTAssertEqual(error as! AuthenticationValidationService.Error, AuthenticationValidationService.Error.notFound)
-        }
+        expect(sut, toCompleteWith: failed(AuthenticationValidationService.Error.notFound))
     }
     
     func test_validate_deliversErrorOnNonEmptyUsersWithUnmatchingPassword() {
-        let user = makeAnyUserBody()
-        let nonMatchingPasswordStoredUser = StoredUserAccount(id: "any id", fullname: "any fullname", username: user.username, password: "non-match-password", createdAt: Date().timeIntervalSince1970)
+        let userRequest = makeAnyUserBody()
+        let nonMatchingPasswordStoredUser = StoredUserAccount(
+            id: "any id",
+            fullname: "any fullname",
+            username: userRequest.username,
+            password: "non-match-password",
+            createdAt: Date().timeIntervalSince1970)
         let (sut, _) = makeSUT(storedUsers: [nonMatchingPasswordStoredUser.map()])
         
-        do {
-            try sut.validate(user)
-            XCTFail("Expected to get failure, but got success instead")
-        } catch {
-            XCTAssertEqual(error as! AuthenticationValidationService.Error, AuthenticationValidationService.Error.passwordNotMatched)
-        }
+        expect(sut, toValidate: userRequest, toCompleteWith: failed(AuthenticationValidationService.Error.passwordNotMatched))
     }
     
     //MARK: - Helpers
@@ -134,6 +122,31 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         let sut = AuthenticationValidationService(store: store)
         
         return (sut, store)
+    }
+    
+    private func expect(
+        _ sut: AuthenticationValidationService,
+        toValidate authenticationUserBody: AuthenticationUserBody = AuthenticationUserBody(username: "test", password: "test"),
+        toCompleteWith expectedResult: Result<Any, Error>,
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        let receivedResult = Result { try sut.validate(authenticationUserBody) }
+        
+        switch (receivedResult, expectedResult) {
+        case let (.failure(receivedError as AuthenticationValidationService.Error), .failure(expectedError as AuthenticationValidationService.Error)):
+            XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+            
+        case let (.failure(receivedError as NSError), .failure(expectedError as NSError)):
+            XCTAssertEqual(receivedError, expectedError, file: file, line: line)
+            
+        default:
+            XCTFail("Expected to get \(expectedResult), but got \(receivedResult) instead")
+        }
+    }
+    
+    private func failed(_ error: AuthenticationValidationService.Error) -> Result<Any, Error> {
+        .failure(error)
     }
     
     private func makeAnyUserBody() -> AuthenticationUserBody {
