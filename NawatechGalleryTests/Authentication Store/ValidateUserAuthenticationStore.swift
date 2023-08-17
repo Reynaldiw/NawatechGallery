@@ -43,14 +43,14 @@ final class AuthenticationValidationService {
 
 final class ValidateUserAuthenticationStore: XCTestCase {
     
-    func test_init_didNotRequestUserDataUponCreation() {
+    func test_init_didNotRequestUsersUponCreation() {
         let store = AuthenticationUserStoreStub()
         _ = AuthenticationValidationService(store: store)
         
         XCTAssertEqual(store.usernames, [])
     }
     
-    func test_validate_requestsUserDataWithAGivenUsername() {
+    func test_validate_requestsUsersWithAGivenUsername() {
         let store = AuthenticationUserStoreStub()
         let sut = AuthenticationValidationService(store: store)
         let user = AuthenticationUserBody(username: "test", password: "test")
@@ -74,7 +74,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         }
     }
     
-    func test_validate_withAGivenUsername_deliversErrorNotFoundOnEmptyUser() {
+    func test_validate_withAGivenUsername_deliversErrorNotFoundOnEmptyUsers() {
         let store = AuthenticationUserStoreStub()
         let sut = AuthenticationValidationService(store: store)
         let user = AuthenticationUserBody(username: "test", password: "test")
