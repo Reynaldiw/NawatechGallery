@@ -78,7 +78,11 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         
         switch (receivedResult, expectedResult) {
         case let (.success(receivedUser), .success(expectedUser)):
-            XCTAssertEqual(receivedUser, expectedUser, file: file, line: line)
+            XCTAssertEqual(receivedUser.id, expectedUser.id, file: file, line: line)
+            XCTAssertEqual(receivedUser.username, expectedUser.username, file: file, line: line)
+            XCTAssertEqual(receivedUser.fullname, expectedUser.fullname, file: file, line: line)
+            XCTAssertEqual(receivedUser.profileImageURL, expectedUser.profileImageURL, file: file, line: line)
+            XCTAssertEqual(receivedUser.createdAt.timeIntervalSince1970, expectedUser.createdAt.timeIntervalSince1970, file: file, line: line)
             
         case let (.failure(receivedError as AuthenticationValidationService.Error), .failure(expectedError as AuthenticationValidationService.Error)):
             XCTAssertEqual(receivedError, expectedError, file: file, line: line)
