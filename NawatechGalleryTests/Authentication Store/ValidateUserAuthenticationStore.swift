@@ -21,9 +21,11 @@ struct StoredUserAccount: Decodable {
     enum CodingKeys: String, CodingKey {
         case id, fullname, username, password
         case createdAt = "created_at"
+        case profileImageURL = "profile_image_url"
     }
     
     let id: String
+    let profileImageURL: URL?
     let fullname: String
     let username: String
     let password: String
@@ -52,11 +54,7 @@ final class AuthenticationValidationService {
             
             let matchedStoreUser = try receivedUsers
                 .map { try JSONSerialization.data(withJSONObject: $0) }
-                .map({ data in
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .millisecondsSince1970
-                    return try decoder.decode(StoredUserAccount.self, from: data)
-                })
+                .map { try JSONDecoder().decode(StoredUserAccount.self, from: $0) }
                 .first(where: { $0.password == user.password })
             
             if matchedStoreUser == nil {
@@ -103,6 +101,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         let userRequest = makeAnyUserBody()
         let nonMatchingPasswordStoredUser = StoredUserAccount(
             id: "any id",
+            profileImageURL: URL(string: "https://any-url.com"),
             fullname: "any fullname",
             username: userRequest.username,
             password: "non-match-password",
@@ -141,7 +140,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
             XCTAssertEqual(receivedError, expectedError, file: file, line: line)
             
         default:
-            XCTFail("Expected to get \(expectedResult), but got \(receivedResult) instead")
+            XCTFail("Expected to get \(expectedResult), but got \(receivedResult) instead", file: file, line: line)
         }
     }
     
@@ -177,12 +176,18 @@ final class ValidateUserAuthenticationStore: XCTestCase {
 
 private extension StoredUserAccount {
     func map() -> [String: Any] {
-        return [
+        var value: [String: Any] = [
             "id": id,
             "fullname": fullname,
             "username": username,
             "password": password,
             "created_at": createdAt
         ]
+        
+        if let profileImageURL = profileImageURL {
+            value["profile_image_url"] = profileImageURL.absoluteString
+        }
+        
+        return value
     }
 }
