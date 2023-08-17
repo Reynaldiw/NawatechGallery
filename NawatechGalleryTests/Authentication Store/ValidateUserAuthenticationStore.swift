@@ -72,15 +72,13 @@ final class AuthenticationValidationService {
 final class ValidateUserAuthenticationStore: XCTestCase {
     
     func test_init_didNotRequestUsersUponCreation() {
-        let store = AuthenticationUserStoreStub()
-        _ = AuthenticationValidationService(store: store)
+        let (_, store) = makeSUT()
         
         XCTAssertEqual(store.usernames, [])
     }
     
     func test_validate_requestsUsersWithAGivenUsername() {
-        let store = AuthenticationUserStoreStub()
-        let sut = AuthenticationValidationService(store: store)
+        let (sut, store) = makeSUT()
         let user = AuthenticationUserBody(username: "test", password: "test")
         
         try? sut.validate(user)
@@ -89,10 +87,9 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     func test_validate_deliversErrorOnErrorStore() {
-        let errorStore = NSError(domain: "any error", code: 0)
-        let store = AuthenticationUserStoreStub(error: errorStore)
-        let sut = AuthenticationValidationService(store: store)
         let user = AuthenticationUserBody(username: "test", password: "test")
+        let errorStore = NSError(domain: "any error", code: 0)
+        let (sut, _) = makeSUT(errorStore: errorStore)
         
         do {
             try sut.validate(user)
@@ -103,9 +100,8 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     func test_validate_withAGivenUsername_deliversErrorNotFoundOnEmptyUsers() {
-        let store = AuthenticationUserStoreStub()
-        let sut = AuthenticationValidationService(store: store)
         let user = AuthenticationUserBody(username: "test", password: "test")
+        let (sut, _) = makeSUT(storedUsers: [])
         
         do {
             try sut.validate(user)
@@ -118,8 +114,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     func test_validate_deliversErrorOnNonEmptyUsersWithUnmatchingPassword() {
         let user = AuthenticationUserBody(username: "test", password: "test")
         let nonMatchingPasswordStoredUser = StoredUserAccount(id: "any id", fullname: "any fullname", username: user.username, password: "non-match-password", createdAt: Date().timeIntervalSince1970)
-        let store = AuthenticationUserStoreStub(storedUsers: [nonMatchingPasswordStoredUser.map()])
-        let sut = AuthenticationValidationService(store: store)
+        let (sut, _) = makeSUT(storedUsers: [nonMatchingPasswordStoredUser.map()])
         
         do {
             try sut.validate(user)
@@ -131,6 +126,16 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     
     //MARK: - Helpers
     
+    private func makeSUT(
+        errorStore: Error? = nil,
+        storedUsers: [[String: Any]] = []
+    ) -> (sut: AuthenticationValidationService, store: AuthenticationUserStoreStub) {
+        let store = AuthenticationUserStoreStub(storedUsers: storedUsers, error: errorStore)
+        let sut = AuthenticationValidationService(store: store)
+        
+        return (sut, store)
+    }
+    
     private final class AuthenticationUserStoreStub: AuthenticationUserStore {
         
         private(set) var usernames: [String] = []
@@ -138,18 +143,8 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         private let error: Error?
         private let storedUsers: [[String: Any]]
         
-        init() {
-            self.error = nil
-            self.storedUsers = []
-        }
-        
-        init(error: Error) {
+        init(storedUsers: [[String: Any]], error: Error?) {
             self.error = error
-            self.storedUsers = []
-        }
-        
-        init(storedUsers: [[String: Any]]) {
-            self.error = nil
             self.storedUsers = storedUsers
         }
         
