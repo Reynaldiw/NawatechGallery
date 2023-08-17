@@ -6,10 +6,7 @@
 //
 
 import XCTest
-
-protocol AuthenticationUserStore {
-    func retrieve(thatMatchedWith username: String) throws -> [[String: Any]]
-}
+import NawatechGallery
 
 struct AuthenticationUserBody {
     let username: String

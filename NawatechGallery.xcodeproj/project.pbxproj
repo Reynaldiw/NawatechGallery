@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
+		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
+		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,22 @@
 			path = "Authentication Store";
 			sourceTree = "<group>";
 		};
+		E18D79602A8EA51C007DEEE1 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E18D79612A8EA52B007DEEE1 /* Store */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E18D79612A8EA52B007DEEE1 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +111,7 @@
 		E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */,
 				E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */,
 				E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */,
@@ -232,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
