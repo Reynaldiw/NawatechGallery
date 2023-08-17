@@ -73,12 +73,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E18D795D2A8E56F5007DEEE1 /* Authentication Store */ = {
+		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */,
+				E18D796F2A8EADC4007DEEE1 /* Store */,
 			);
-			path = "Authentication Store";
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		E18D79602A8EA51C007DEEE1 /* Authentication */ = {
@@ -107,6 +107,14 @@
 				E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		E18D796F2A8EADC4007DEEE1 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -147,7 +155,7 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
-				E18D795D2A8E56F5007DEEE1 /* Authentication Store */,
+				E18D795D2A8E56F5007DEEE1 /* Authentication */,
 			);
 			path = NawatechGalleryTests;
 			sourceTree = "<group>";
