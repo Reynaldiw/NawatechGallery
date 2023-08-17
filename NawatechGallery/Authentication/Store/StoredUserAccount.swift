@@ -15,7 +15,7 @@ struct StoredUserAccount: Decodable {
         case profileImageURL = "profile_image_url"
     }
     
-    let id: String
+    let id: UUID
     let profileImageURL: URL?
     let fullname: String
     let username: String

@@ -96,10 +96,10 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     private func makeUser(username: String, password: String, profileImageURL: URL? = nil) -> (json: [String: Any], model: UserAccount) {
-        let model = UserAccount(id: "any-id", profileImageURL: profileImageURL, fullname: "any-fullname", username: username, createdAt: Date())
+        let model = UserAccount(id: UUID(), profileImageURL: profileImageURL, fullname: "any-fullname", username: username, createdAt: Date())
         
         var json: [String: Any] = [
-            "id": model.id,
+            "id": model.id.uuidString,
             "fullname": model.fullname,
             "username": model.username,
             "password": password,
