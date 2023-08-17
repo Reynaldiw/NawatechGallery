@@ -32,6 +32,14 @@ struct StoredUserAccount: Decodable {
     let createdAt: Double
 }
 
+struct UserAccount: Equatable {
+    let id: String
+    let profileImageURL: URL?
+    let fullname: String
+    let username: String
+    let createdAt: Date
+}
+
 final class AuthenticationValidationService {
     
     private let store: AuthenticationUserStore
@@ -45,21 +53,23 @@ final class AuthenticationValidationService {
         case passwordNotMatched
     }
     
-    func validate(_ user: AuthenticationUserBody) throws {
+    func validate(_ user: AuthenticationUserBody) throws -> UserAccount {
         do {
             let receivedUsers = try store.retrieve(thatMatchedWith: user.username)
             guard !receivedUsers.isEmpty else {
                 throw Error.notFound
             }
             
-            let matchedStoreUser = try receivedUsers
+            let matchedStoredUser = try receivedUsers
                 .map { try JSONSerialization.data(withJSONObject: $0) }
                 .map { try JSONDecoder().decode(StoredUserAccount.self, from: $0) }
                 .first(where: { $0.password == user.password })
             
-            if matchedStoreUser == nil {
+            guard let matchedStoredUser = matchedStoredUser else {
                 throw Error.passwordNotMatched
             }
+            
+            return matchedStoredUser.toModel()
             
         } catch {
             throw error
@@ -79,7 +89,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         let (sut, store) = makeSUT()
         let user = makeAnyUserBody()
 
-        try? sut.validate(user)
+        _ = try? sut.validate(user)
         
         XCTAssertEqual(store.usernames, [user.username])
     }
@@ -111,6 +121,21 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         expect(sut, toValidate: userRequest, toCompleteWith: failed(AuthenticationValidationService.Error.passwordNotMatched))
     }
     
+    func test_validate_deliversUserOnNonEmptyStoredUserAndMatchedPassword() {
+        let userRequest = makeAnyUserBody()
+        let matchedPasswordStoredUser = StoredUserAccount(
+            id: "any id",
+            profileImageURL: nil,
+            fullname: "any fullname",
+            username: userRequest.username,
+            password: userRequest.password,
+            createdAt: Date().timeIntervalSince1970)
+        let (sut, _) = makeSUT(storedUsers: [matchedPasswordStoredUser.map()])
+        
+        let userAccount: UserAccount = matchedPasswordStoredUser.toModel()
+        expect(sut, toValidate: userRequest, toCompleteWith: .success(userAccount))
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT(
@@ -126,13 +151,16 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     private func expect(
         _ sut: AuthenticationValidationService,
         toValidate authenticationUserBody: AuthenticationUserBody = AuthenticationUserBody(username: "test", password: "test"),
-        toCompleteWith expectedResult: Result<Any, Error>,
+        toCompleteWith expectedResult: Result<UserAccount, Error>,
         file: StaticString = #file,
         line: UInt = #line
     ) {
         let receivedResult = Result { try sut.validate(authenticationUserBody) }
         
         switch (receivedResult, expectedResult) {
+        case let (.success(receivedUser), .success(expectedUser)):
+            XCTAssertEqual(receivedUser, expectedUser, file: file, line: line)
+            
         case let (.failure(receivedError as AuthenticationValidationService.Error), .failure(expectedError as AuthenticationValidationService.Error)):
             XCTAssertEqual(receivedError, expectedError, file: file, line: line)
             
@@ -144,7 +172,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         }
     }
     
-    private func failed(_ error: AuthenticationValidationService.Error) -> Result<Any, Error> {
+    private func failed(_ error: AuthenticationValidationService.Error) -> Result<UserAccount, Error> {
         .failure(error)
     }
     
@@ -189,5 +217,9 @@ private extension StoredUserAccount {
         }
         
         return value
+    }
+    
+    func toModel() -> UserAccount {
+        return UserAccount(id: id, profileImageURL: profileImageURL, fullname: fullname, username: username, createdAt: Date(timeIntervalSince1970: createdAt))
     }
 }
