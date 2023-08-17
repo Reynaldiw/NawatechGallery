@@ -8,63 +8,6 @@
 import XCTest
 import NawatechGallery
 
-struct StoredUserAccount: Decodable {
-    
-    enum CodingKeys: String, CodingKey {
-        case id, fullname, username, password
-        case createdAt = "created_at"
-        case profileImageURL = "profile_image_url"
-    }
-    
-    let id: String
-    let profileImageURL: URL?
-    let fullname: String
-    let username: String
-    let password: String
-    let createdAt: Double
-    
-    var userAccount: UserAccount {
-        UserAccount(id: id, profileImageURL: profileImageURL, fullname: fullname, username: username, createdAt: Date(timeIntervalSince1970: createdAt))
-    }
-}
-
-final class AuthenticationValidationService {
-    
-    private let store: AuthenticationUserStore
-    
-    init(store: AuthenticationUserStore) {
-        self.store = store
-    }
-    
-    enum Error: Swift.Error {
-        case notFound
-        case passwordNotMatched
-    }
-    
-    func validate(_ user: AuthenticationUserBody) throws -> UserAccount {
-        do {
-            let receivedUsers = try store.retrieve(thatMatchedWith: user.username)
-            guard !receivedUsers.isEmpty else {
-                throw Error.notFound
-            }
-            
-            let matchedStoredUser = try receivedUsers
-                .map { try JSONSerialization.data(withJSONObject: $0) }
-                .map { try JSONDecoder().decode(StoredUserAccount.self, from: $0) }
-                .first(where: { $0.password == user.password })
-            
-            guard let matchedStoredUser = matchedStoredUser else {
-                throw Error.passwordNotMatched
-            }
-            
-            return matchedStoredUser.userAccount
-            
-        } catch {
-            throw error
-        }
-    }
-}
-
 final class ValidateUserAuthenticationStore: XCTestCase {
     
     func test_init_didNotRequestUsersUponCreation() {
