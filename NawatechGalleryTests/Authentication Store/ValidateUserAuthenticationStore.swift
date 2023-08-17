@@ -27,14 +27,10 @@ struct StoredUserAccount: Decodable {
     let username: String
     let password: String
     let createdAt: Double
-}
-
-struct UserAccount: Equatable {
-    let id: String
-    let profileImageURL: URL?
-    let fullname: String
-    let username: String
-    let createdAt: Date
+    
+    var userAccount: UserAccount {
+        UserAccount(id: id, profileImageURL: profileImageURL, fullname: fullname, username: username, createdAt: Date(timeIntervalSince1970: createdAt))
+    }
 }
 
 final class AuthenticationValidationService {
@@ -66,7 +62,7 @@ final class AuthenticationValidationService {
                 throw Error.passwordNotMatched
             }
             
-            return matchedStoredUser.toModel()
+            return matchedStoredUser.userAccount
             
         } catch {
             throw error
@@ -106,31 +102,19 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     
     func test_validate_deliversErrorOnNonEmptyUsersWithUnmatchingPassword() {
         let userRequest = makeAnyUserBody()
-        let nonMatchingPasswordStoredUser = StoredUserAccount(
-            id: "any id",
-            profileImageURL: URL(string: "https://any-url.com"),
-            fullname: "any fullname",
-            username: userRequest.username,
-            password: "non-match-password",
-            createdAt: Date().timeIntervalSince1970)
-        let (sut, _) = makeSUT(storedUsers: [nonMatchingPasswordStoredUser.map()])
+        let nonMatchingPasswordStoredUser = makeUser(username: userRequest.username, password: "non-matching-password", profileImageURL: URL(string: "https://any-url.com"))
+        let (sut, _) = makeSUT(storedUsers: [nonMatchingPasswordStoredUser.json])
         
         expect(sut, toValidate: userRequest, toCompleteWith: failed(AuthenticationValidationService.Error.passwordNotMatched))
     }
     
     func test_validate_deliversUserOnNonEmptyStoredUserAndMatchedPassword() {
         let userRequest = makeAnyUserBody()
-        let matchedPasswordStoredUser = StoredUserAccount(
-            id: "any id",
-            profileImageURL: nil,
-            fullname: "any fullname",
-            username: userRequest.username,
-            password: userRequest.password,
-            createdAt: Date().timeIntervalSince1970)
-        let (sut, _) = makeSUT(storedUsers: [matchedPasswordStoredUser.map()])
+        let matchingPasswordStoredUser = makeUser(username: userRequest.username, password: userRequest.password)
+        let (sut, _) = makeSUT(storedUsers: [matchingPasswordStoredUser.json])
         
-        let userAccount: UserAccount = matchedPasswordStoredUser.toModel()
-        expect(sut, toValidate: userRequest, toCompleteWith: .success(userAccount))
+        
+        expect(sut, toValidate: userRequest, toCompleteWith: .success(matchingPasswordStoredUser.model))
     }
     
     //MARK: - Helpers
@@ -169,6 +153,24 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         }
     }
     
+    private func makeUser(username: String, password: String, profileImageURL: URL? = nil) -> (json: [String: Any], model: UserAccount) {
+        let model = UserAccount(id: "any-id", profileImageURL: profileImageURL, fullname: "any-fullname", username: username, createdAt: Date())
+        
+        var json: [String: Any] = [
+            "id": model.id,
+            "fullname": model.fullname,
+            "username": model.username,
+            "password": password,
+            "created_at": model.createdAt.timeIntervalSince1970
+        ]
+        
+        if let profileImageURL = model.profileImageURL {
+            json["profile_image_url"] = profileImageURL.absoluteString
+        }
+        
+        return (json, model)
+    }
+    
     private func failed(_ error: AuthenticationValidationService.Error) -> Result<UserAccount, Error> {
         .failure(error)
     }
@@ -196,27 +198,5 @@ final class ValidateUserAuthenticationStore: XCTestCase {
             
             return storedUsers
         }
-    }
-}
-
-private extension StoredUserAccount {
-    func map() -> [String: Any] {
-        var value: [String: Any] = [
-            "id": id,
-            "fullname": fullname,
-            "username": username,
-            "password": password,
-            "created_at": createdAt
-        ]
-        
-        if let profileImageURL = profileImageURL {
-            value["profile_image_url"] = profileImageURL.absoluteString
-        }
-        
-        return value
-    }
-    
-    func toModel() -> UserAccount {
-        return UserAccount(id: id, profileImageURL: profileImageURL, fullname: fullname, username: username, createdAt: Date(timeIntervalSince1970: createdAt))
     }
 }
