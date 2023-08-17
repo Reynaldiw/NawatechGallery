@@ -79,15 +79,15 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     
     func test_validate_requestsUsersWithAGivenUsername() {
         let (sut, store) = makeSUT()
-        let user = AuthenticationUserBody(username: "test", password: "test")
-        
+        let user = makeAnyUserBody()
+
         try? sut.validate(user)
         
         XCTAssertEqual(store.usernames, [user.username])
     }
     
     func test_validate_deliversErrorOnErrorStore() {
-        let user = AuthenticationUserBody(username: "test", password: "test")
+        let user = makeAnyUserBody()
         let errorStore = NSError(domain: "any error", code: 0)
         let (sut, _) = makeSUT(errorStore: errorStore)
         
@@ -100,7 +100,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     func test_validate_withAGivenUsername_deliversErrorNotFoundOnEmptyUsers() {
-        let user = AuthenticationUserBody(username: "test", password: "test")
+        let user = makeAnyUserBody()
         let (sut, _) = makeSUT(storedUsers: [])
         
         do {
@@ -112,7 +112,7 @@ final class ValidateUserAuthenticationStore: XCTestCase {
     }
     
     func test_validate_deliversErrorOnNonEmptyUsersWithUnmatchingPassword() {
-        let user = AuthenticationUserBody(username: "test", password: "test")
+        let user = makeAnyUserBody()
         let nonMatchingPasswordStoredUser = StoredUserAccount(id: "any id", fullname: "any fullname", username: user.username, password: "non-match-password", createdAt: Date().timeIntervalSince1970)
         let (sut, _) = makeSUT(storedUsers: [nonMatchingPasswordStoredUser.map()])
         
@@ -134,6 +134,10 @@ final class ValidateUserAuthenticationStore: XCTestCase {
         let sut = AuthenticationValidationService(store: store)
         
         return (sut, store)
+    }
+    
+    private func makeAnyUserBody() -> AuthenticationUserBody {
+        AuthenticationUserBody(username: "test", password: "test")
     }
     
     private final class AuthenticationUserStoreStub: AuthenticationUserStore {
