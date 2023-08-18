@@ -29,10 +29,23 @@ public final class LoginViewController: UIViewController {
     
     private func configureInitialUI() {
         updateLoginButtonUIState(isEnable: false)
+        usernameField.delegate = self
+        passwordField.delegate = self
     }
     
     private func updateLoginButtonUIState(isEnable: Bool) {
         loginButton.isEnabled = isEnable
-        loginButton.layer.opacity = isEnable ? 1.0 : 0.7
+        loginButton.layer.opacity = isEnable ? 1.0 : 0.5
+    }
+    
+    private func extractLoginFieldsValue() -> (username: String?, password: String?) {
+        return (usernameField.text, passwordField.text)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        let (username, password) = extractLoginFieldsValue()
+        updateLoginButtonUIState(isEnable: username?.isEmpty == false && password?.isEmpty == false)
     }
 }
