@@ -27,7 +27,7 @@ struct StoredRegistrationUserAccount: Equatable {
 }
 
 protocol RegistrationUserAccountStore {
-    func insert(_ user: StoredRegistrationUserAccount)
+    func insert(_ user: StoredRegistrationUserAccount) throws
 }
 
 final class RegistrationUserAccountService {
@@ -42,7 +42,7 @@ final class RegistrationUserAccountService {
         self.idCreated = idCreated
     }
     
-    func register(_ user: RegistrationUserAccount) {
+    func register(_ user: RegistrationUserAccount) throws {
         let storedUser = StoredRegistrationUserAccount(
             id: idCreated(),
             profileImageURL: nil,
@@ -50,7 +50,8 @@ final class RegistrationUserAccountService {
             username: user.username,
             password: user.password,
             createdAt: dateCreated())
-        store.insert(storedUser)
+        
+        try store.insert(storedUser)
     }
 }
 
@@ -73,10 +74,17 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
             dateCreated: { userCreatedDate },
             idCreated: { userID })
         
-        sut.register(user.registration)
+        try? sut.register(user.registration)
         
         XCTAssertEqual(store.messages, [.insert(user.stored)])
+    }
+    
+    func test_register_deliversErrorOnInsertionError() throws {
+        let errorStore = NSError(domain: "any-error", code: 0)
+        let store = UserAccountStoreStub(error: errorStore)
+        let sut = RegistrationUserAccountService(store: store)
         
+        XCTAssertThrowsError(try sut.register(anyRegistrationUser()))
     }
     
     //MARK: - Helpers
@@ -99,8 +107,18 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         
         private(set) var messages: [Message] = []
         
-        func insert(_ user: StoredRegistrationUserAccount) {
+        private let error: Error?
+        
+        init(error: Error? = nil) {
+            self.error = error
+        }
+        
+        func insert(_ user: StoredRegistrationUserAccount) throws {
             messages.append(.insert(user))
+            
+            if let error = error {
+                throw error
+            }
         }
     }
 }
