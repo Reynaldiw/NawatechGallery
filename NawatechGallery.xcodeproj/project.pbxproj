@@ -12,6 +12,7 @@
 		E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */; };
 		E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */; };
 		E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */; };
+		E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E168041E2A8FA47A0051B8E5 /* Login.storyboard */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -45,6 +46,7 @@
 		E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountStore.swift; sourceTree = "<group>"; };
 		E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredRegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
+		E168041E2A8FA47A0051B8E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -118,6 +120,30 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */ = {
+			isa = PBXGroup;
+			children = (
+				E168041C2A8F963D0051B8E5 /* Login UI */,
+			);
+			path = NawatechGalleryiOS;
+			sourceTree = "<group>";
+		};
+		E168041C2A8F963D0051B8E5 /* Login UI */ = {
+			isa = PBXGroup;
+			children = (
+				E168041D2A8FA46F0051B8E5 /* Views */,
+			);
+			path = "Login UI";
+			sourceTree = "<group>";
+		};
+		E168041D2A8FA46F0051B8E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E168041E2A8FA47A0051B8E5 /* Login.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +212,7 @@
 			children = (
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
+				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
 				E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */,
 				E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */,
 				E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */,
@@ -308,6 +335,7 @@
 				E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */,
 				E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */,
 				E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */,
+				E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */,
 				E1A6D7BC2A8C8F1F0094F71C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
