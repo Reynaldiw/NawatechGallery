@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E168040D2A8F7DC80051B8E5 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				E168040D2A8F7DC80051B8E5 /* Registration */,
 				E18D795D2A8E56F5007DEEE1 /* Authentication */,
 			);
 			path = NawatechGalleryTests;
@@ -295,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */,
+				E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
