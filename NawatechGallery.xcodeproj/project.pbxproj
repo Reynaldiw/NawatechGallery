@@ -11,6 +11,7 @@
 		E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */; };
 		E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */; };
 		E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */; };
+		E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -43,6 +44,7 @@
 		E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountStore.swift; sourceTree = "<group>"; };
 		E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredRegistrationUserAccount.swift; sourceTree = "<group>"; };
+		E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */,
 				E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */,
+				E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
+				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
