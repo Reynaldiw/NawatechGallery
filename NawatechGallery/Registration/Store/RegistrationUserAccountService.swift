@@ -9,6 +9,10 @@ import Foundation
 
 public final class RegistrationUserAccountService {
     
+    public enum Error: Swift.Error {
+        case usernameAlreadyTaken
+    }
+    
     private let store: RegistrationUserAccountStore
     private let dateCreated: () -> Date
     private let idCreated: () -> UUID
@@ -20,6 +24,10 @@ public final class RegistrationUserAccountService {
     }
     
     public func register(_ user: RegistrationUserAccount) throws {
+        guard store.retrieve(thatMathedWithUsername: user.username) == nil else {
+            throw Error.usernameAlreadyTaken
+        }
+        
         let storedUser = StoredRegistrationUserAccount(
             id: idCreated(),
             profileImageURL: nil,

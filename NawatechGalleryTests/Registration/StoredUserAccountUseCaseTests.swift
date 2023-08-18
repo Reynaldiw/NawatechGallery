@@ -27,6 +27,16 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         XCTAssertEqual(store.messages, [.insert(user.stored)])
     }
     
+    func test_register_deliversErrorOnUsernameAlreadyTaken() throws {
+        let user = uniqueUser(id: UUID(), createdAt: Date())
+        let existingUser = user.stored
+        let (sut, _) = makeSUT(existingUser: existingUser)
+        
+        XCTAssertThrowsError(try sut.register(user.registration), "Expected to throw error username already taken") { error in
+            XCTAssertEqual(error as? RegistrationUserAccountService.Error, RegistrationUserAccountService.Error.usernameAlreadyTaken)
+        }
+    }
+    
     func test_register_deliversErrorOnInsertionError() throws {
         let errorStore = NSError(domain: "any-error", code: 0)
         let (sut, _) = makeSUT(error: errorStore)
@@ -42,8 +52,13 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
     
     //MARK: - Helpers
     
-    private func makeSUT(date: @escaping () -> Date = Date.init, id: @escaping () -> UUID = UUID.init, error: Error? = nil) -> (sut: RegistrationUserAccountService, store: UserAccountStoreStub) {
-        let store = UserAccountStoreStub(error: error)
+    private func makeSUT(
+        date: @escaping () -> Date = Date.init,
+        id: @escaping () -> UUID = UUID.init,
+        error: Error? = nil,
+        existingUser: StoredRegistrationUserAccount? = nil
+    ) -> (sut: RegistrationUserAccountService, store: UserAccountStoreStub) {
+        let store = UserAccountStoreStub(error: error, existingUser: existingUser)
         let sut = RegistrationUserAccountService(
             store: store,
             dateCreated: date,
@@ -70,9 +85,11 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         private(set) var messages: [Message] = []
         
         private let error: Error?
+        private let existingUser: StoredRegistrationUserAccount?
         
-        init(error: Error? = nil) {
+        init(error: Error?, existingUser: StoredRegistrationUserAccount?) {
             self.error = error
+            self.existingUser = existingUser
         }
         
         func insert(_ user: StoredRegistrationUserAccount) throws {
@@ -81,6 +98,10 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
             if let error = error {
                 throw error
             }
+        }
+        
+        func retrieve(thatMathedWithUsername username: String) -> StoredRegistrationUserAccount? {
+            return existingUser
         }
     }
 }
