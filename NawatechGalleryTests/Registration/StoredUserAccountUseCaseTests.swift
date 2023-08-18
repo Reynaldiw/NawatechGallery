@@ -87,6 +87,13 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         XCTAssertThrowsError(try sut.register(anyRegistrationUser()))
     }
     
+    func test_register_doesNotDeliversErrorOnSuccessfulInsertion() {
+        let store = UserAccountStoreStub()
+        let sut = RegistrationUserAccountService(store: store)
+        
+        XCTAssertNoThrow(try sut.register(anyRegistrationUser()))
+    }
+    
     //MARK: - Helpers
     
     private func uniqueUser(id: UUID, createdAt date: Date) -> (registration: RegistrationUserAccount, stored: StoredRegistrationUserAccount) {
