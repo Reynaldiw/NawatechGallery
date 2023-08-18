@@ -6,12 +6,7 @@
 //
 
 import XCTest
-
-struct RegistrationUserAccount {
-    let fullname: String
-    let username: String
-    let password: String
-}
+import NawatechGallery
 
 struct StoredRegistrationUserAccount: Equatable {
     static func == (lhs: StoredRegistrationUserAccount, rhs: StoredRegistrationUserAccount) -> Bool {
