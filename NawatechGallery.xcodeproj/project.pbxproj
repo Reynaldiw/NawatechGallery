@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
+		E1595A162A8FF96300B3DA3F /* LoginSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */; };
+		E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */; };
+		E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A1A2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift */; };
+		E1595A1E2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */; };
 		E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */; };
 		E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */; };
 		E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTest.swift; sourceTree = "<group>"; };
+		E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		E1595A1A2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
+		E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_INITIAL_SETUP_light.png; sourceTree = "<group>"; };
 		E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
 		E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountStore.swift; sourceTree = "<group>"; };
@@ -85,6 +95,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1595A102A8FF74F00B3DA3F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1595A132A8FF93200B3DA3F /* NawatechGalleryiOS */ = {
+			isa = PBXGroup;
+			children = (
+				E1595A172A8FF9C800B3DA3F /* Helpers */,
+				E1595A142A8FF94F00B3DA3F /* Login UI */,
+			);
+			path = NawatechGalleryiOS;
+			sourceTree = "<group>";
+		};
+		E1595A142A8FF94F00B3DA3F /* Login UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1595A1C2A8FFD7C00B3DA3F /* snapshots */,
+				E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */,
+			);
+			path = "Login UI";
+			sourceTree = "<group>";
+		};
+		E1595A172A8FF9C800B3DA3F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */,
+				E1595A1A2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E1595A1C2A8FFD7C00B3DA3F /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */,
+			);
+			path = snapshots;
+			sourceTree = "<group>";
+		};
 		E168040D2A8F7DC80051B8E5 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +184,7 @@
 		E168041C2A8F963D0051B8E5 /* Login UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1595A102A8FF74F00B3DA3F /* Controller */,
 				E168041D2A8FA46F0051B8E5 /* Views */,
 			);
 			path = "Login UI";
@@ -228,6 +282,7 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1595A132A8FF93200B3DA3F /* NawatechGalleryiOS */,
 				E168040D2A8F7DC80051B8E5 /* Registration */,
 				E18D795D2A8E56F5007DEEE1 /* Authentication */,
 			);
@@ -344,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1595A1E2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +421,7 @@
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
+				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1595A162A8FF96300B3DA3F /* LoginSnapshotTest.swift in Sources */,
+				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
 				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */,
+				E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */,
 				E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
