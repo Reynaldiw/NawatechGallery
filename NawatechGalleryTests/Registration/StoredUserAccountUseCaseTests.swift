@@ -11,8 +11,7 @@ import NawatechGallery
 final class StoredUserAccountUseCaseTests: XCTestCase {
     
     func test_init_didNotInsertUserUponCreation() {
-        let store = UserAccountStoreStub()
-        let _ = RegistrationUserAccountService(store: store)
+        let (_, store) = makeSUT()
         
         XCTAssertEqual(store.messages, [])
     }
@@ -21,11 +20,7 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         let userCreatedDate = Date()
         let userID = UUID()
         let user = uniqueUser(id: userID, createdAt: userCreatedDate)
-        let store = UserAccountStoreStub()
-        let sut = RegistrationUserAccountService(
-            store: store,
-            dateCreated: { userCreatedDate },
-            idCreated: { userID })
+        let (sut, store) = makeSUT(date: { userCreatedDate }, id: { userID })
         
         try? sut.register(user.registration)
         
@@ -34,20 +29,27 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
     
     func test_register_deliversErrorOnInsertionError() throws {
         let errorStore = NSError(domain: "any-error", code: 0)
-        let store = UserAccountStoreStub(error: errorStore)
-        let sut = RegistrationUserAccountService(store: store)
+        let (sut, _) = makeSUT(error: errorStore)
         
         XCTAssertThrowsError(try sut.register(anyRegistrationUser()))
     }
     
     func test_register_doesNotDeliversErrorOnSuccessfulInsertion() {
-        let store = UserAccountStoreStub()
-        let sut = RegistrationUserAccountService(store: store)
+        let (sut, _) = makeSUT()
         
         XCTAssertNoThrow(try sut.register(anyRegistrationUser()))
     }
     
     //MARK: - Helpers
+    
+    private func makeSUT(date: @escaping () -> Date = Date.init, id: @escaping () -> UUID = UUID.init, error: Error? = nil) -> (sut: RegistrationUserAccountService, store: UserAccountStoreStub) {
+        let store = UserAccountStoreStub(error: error)
+        let sut = RegistrationUserAccountService(
+            store: store,
+            dateCreated: date,
+            idCreated: id)
+        return (sut, store)
+    }
     
     private func uniqueUser(id: UUID, createdAt date: Date) -> (registration: RegistrationUserAccount, stored: StoredRegistrationUserAccount) {
         let registrationUser = anyRegistrationUser()
