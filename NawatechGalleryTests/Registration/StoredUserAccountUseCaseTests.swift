@@ -8,23 +8,6 @@
 import XCTest
 import NawatechGallery
 
-struct StoredRegistrationUserAccount: Equatable {
-    static func == (lhs: StoredRegistrationUserAccount, rhs: StoredRegistrationUserAccount) -> Bool {
-        return lhs.id.uuidString == rhs.id.uuidString && lhs.profileImageURL == rhs.profileImageURL && lhs.username == rhs.username && lhs.fullname == rhs.fullname && lhs.password == rhs.password && lhs.createdAt.timeIntervalSince1970 == rhs.createdAt.timeIntervalSince1970
-    }
-    
-    let id: UUID
-    let profileImageURL: URL?
-    let fullname: String
-    let username: String
-    let password: String
-    let createdAt: Date
-}
-
-protocol RegistrationUserAccountStore {
-    func insert(_ user: StoredRegistrationUserAccount) throws
-}
-
 final class RegistrationUserAccountService {
     
     private let store: RegistrationUserAccountStore
@@ -54,7 +37,7 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
     
     func test_init_didNotInsertUserUponCreation() {
         let store = UserAccountStoreStub()
-        let sut = RegistrationUserAccountService(store: store)
+        let _ = RegistrationUserAccountService(store: store)
         
         XCTAssertEqual(store.messages, [])
     }

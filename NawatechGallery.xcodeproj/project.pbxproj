@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */; };
 		E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */; };
+		E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */; };
+		E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		E168040E2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
 		E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
+		E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountStore.swift; sourceTree = "<group>"; };
+		E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredRegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		E16804102A8F8CBA0051B8E5 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				E16804142A8F8D2B0051B8E5 /* Store */,
 				E16804112A8F8CD80051B8E5 /* Feature */,
 			);
 			path = Registration;
@@ -99,6 +104,15 @@
 				E16804122A8F8CE70051B8E5 /* RegistrationUserAccount.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		E16804142A8F8D2B0051B8E5 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E16804152A8F8D340051B8E5 /* RegistrationUserAccountStore.swift */,
+				E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
@@ -312,8 +326,10 @@
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
+				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
+				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
