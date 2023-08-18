@@ -16,6 +16,13 @@ final class LoginSnapshotTest: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_INITIAL_SETUP_light")
     }
     
+    func test_loginWithNotAllOfFieldsIsFilled() {
+        let sut = makeSUT()
+        sut.fillFields(withUsername: "Test username", andPassword: nil)
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_NOT_ALL_FIELDS_FILLED_light")
+    }
+    
     func test_loginFieldsFilled() {
         let sut = makeSUT()
         sut.fillFields(withUsername: "Test username", andPassword: "test password")
@@ -36,7 +43,7 @@ final class LoginSnapshotTest: XCTestCase {
 }
 
 private extension LoginViewController {
-    func fillFields(withUsername username: String, andPassword password: String) {
+    func fillFields(withUsername username: String?, andPassword password: String?) {
         usernameField.text = username
         passwordField.text = password
         textFieldDidEndEditing(usernameField)
