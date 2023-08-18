@@ -66,24 +66,30 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
     func test_register_insertsUser() {
         let userCreatedDate = Date()
         let userID = UUID()
+        let user = uniqueUser(id: userID, createdAt: userCreatedDate)
         let store = UserAccountStoreStub()
         let sut = RegistrationUserAccountService(
             store: store,
             dateCreated: { userCreatedDate },
             idCreated: { userID })
-        let registrationUser = RegistrationUserAccount(
-            fullname: "any-fullname",
-            username: "any-username",
-            password: "any-password")
         
-        sut.register(registrationUser)
+        sut.register(user.registration)
         
-        let storedUser = StoredRegistrationUserAccount(id: userID, profileImageURL: nil, fullname: registrationUser.fullname, username: registrationUser.username, password: registrationUser.password, createdAt: userCreatedDate)
-        XCTAssertEqual(store.messages, [.insert(storedUser)])
+        XCTAssertEqual(store.messages, [.insert(user.stored)])
         
     }
     
     //MARK: - Helpers
+    
+    private func uniqueUser(id: UUID, createdAt date: Date) -> (registration: RegistrationUserAccount, stored: StoredRegistrationUserAccount) {
+        let registrationUser = anyRegistrationUser()
+        let storedUser = StoredRegistrationUserAccount(id: id, profileImageURL: nil, fullname: registrationUser.fullname, username: registrationUser.username, password: registrationUser.password, createdAt: date)
+        return (registrationUser, storedUser)
+    }
+    
+    private func anyRegistrationUser() -> RegistrationUserAccount {
+        RegistrationUserAccount(fullname: "any-fullname", username: "any-username", password: "any-password")
+    }
     
     private class UserAccountStoreStub: RegistrationUserAccountStore {
         
