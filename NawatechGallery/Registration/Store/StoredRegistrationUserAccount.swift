@@ -7,9 +7,15 @@
 
 import Foundation
 
-public struct StoredRegistrationUserAccount: Equatable {
+public struct StoredRegistrationUserAccount: Equatable, Codable {
     public static func == (lhs: StoredRegistrationUserAccount, rhs: StoredRegistrationUserAccount) -> Bool {
         return lhs.id.uuidString == rhs.id.uuidString && lhs.profileImageURL == rhs.profileImageURL && lhs.username == rhs.username && lhs.fullname == rhs.fullname && lhs.password == rhs.password && lhs.createdAt.timeIntervalSince1970 == rhs.createdAt.timeIntervalSince1970
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id, fullname, username, password
+        case createdAt = "created_at"
+        case profileImageURL = "profile_image_url"
     }
     
     public let id: UUID
