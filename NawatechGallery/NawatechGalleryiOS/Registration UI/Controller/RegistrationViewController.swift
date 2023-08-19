@@ -31,7 +31,7 @@ public final class RegistrationViewController: UIViewController {
     public var isLoading: Bool {
         get { spinner.isAnimating }
         set {
-            loadingContainer.isHidden = !isLoading
+            loadingContainer.isHidden = !newValue
             registerButton.titleLabel?.isHidden = newValue
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }

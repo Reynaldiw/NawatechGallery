@@ -30,6 +30,14 @@ final class RegistrationSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_FIELDS_FILLED_light")
     }
     
+    func test_registrationWithLoading() {
+        let sut = makeSUT()
+        sut.fillFields(fullname: "Test fullname", username: "Test username", password: "test password")
+        sut.isLoading = true
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_LOADING_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> RegistrationViewController {
