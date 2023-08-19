@@ -34,6 +34,12 @@
 		E18F0AE12A9109DD003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */; };
 		E18F0AE22A9109DD003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */; };
 		E18F0AE32A9109DD003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */; };
+		E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */; };
+		E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */; };
+		E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */; };
+		E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */; };
+		E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */; };
+		E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -83,6 +89,12 @@
 		E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_INITIAL_SETUP_light.png; sourceTree = "<group>"; };
 		E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
 		E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
+		E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateAccountPresenter.swift; sourceTree = "<group>"; };
+		E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSucceedView.swift; sourceTree = "<group>"; };
+		E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingViewModel.swift; sourceTree = "<group>"; };
+		E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
+		E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorViewModel.swift; sourceTree = "<group>"; };
+		E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +324,27 @@
 			path = snapshots;
 			sourceTree = "<group>";
 		};
+		E18F0AE42A911235003CEC98 /* Shared Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AE52A9112A4003CEC98 /* Authentication */,
+			);
+			path = "Shared Presentation";
+			sourceTree = "<group>";
+		};
+		E18F0AE52A9112A4003CEC98 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */,
+				E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */,
+				E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */,
+				E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */,
+				E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */,
+				E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +367,7 @@
 		E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0AE42A911235003CEC98 /* Shared Presentation */,
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
@@ -489,7 +523,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
+				E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */,
+				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
+				E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
+				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
+				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
@@ -500,6 +539,7 @@
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
+				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 			);
