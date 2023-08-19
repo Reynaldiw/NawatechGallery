@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
-		E1595A162A8FF96300B3DA3F /* LoginSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */; };
+		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
 		E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */; };
 		E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A1A2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift */; };
 		E1595A1E2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */; };
@@ -18,7 +18,7 @@
 		E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */; };
 		E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */; };
 		E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E168041E2A8FA47A0051B8E5 /* Login.storyboard */; };
-		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */; };
+		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
 		E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79692A8EAC4E007DEEE1 /* AuthenticationUserBody.swift */; };
@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTest.swift; sourceTree = "<group>"; };
+		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
 		E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		E1595A1A2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_INITIAL_SETUP_light.png; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredRegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
 		E168041E2A8FA47A0051B8E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStore.swift; sourceTree = "<group>"; };
+		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		E18D79692A8EAC4E007DEEE1 /* AuthenticationUserBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserBody.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E1595A1C2A8FFD7C00B3DA3F /* snapshots */,
-				E1595A152A8FF96300B3DA3F /* LoginSnapshotTest.swift */,
+				E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */,
 			);
 			path = "Login UI";
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 		E18D796F2A8EADC4007DEEE1 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */,
+				E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -486,9 +486,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18F0ADA2A9105BA003CEC98 /* RegistrationSnapshotTests.swift in Sources */,
-				E1595A162A8FF96300B3DA3F /* LoginSnapshotTest.swift in Sources */,
+				E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */,
 				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
-				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift in Sources */,
+				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */,
 				E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */,
 				E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */,
 			);

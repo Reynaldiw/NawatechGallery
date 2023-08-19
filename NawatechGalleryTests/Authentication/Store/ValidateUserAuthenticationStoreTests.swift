@@ -8,7 +8,7 @@
 import XCTest
 import NawatechGallery
 
-final class ValidateUserAuthenticationStore: XCTestCase {
+final class ValidateUserAuthenticationStoreTests: XCTestCase {
     
     func test_init_didNotRequestUsersUponCreation() {
         let (_, store) = makeSUT()

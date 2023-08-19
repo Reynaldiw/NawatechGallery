@@ -8,7 +8,7 @@
 import XCTest
 import NawatechGallery
 
-final class LoginSnapshotTest: XCTestCase {
+final class LoginSnapshotTests: XCTestCase {
     
     func test_loginInitialSetup() {
         let sut = makeSUT()
