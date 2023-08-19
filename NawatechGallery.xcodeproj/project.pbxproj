@@ -30,6 +30,10 @@
 		E18F0AD42A910162003CEC98 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0AD32A910162003CEC98 /* Registration.storyboard */; };
 		E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AD62A910421003CEC98 /* RegistrationViewController.swift */; };
 		E18F0ADA2A9105BA003CEC98 /* RegistrationSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AD92A9105BA003CEC98 /* RegistrationSnapshotTests.swift */; };
+		E18F0AE02A9109DD003CEC98 /* REGISTRATION_LOADING_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADC2A9109DC003CEC98 /* REGISTRATION_LOADING_light.png */; };
+		E18F0AE12A9109DD003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */; };
+		E18F0AE22A9109DD003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */; };
+		E18F0AE32A9109DD003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -75,6 +79,10 @@
 		E18F0AD32A910162003CEC98 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E18F0AD62A910421003CEC98 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		E18F0AD92A9105BA003CEC98 /* RegistrationSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSnapshotTests.swift; sourceTree = "<group>"; };
+		E18F0ADC2A9109DC003CEC98 /* REGISTRATION_LOADING_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_LOADING_light.png; sourceTree = "<group>"; };
+		E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_INITIAL_SETUP_light.png; sourceTree = "<group>"; };
+		E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
+		E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,9 +295,21 @@
 		E18F0AD82A9105A5003CEC98 /* Registration UI */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0ADB2A9109DC003CEC98 /* snapshots */,
 				E18F0AD92A9105BA003CEC98 /* RegistrationSnapshotTests.swift */,
 			);
 			path = "Registration UI";
+			sourceTree = "<group>";
+		};
+		E18F0ADB2A9109DC003CEC98 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0ADC2A9109DC003CEC98 /* REGISTRATION_LOADING_light.png */,
+				E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */,
+				E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */,
+				E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */,
+			);
+			path = snapshots;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -452,7 +472,11 @@
 			files = (
 				E1595A1E2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png in Resources */,
 				E18F0AD02A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png in Resources */,
+				E18F0AE12A9109DD003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png in Resources */,
 				E18F0ACF2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png in Resources */,
+				E18F0AE22A9109DD003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png in Resources */,
+				E18F0AE02A9109DD003CEC98 /* REGISTRATION_LOADING_light.png in Resources */,
+				E18F0AE32A9109DD003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png in Resources */,
 				E18F0ACE2A91005A003CEC98 /* LOGIN_LOADING_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
