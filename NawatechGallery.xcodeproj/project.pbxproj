@@ -45,6 +45,8 @@
 		E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AFB2A9142A1003CEC98 /* LoginUIComposer.swift */; };
 		E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AFD2A914688003CEC98 /* WeakRefVirtualProxy.swift */; };
 		E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AFF2A914AC4003CEC98 /* LoginErrorViewAdapter.swift */; };
+		E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B022A914DC6003CEC98 /* RegistrationUIComposer.swift */; };
+		E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B042A914F28003CEC98 /* RegistrationErrorViewAdapter.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -105,6 +107,8 @@
 		E18F0AFB2A9142A1003CEC98 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E18F0AFD2A914688003CEC98 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		E18F0AFF2A914AC4003CEC98 /* LoginErrorViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorViewAdapter.swift; sourceTree = "<group>"; };
+		E18F0B022A914DC6003CEC98 /* RegistrationUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUIComposer.swift; sourceTree = "<group>"; };
+		E18F0B042A914F28003CEC98 /* RegistrationErrorViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorViewAdapter.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -358,6 +362,7 @@
 		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0B012A914D81003CEC98 /* Registration */,
 				E18F0AFA2A91428E003CEC98 /* Login */,
 				E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */,
 			);
@@ -380,6 +385,15 @@
 				E18F0AFF2A914AC4003CEC98 /* LoginErrorViewAdapter.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E18F0B012A914D81003CEC98 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B022A914DC6003CEC98 /* RegistrationUIComposer.swift */,
+				E18F0B042A914F28003CEC98 /* RegistrationErrorViewAdapter.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -573,6 +587,7 @@
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
@@ -580,6 +595,7 @@
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
+				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,

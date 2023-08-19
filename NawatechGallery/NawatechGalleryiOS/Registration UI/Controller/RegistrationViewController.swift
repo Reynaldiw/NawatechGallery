@@ -7,6 +7,8 @@
 
 import UIKit
 
+public typealias RegistrationAuthenticationAccount = (fullname: String, username: String, password: String)
+
 public final class RegistrationViewController: UIViewController {
     
     @IBOutlet private(set) public var fullnameField: UITextField!
@@ -36,6 +38,11 @@ public final class RegistrationViewController: UIViewController {
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }
     }
+    
+    public var errorMessage: String? = nil
+    
+    public var register: ((RegistrationAuthenticationAccount) -> Void)?
+    public var onSucceedRegistration: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +65,16 @@ public final class RegistrationViewController: UIViewController {
     
     private func extractRegistrationFieldsValue() -> (fullname: String?, username: String?, password: String?) {
         return (fullnameField.text, usernameField.text, passwordField.text)
+    }
+}
+
+extension RegistrationViewController: AuthenticationSucceedView, AuthenticationLoadingView {
+    public func succeed() {
+        onSucceedRegistration?()
+    }
+    
+    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+        isLoading = viewModel.isLoading
     }
 }
 
