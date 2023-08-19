@@ -7,6 +7,8 @@
 
 import UIKit
 
+public typealias LoginAuthenticationAccount = (username: String, password: String)
+
 public final class LoginViewController: UIViewController {
     
     @IBOutlet private(set) public var usernameField: UITextField!
@@ -28,7 +30,7 @@ public final class LoginViewController: UIViewController {
         
         return spinner
     }()
-    
+        
     public var isLoading: Bool {
         get { spinner.isAnimating }
         set {
@@ -36,6 +38,13 @@ public final class LoginViewController: UIViewController {
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }
     }
+    
+    public var errorMessage: String? = nil
+        
+    public var authenticate: ((LoginAuthenticationAccount) -> Void)?
+    public var onSucceedAuthenticate: (() -> Void)?
+    public var onRegister: (() -> Void)?
+    public var onSkipLogin: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +65,16 @@ public final class LoginViewController: UIViewController {
     
     private func extractLoginFieldsValue() -> (username: String?, password: String?) {
         return (usernameField.text, passwordField.text)
+    }
+}
+
+extension LoginViewController: AuthenticationSucceedView, AuthenticationLoadingView {
+    public func succeed() {
+        onSucceedAuthenticate?()
+    }
+    
+    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+        isLoading = viewModel.isLoading
     }
 }
 
