@@ -40,6 +40,8 @@
 		E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */; };
 		E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */; };
 		E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */; };
+		E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */; };
+		E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF82A91418C003CEC98 /* CombineHelpers.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -95,6 +97,8 @@
 		E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
 		E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorViewModel.swift; sourceTree = "<group>"; };
 		E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
+		E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateAccountPresentationAdapter.swift; sourceTree = "<group>"; };
+		E18F0AF82A91418C003CEC98 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -345,6 +349,22 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */,
+			);
+			path = "UI Composer";
+			sourceTree = "<group>";
+		};
+		E18F0AF72A91417A003CEC98 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AF82A91418C003CEC98 /* CombineHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +391,8 @@
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
+				E18F0AF62A91414B003CEC98 /* UI Composer */,
+				E18F0AF72A91417A003CEC98 /* Helpers */,
 				E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */,
 				E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */,
 				E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */,
@@ -537,6 +559,8 @@
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
+				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
+				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
