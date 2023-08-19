@@ -27,6 +27,7 @@
 		E18F0ACE2A91005A003CEC98 /* LOGIN_LOADING_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACB2A91005A003CEC98 /* LOGIN_LOADING_light.png */; };
 		E18F0ACF2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACC2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png */; };
 		E18F0AD02A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACD2A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png */; };
+		E18F0AD42A910162003CEC98 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0AD32A910162003CEC98 /* Registration.storyboard */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -69,6 +70,7 @@
 		E18F0ACB2A91005A003CEC98 /* LOGIN_LOADING_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LOADING_light.png; sourceTree = "<group>"; };
 		E18F0ACC2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_NOT_ALL_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
 		E18F0ACD2A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
+		E18F0AD32A910162003CEC98 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0AD12A91014C003CEC98 /* Registration UI */,
 				E168041C2A8F963D0051B8E5 /* Login UI */,
 			);
 			path = NawatechGalleryiOS;
@@ -249,6 +252,22 @@
 				E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		E18F0AD12A91014C003CEC98 /* Registration UI */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AD22A910153003CEC98 /* Views */,
+			);
+			path = "Registration UI";
+			sourceTree = "<group>";
+		};
+		E18F0AD22A910153003CEC98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0AD32A910162003CEC98 /* Registration.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -397,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */,
+				E18F0AD42A910162003CEC98 /* Registration.storyboard in Resources */,
 				E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */,
 				E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */,
 				E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */,
