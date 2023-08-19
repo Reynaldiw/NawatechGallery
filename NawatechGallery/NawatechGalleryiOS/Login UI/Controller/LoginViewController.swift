@@ -14,6 +14,28 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private(set) public var loginButton: UIButton!
     @IBOutlet private(set) public var signUpButton: UIButton!
     @IBOutlet private(set) public var skipLoginButton: UIButton!
+    @IBOutlet private(set) public var loadingContainer: UIView!
+    
+    private lazy var spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        loadingContainer.addSubview(spinner)
+        
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            spinner.centerXAnchor.constraint(equalTo: loadingContainer.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: loadingContainer.centerYAnchor)
+        ])
+        
+        return spinner
+    }()
+    
+    public var isLoading: Bool {
+        get { spinner.isAnimating }
+        set {
+            loginButton.titleLabel?.isHidden = newValue
+            newValue ? spinner.startAnimating() : spinner.stopAnimating()
+        }
+    }
     
     public override func viewDidLoad() {
         super.viewDidLoad()

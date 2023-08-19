@@ -86,6 +86,14 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Nm-Ttl" userLabel="Loading Container">
+                                        <rect key="frame" x="175" y="260.66666666666669" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Bpc-Kz-sAK"/>
+                                            <constraint firstAttribute="width" constant="40" id="FnS-Qy-YoK"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -95,6 +103,7 @@
                                     <constraint firstItem="u7f-R8-fzw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9fh-Fj-oq5" secondAttribute="leadingMargin" priority="999" constant="16" id="LJw-ns-tzV"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="uQ2-Jp-rI3" secondAttribute="trailing" constant="16" id="Yuc-d9-ZJh"/>
                                     <constraint firstItem="HsH-Ub-iaU" firstAttribute="leading" secondItem="9fh-Fj-oq5" secondAttribute="leadingMargin" constant="16" id="b9a-lf-WFN"/>
+                                    <constraint firstItem="SmJ-Nm-Ttl" firstAttribute="top" secondItem="HsH-Ub-iaU" secondAttribute="top" id="bfk-Bj-3Ve"/>
                                     <constraint firstItem="uQ2-Jp-rI3" firstAttribute="top" secondItem="OR7-vN-HnE" secondAttribute="bottom" constant="50" id="dbb-t8-S3O"/>
                                     <constraint firstAttribute="bottom" secondItem="Art-ft-GGt" secondAttribute="bottom" constant="16" id="ffs-UJ-yD1"/>
                                     <constraint firstItem="OR7-vN-HnE" firstAttribute="top" secondItem="9fh-Fj-oq5" secondAttribute="top" constant="50" id="o5c-VP-TOS"/>
@@ -103,6 +112,7 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="OR7-vN-HnE" secondAttribute="trailing" constant="16" id="tlh-Bx-rOm"/>
                                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="u7f-R8-fzw" secondAttribute="trailing" priority="999" constant="16" id="xLy-I9-pqd"/>
                                     <constraint firstItem="u7f-R8-fzw" firstAttribute="top" secondItem="HsH-Ub-iaU" secondAttribute="bottom" constant="32" id="yuj-tD-are"/>
+                                    <constraint firstItem="SmJ-Nm-Ttl" firstAttribute="centerX" secondItem="9fh-Fj-oq5" secondAttribute="centerX" id="zNN-Ba-8X0"/>
                                     <constraint firstItem="OR7-vN-HnE" firstAttribute="leading" secondItem="9fh-Fj-oq5" secondAttribute="leadingMargin" constant="16" id="zjn-J3-oNe"/>
                                 </constraints>
                             </view>
@@ -117,6 +127,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingContainer" destination="SmJ-Nm-Ttl" id="tNl-1C-Vex"/>
                         <outlet property="loginButton" destination="HsH-Ub-iaU" id="De4-Z1-kXw"/>
                         <outlet property="passwordField" destination="2FB-7A-BBL" id="RTz-dJ-LFX"/>
                         <outlet property="signUpButton" destination="SzD-y1-BFw" id="HDS-R9-Gsz"/>
