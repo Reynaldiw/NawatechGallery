@@ -56,6 +56,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ghm-VV-soE"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-R8-fzw" userLabel="Registration Container">
                                         <rect key="frame" x="80.333333333333329" y="332.66666666666669" width="229.33333333333337" height="30"/>
@@ -72,6 +75,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up.">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapSignUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jYW-0L-cna"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -85,6 +91,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Skip Login">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSkipLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hzU-Ac-0aH"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmJ-Nm-Ttl" userLabel="Loading Container">
                                         <rect key="frame" x="175" y="260.66666666666669" width="40" height="40"/>

@@ -66,6 +66,22 @@ public final class LoginViewController: UIViewController {
     private func extractLoginFieldsValue() -> (username: String?, password: String?) {
         return (usernameField.text, passwordField.text)
     }
+    
+    
+    @IBAction func didTapLogin(_ sender: Any) {
+        let value = extractLoginFieldsValue()
+        guard let username = value.username, let password = value.password else { return }
+        
+        authenticate?(LoginAuthenticationAccount(username, password))
+    }
+    
+    @IBAction func didTapSignUp(_ sender: Any) {
+        onRegister?()
+    }
+    
+    @IBAction func didTapSkipLogin(_ sender: Any) {
+        onSkipLogin?()
+    }
 }
 
 extension LoginViewController: AuthenticationSucceedView, AuthenticationLoadingView {
