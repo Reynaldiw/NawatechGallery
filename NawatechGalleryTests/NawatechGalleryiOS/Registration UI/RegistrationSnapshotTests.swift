@@ -23,6 +23,13 @@ final class RegistrationSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_NOT_ALL_FIELDS_FILLED_light")
     }
     
+    func test_registrationFieldsFilled() {
+        let sut = makeSUT()
+        sut.fillFields(fullname: "Test fullname", username: "Test username", password: "test password")
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_FIELDS_FILLED_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> RegistrationViewController {
