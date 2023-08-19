@@ -66,6 +66,14 @@ public final class RegistrationViewController: UIViewController {
     private func extractRegistrationFieldsValue() -> (fullname: String?, username: String?, password: String?) {
         return (fullnameField.text, usernameField.text, passwordField.text)
     }
+    
+    
+    @IBAction private func didTapRegister(_ sender: Any) {
+        let value = extractRegistrationFieldsValue()
+        guard let fullname = value.fullname, let username = value.username, let password = value.password else { return }
+        
+        register?(RegistrationAuthenticationAccount(fullname, username, password))
+    }
 }
 
 extension RegistrationViewController: AuthenticationSucceedView, AuthenticationLoadingView {

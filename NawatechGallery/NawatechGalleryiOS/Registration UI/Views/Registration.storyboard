@@ -62,6 +62,9 @@
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapRegister:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="998-JO-FfI"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Amt-Q4-6rP" userLabel="Loading Container">
                                         <rect key="frame" x="175" y="322.66666666666669" width="40" height="40"/>
