@@ -68,18 +68,18 @@ public final class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func didTapLogin(_ sender: Any) {
+    @IBAction private func didTapLogin(_ sender: Any) {
         let value = extractLoginFieldsValue()
         guard let username = value.username, let password = value.password else { return }
         
         authenticate?(LoginAuthenticationAccount(username, password))
     }
     
-    @IBAction func didTapSignUp(_ sender: Any) {
+    @IBAction private func didTapSignUp(_ sender: Any) {
         onRegister?()
     }
     
-    @IBAction func didTapSkipLogin(_ sender: Any) {
+    @IBAction private func didTapSkipLogin(_ sender: Any) {
         onSkipLogin?()
     }
 }
