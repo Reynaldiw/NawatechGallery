@@ -24,6 +24,9 @@
 		E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79692A8EAC4E007DEEE1 /* AuthenticationUserBody.swift */; };
 		E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D796B2A8EAD4F007DEEE1 /* StoredUserAccount.swift */; };
 		E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D796D2A8EAD60007DEEE1 /* AuthenticationValidationService.swift */; };
+		E18F0ACE2A91005A003CEC98 /* LOGIN_LOADING_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACB2A91005A003CEC98 /* LOGIN_LOADING_light.png */; };
+		E18F0ACF2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACC2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png */; };
+		E18F0AD02A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ACD2A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -63,6 +66,9 @@
 		E18D79692A8EAC4E007DEEE1 /* AuthenticationUserBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserBody.swift; sourceTree = "<group>"; };
 		E18D796B2A8EAD4F007DEEE1 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
 		E18D796D2A8EAD60007DEEE1 /* AuthenticationValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationValidationService.swift; sourceTree = "<group>"; };
+		E18F0ACB2A91005A003CEC98 /* LOGIN_LOADING_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_LOADING_light.png; sourceTree = "<group>"; };
+		E18F0ACC2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_NOT_ALL_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
+		E18F0ACD2A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGIN_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +139,9 @@
 		E1595A1C2A8FFD7C00B3DA3F /* snapshots */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0ACD2A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png */,
+				E18F0ACB2A91005A003CEC98 /* LOGIN_LOADING_light.png */,
+				E18F0ACC2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png */,
 				E1595A1D2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png */,
 			);
 			path = snapshots;
@@ -400,6 +409,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1595A1E2A8FFD7C00B3DA3F /* LOGIN_INITIAL_SETUP_light.png in Resources */,
+				E18F0AD02A91005A003CEC98 /* LOGIN_FIELDS_FILLED_light.png in Resources */,
+				E18F0ACF2A91005A003CEC98 /* LOGIN_NOT_ALL_FIELDS_FILLED_light.png in Resources */,
+				E18F0ACE2A91005A003CEC98 /* LOGIN_LOADING_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
