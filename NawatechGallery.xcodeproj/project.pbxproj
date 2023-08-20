@@ -60,6 +60,11 @@
 		E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B332A92189C003CEC98 /* Cart.storyboard */; };
 		E18F0B372A922E1C003CEC98 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B362A922E1C003CEC98 /* Profile.storyboard */; };
 		E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */; };
+		E18F0B3E2A9239C9003CEC98 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */; };
+		E18F0B402A924A60003CEC98 /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */; };
+		E18F0B422A924A6F003CEC98 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */; };
+		E18F0B442A924A7E003CEC98 /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */; };
+		E18F0B462A924A90003CEC98 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -135,6 +140,11 @@
 		E18F0B332A92189C003CEC98 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		E18F0B362A922E1C003CEC98 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
+		E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -376,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				E18F0AE52A9112A4003CEC98 /* Authentication */,
+				E18F0B3C2A923987003CEC98 /* Load Resource */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -543,6 +554,18 @@
 				E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E18F0B3C2A923987003CEC98 /* Load Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */,
+				E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */,
+				E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */,
+				E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */,
+				E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */,
+			);
+			path = "Load Resource";
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -739,14 +762,17 @@
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
 				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
+				E18F0B442A924A7E003CEC98 /* ResourceErrorViewModel.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
+				E18F0B462A924A90003CEC98 /* ResourceErrorView.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
 				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
+				E18F0B3E2A9239C9003CEC98 /* LoadResourcePresenter.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
@@ -755,9 +781,11 @@
 				E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
+				E18F0B402A924A60003CEC98 /* ResourceLoadingViewModel.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
+				E18F0B422A924A6F003CEC98 /* ResourceLoadingView.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
