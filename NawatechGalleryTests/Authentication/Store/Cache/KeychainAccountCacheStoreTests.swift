@@ -110,6 +110,23 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
         }
     }
     
+    func test_retrieveAccountID_deliversLastSavedValue() {
+        let sutToSave = makeSUT()
+        let anyAccountID1 = "any-account-id-1"
+        let anyAccountID2 = "any-account-id-2"
+
+        do {
+            try sutToSave.save(anyAccountID1)
+            try sutToSave.save(anyAccountID2)
+            
+            let receivedValue = try makeSUT().retrieve()
+            XCTAssertEqual(receivedValue, anyAccountID2)
+            
+        } catch {
+            XCTFail("Expected to succeed with last saved value")
+        }
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT(storeKey: String = "keychain.account.store.test.key") -> KeychainAccountCacheStore {
