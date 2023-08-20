@@ -8,6 +8,35 @@
 import Combine
 import Foundation
 
+public extension AuthenticationValidationService {
+    typealias Publisher = AnyPublisher<UserAccount, Swift.Error>
+    
+    func validatePublisher(_ user: AuthenticationUserBody) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.validate(user)
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+public extension Publisher where Output == UserAccount {
+    func caching(to cache: AccountCacheStoreSaver) -> AnyPublisher<Output, Failure> {
+        handleEvents(receiveOutput: { account in
+            cache.saveIgnoringResult(account.id.uuidString)
+        }).eraseToAnyPublisher()
+    }
+}
+
+private extension AccountCacheStoreSaver {
+    func saveIgnoringResult(_ accountID: String) {
+        try? save(accountID)
+    }
+}
+
 extension Publisher {
     func dispatchOnMainQueue() -> AnyPublisher<Output, Failure> {
         receive(on: DispatchQueue.immediateWhenOnMainQueueScheduler).eraseToAnyPublisher()
