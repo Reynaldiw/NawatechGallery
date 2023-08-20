@@ -11,7 +11,7 @@ import NawatechGallery
 final class MotorycleCatalogueItemsMapper {
     private init() {}
     
-    static func map(_ values: [[String: Any]]) -> [MotorcycleCatalogueItem] {
+    static func map(_ data: Data) -> [MotorcycleCatalogueItem] {
         return []
     }
 }
@@ -19,8 +19,14 @@ final class MotorycleCatalogueItemsMapper {
 final class MotorycleCatalogueItemsMapperTests: XCTestCase {
     
     func test_map_deliversNoItemsOnEmptyValues() {
-        let result = MotorycleCatalogueItemsMapper.map([])
+        let result = MotorycleCatalogueItemsMapper.map(makeItemValues([]))
         
         XCTAssertEqual(result, [])
+    }
+    
+    //MARK: - Helpers
+    
+    private func makeItemValues(_ items: [[String: Any]]) -> Data {
+        return try! JSONSerialization.data(withJSONObject: items)
     }
 }

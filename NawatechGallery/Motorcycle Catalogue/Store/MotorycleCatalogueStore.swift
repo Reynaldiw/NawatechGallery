@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol MotorycleCatalogueStore {
-    func retrieve() throws -> [[String: Any]]
+    func retrieve() throws -> Data
 }
