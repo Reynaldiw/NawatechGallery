@@ -59,6 +59,7 @@
 		E18F0B302A92126C003CEC98 /* Catalogue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */; };
 		E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B332A92189C003CEC98 /* Cart.storyboard */; };
 		E18F0B372A922E1C003CEC98 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B362A922E1C003CEC98 /* Profile.storyboard */; };
+		E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -133,6 +134,7 @@
 		E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalogue.storyboard; sourceTree = "<group>"; };
 		E18F0B332A92189C003CEC98 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		E18F0B362A922E1C003CEC98 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -521,6 +523,7 @@
 		E18F0B352A922E0D003CEC98 /* Profile UI */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0B392A923277003CEC98 /* Controller */,
 				E18F0B382A922E21003CEC98 /* Views */,
 			);
 			path = "Profile UI";
@@ -532,6 +535,14 @@
 				E18F0B362A922E1C003CEC98 /* Profile.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E18F0B392A923277003CEC98 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -750,6 +761,7 @@
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
+				E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
 			);

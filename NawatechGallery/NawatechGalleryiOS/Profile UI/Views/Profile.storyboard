@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="NawatechGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Z9c-Bm-VjN">
-                                        <rect key="frame" x="8" y="193.66666666666669" width="374" height="235.66666666666669"/>
+                                        <rect key="frame" x="8" y="217.66666666666669" width="374" height="188"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l20-jK-FXR" userLabel="Profile Image Container">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="156"/>
@@ -48,12 +48,15 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-90-DO4">
-                                                        <rect key="frame" x="105.33333333333333" y="116.00000000000003" width="163.33333333333337" height="40"/>
+                                                        <rect key="frame" x="105.33333333333333" y="116" width="163.33333333333337" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="EpZ-G0-lAW"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Edit profile picture"/>
+                                                        <connections>
+                                                            <action selector="didTapEditProfileImage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="15z-Ez-MeZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,8 +68,8 @@
                                                     <constraint firstItem="ve0-AE-dzZ" firstAttribute="centerX" secondItem="l20-jK-FXR" secondAttribute="centerX" id="v8R-fe-TxJ"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Nawatech Gallery!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-aB-f99">
-                                                <rect key="frame" x="25.666666666666657" y="188.00000000000003" width="323" height="47.666666666666657"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-aB-f99">
+                                                <rect key="frame" x="187" y="188" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="34"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -97,6 +100,11 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5cc-vG-OxQ" secondAttribute="bottom" id="p7n-QC-KU1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="editProfileImageButton" destination="FEa-90-DO4" id="Lu2-Ho-cDs"/>
+                        <outlet property="nameLabel" destination="MxA-aB-f99" id="7wh-cJ-T00"/>
+                        <outlet property="profileImageView" destination="6L5-Uo-aqk" id="jxg-UA-wZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
