@@ -13,4 +13,12 @@ public struct MotorcycleCatalogueItem: Equatable {
     public let name: String
     public let detail: String
     public let price: Int
+    
+    public init(id: UUID, imageURL: URL, name: String, detail: String, price: Int) {
+        self.id = id
+        self.imageURL = imageURL
+        self.name = name
+        self.detail = detail
+        self.price = price
+    }
 }
