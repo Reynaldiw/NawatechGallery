@@ -20,6 +20,7 @@ final class KeychainAccountCacheStore {
     enum Error: Swift.Error {
         case failedToRetrieve
         case failedToSave
+        case failedToDelete
     }
     
     private let storeKey: String
@@ -70,10 +71,21 @@ extension KeychainAccountCacheStore: AccountCacheStoreSaver {
     }
 }
 
+extension KeychainAccountCacheStore {
+    func delete() throws {
+        let query = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: storeKey
+        ] as CFDictionary
+        
+        guard SecItemDelete(query) == noErr else { throw Error.failedToDelete }
+    }
+}
+
 final class KeychainAccountCacheStoreTests: XCTestCase {
     
     func test_retrieveAccountID_deliversEmptyValueOnEmptyCache() {
-        let sut = KeychainAccountCacheStore(storeKey: "keychain.account.store.test.key")
+        let sut = makeSUT()
         
         do {
             let accountID = try sut.retrieve()
@@ -86,16 +98,27 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
     
     func test_retrieveAccountID_deliversValueOnNonEmptyCache() {
         let anyAccountID = "any-account-id"
-        let sut = KeychainAccountCacheStore(storeKey: "keychain.account.store.test.key")
         
         do {
-            try sut.save(anyAccountID)
+            try makeSUT().save(anyAccountID)
             
-            let receivedValue = try sut.retrieve()
+            let receivedValue = try makeSUT().retrieve()
             XCTAssertEqual(receivedValue, anyAccountID)
             
         } catch {
             XCTFail("Expected to succeed with value")
         }
+    }
+    
+    //MARK: - Helpers
+    
+    private func makeSUT(storeKey: String = "keychain.account.store.test.key") -> KeychainAccountCacheStore {
+        let sut = KeychainAccountCacheStore(storeKey: storeKey)
+        
+        addTeardownBlock {
+            try? KeychainAccountCacheStore(storeKey: storeKey).delete()
+        }
+        
+        return sut
     }
 }
