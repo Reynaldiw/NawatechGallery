@@ -60,6 +60,7 @@
 		E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B332A92189C003CEC98 /* Cart.storyboard */; };
 		E18F0B372A922E1C003CEC98 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B362A922E1C003CEC98 /* Profile.storyboard */; };
 		E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */; };
+		E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -135,6 +136,7 @@
 		E18F0B332A92189C003CEC98 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		E18F0B362A922E1C003CEC98 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreAuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -545,6 +547,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E18F0B4A2A925B4C003CEC98 /* Store Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B4B2A925E08003CEC98 /* Authentication */,
+			);
+			path = "Store Infra";
+			sourceTree = "<group>";
+		};
+		E18F0B4B2A925E08003CEC98 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -567,6 +585,7 @@
 		E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E18F0B4A2A925B4C003CEC98 /* Store Infra */,
 				E18F0AE42A911235003CEC98 /* Shared Presentation */,
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
@@ -753,6 +772,7 @@
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E18F0B0B2A91D674003CEC98 /* AccountCacheStoreSaver.swift in Sources */,
 				E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */,
+				E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
