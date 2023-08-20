@@ -34,6 +34,7 @@ public final class LoginViewController: UIViewController {
     public var isLoading: Bool {
         get { spinner.isAnimating }
         set {
+            loadingContainer.isHidden = !newValue
             loginButton.titleLabel?.isHidden = newValue
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }
@@ -58,6 +59,7 @@ public final class LoginViewController: UIViewController {
     }
     
     private func configureInitialUI() {
+        loadingContainer.isHidden = true
         updateLoginButtonUIState(isEnable: false)
         usernameField.delegate = self
         passwordField.delegate = self
@@ -108,7 +110,7 @@ extension LoginViewController: AuthenticationSucceedView, AuthenticationLoadingV
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidChangeSelection(_ textField: UITextField) {
         let (username, password) = extractLoginFieldsValue()
         updateLoginButtonUIState(isEnable: username?.isEmpty == false && password?.isEmpty == false)
     }

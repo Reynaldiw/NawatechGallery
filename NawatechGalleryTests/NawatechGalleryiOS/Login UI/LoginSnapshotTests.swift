@@ -54,7 +54,7 @@ private extension LoginViewController {
     func fillFields(withUsername username: String?, andPassword password: String?) {
         usernameField.text = username
         passwordField.text = password
-        textFieldDidEndEditing(usernameField)
-        textFieldDidEndEditing(passwordField)
+        textFieldDidChangeSelection(usernameField)
+        textFieldDidChangeSelection(passwordField)
     }
 }
