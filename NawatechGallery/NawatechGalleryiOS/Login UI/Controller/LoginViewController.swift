@@ -39,7 +39,12 @@ public final class LoginViewController: UIViewController {
         }
     }
     
-    public var errorMessage: String? = nil
+    public var errorMessage: String? = nil {
+        didSet {
+            guard let errorMessage = errorMessage else { return }
+            displayError(errorMessage)
+        }
+    }
         
     public var authenticate: ((LoginAuthenticationAccount) -> Void)?
     public var onSucceedAuthenticate: (() -> Void)?
@@ -67,6 +72,14 @@ public final class LoginViewController: UIViewController {
         return (usernameField.text, passwordField.text)
     }
     
+    private func displayError(_ message: String) {
+        let controller = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+            controller.dismiss(animated: true)
+        }))
+        
+        self.present(controller, animated: true)
+    }
     
     @IBAction private func didTapLogin(_ sender: Any) {
         let value = extractLoginFieldsValue()
