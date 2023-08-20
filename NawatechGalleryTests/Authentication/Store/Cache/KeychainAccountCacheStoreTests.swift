@@ -99,9 +99,9 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
     func test_retrieveAccountID_deliversValueOnNonEmptyCache() {
         let anyAccountID = "any-account-id"
         
+        save(anyAccountID)
+        
         do {
-            try makeSUT().save(anyAccountID)
-            
             let receivedValue = try makeSUT().retrieve()
             XCTAssertEqual(receivedValue, anyAccountID)
             
@@ -111,14 +111,13 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
     }
     
     func test_retrieveAccountID_deliversLastSavedValue() {
-        let sutToSave = makeSUT()
         let anyAccountID1 = "any-account-id-1"
         let anyAccountID2 = "any-account-id-2"
 
+        save(anyAccountID1)
+        save(anyAccountID2)
+        
         do {
-            try sutToSave.save(anyAccountID1)
-            try sutToSave.save(anyAccountID2)
-            
             let receivedValue = try makeSUT().retrieve()
             XCTAssertEqual(receivedValue, anyAccountID2)
             
@@ -137,5 +136,9 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
         }
         
         return sut
+    }
+    
+    private func save(_ accountID: String) {
+        try? makeSUT().save(accountID)
     }
 }
