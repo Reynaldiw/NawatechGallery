@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MotorcycleCatalogueItem {
+public struct MotorcycleCatalogueItem: Equatable {
     public let id: UUID
     public let imageURL: URL
     public let name: String

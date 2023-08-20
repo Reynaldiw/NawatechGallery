@@ -54,6 +54,7 @@
 		E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B112A91D745003CEC98 /* AccountCacheStoreRemover.swift */; };
 		E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B152A91D967003CEC98 /* MotorcycleCatalogueItem.swift */; };
 		E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B1B2A91DC19003CEC98 /* MotorycleCatalogueStore.swift */; };
+		E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -123,6 +124,7 @@
 		E18F0B112A91D745003CEC98 /* AccountCacheStoreRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCacheStoreRemover.swift; sourceTree = "<group>"; };
 		E18F0B152A91D967003CEC98 /* MotorcycleCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleCatalogueItem.swift; sourceTree = "<group>"; };
 		E18F0B1B2A91DC19003CEC98 /* MotorycleCatalogueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueStore.swift; sourceTree = "<group>"; };
+		E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueItemsMapperTests.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -456,6 +458,22 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		E18F0B1D2A91DDC1003CEC98 /* Motorycle Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B202A91DE05003CEC98 /* Store */,
+			);
+			path = "Motorycle Catalogue";
+			sourceTree = "<group>";
+		};
+		E18F0B202A91DE05003CEC98 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -503,6 +521,7 @@
 				E1595A132A8FF93200B3DA3F /* NawatechGalleryiOS */,
 				E168040D2A8F7DC80051B8E5 /* Registration */,
 				E18D795D2A8E56F5007DEEE1 /* Authentication */,
+				E18F0B1D2A91DDC1003CEC98 /* Motorycle Catalogue */,
 			);
 			path = NawatechGalleryTests;
 			sourceTree = "<group>";
@@ -676,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */,
 				E18F0ADA2A9105BA003CEC98 /* RegistrationSnapshotTests.swift in Sources */,
 				E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */,
 				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
