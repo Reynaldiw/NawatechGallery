@@ -1,5 +1,5 @@
 //
-//  MotorycleContentStore.swift
+//  MotorycleCatalogueStore.swift
 //  NawatechGallery
 //
 //  Created by Reynaldi on 20/08/23.
@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol MotorycleContentStore {
+public protocol MotorycleCatalogueStore {
     func retrieve() throws -> [[String: Any]]
 }
