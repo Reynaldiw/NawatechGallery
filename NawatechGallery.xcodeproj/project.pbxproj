@@ -57,6 +57,7 @@
 		E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */; };
 		E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B232A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift */; };
 		E18F0B302A92126C003CEC98 /* Catalogue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */; };
+		E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B332A92189C003CEC98 /* Cart.storyboard */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -129,6 +130,7 @@
 		E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueItemsMapperTests.swift; sourceTree = "<group>"; };
 		E18F0B232A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueItemsMapper.swift; sourceTree = "<group>"; };
 		E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Catalogue.storyboard; sourceTree = "<group>"; };
+		E18F0B332A92189C003CEC98 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				E18F0AD12A91014C003CEC98 /* Registration UI */,
 				E168041C2A8F963D0051B8E5 /* Login UI */,
 				E18F0B2D2A9211E3003CEC98 /* Catalogue UI */,
+				E18F0B312A921866003CEC98 /* Cart UI */,
 			);
 			path = NawatechGalleryiOS;
 			sourceTree = "<group>";
@@ -496,6 +499,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E18F0B312A921866003CEC98 /* Cart UI */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B322A921871003CEC98 /* Views */,
+			);
+			path = "Cart UI";
+			sourceTree = "<group>";
+		};
+		E18F0B322A921871003CEC98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B332A92189C003CEC98 /* Cart.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E1A6D7A82A8C8F1F0094F71C = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +665,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */,
 				E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */,
 				E18F0AD42A910162003CEC98 /* Registration.storyboard in Resources */,
 				E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */,
