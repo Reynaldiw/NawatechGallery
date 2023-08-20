@@ -85,29 +85,15 @@ extension KeychainAccountCacheStore {
 final class KeychainAccountCacheStoreTests: XCTestCase {
     
     func test_retrieveAccountID_deliversEmptyValueOnEmptyCache() {
-        let sut = makeSUT()
-        
-        do {
-            let accountID = try sut.retrieve()
-            XCTAssertNil(accountID, "Should return empty value on empty cache")
-            
-        } catch {
-            XCTFail("Expected to succeed with empty value")
-        }
+        expectSUT(toRetrive: nil)
     }
     
     func test_retrieveAccountID_deliversValueOnNonEmptyCache() {
         let anyAccountID = "any-account-id"
         
         save(anyAccountID)
-        
-        do {
-            let receivedValue = try makeSUT().retrieve()
-            XCTAssertEqual(receivedValue, anyAccountID)
-            
-        } catch {
-            XCTFail("Expected to succeed with value")
-        }
+
+        expectSUT(toRetrive: anyAccountID)
     }
     
     func test_retrieveAccountID_deliversLastSavedValue() {
@@ -117,13 +103,7 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
         save(anyAccountID1)
         save(anyAccountID2)
         
-        do {
-            let receivedValue = try makeSUT().retrieve()
-            XCTAssertEqual(receivedValue, anyAccountID2)
-            
-        } catch {
-            XCTFail("Expected to succeed with last saved value")
-        }
+        expectSUT(toRetrive: anyAccountID2)
     }
     
     //MARK: - Helpers
@@ -136,6 +116,16 @@ final class KeychainAccountCacheStoreTests: XCTestCase {
         }
         
         return sut
+    }
+    
+    private func expectSUT(toRetrive expectedValue: String?, file: StaticString = #file, line: UInt = #line) {
+        do {
+            let receivedValue = try makeSUT().retrieve()
+            XCTAssertEqual(receivedValue, expectedValue, file: file, line: line)
+            
+        } catch {
+            XCTFail("Expected to succeed with value \(String(describing: expectedValue)), but got error \(error) instead", file: file, line: line)
+        }
     }
     
     private func save(_ accountID: String) {
