@@ -55,6 +55,7 @@
 		E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B152A91D967003CEC98 /* MotorcycleCatalogueItem.swift */; };
 		E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B1B2A91DC19003CEC98 /* MotorycleCatalogueStore.swift */; };
 		E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */; };
+		E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B232A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
@@ -125,6 +126,7 @@
 		E18F0B152A91D967003CEC98 /* MotorcycleCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleCatalogueItem.swift; sourceTree = "<group>"; };
 		E18F0B1B2A91DC19003CEC98 /* MotorycleCatalogueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueStore.swift; sourceTree = "<group>"; };
 		E18F0B212A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueItemsMapperTests.swift; sourceTree = "<group>"; };
+		E18F0B232A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorycleCatalogueItemsMapper.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				E18F0B1B2A91DC19003CEC98 /* MotorycleCatalogueStore.swift */,
+				E18F0B232A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
 				E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
+				E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */,
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
 				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
