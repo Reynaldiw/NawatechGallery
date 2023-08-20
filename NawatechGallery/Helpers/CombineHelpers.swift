@@ -8,6 +8,8 @@
 import Combine
 import Foundation
 
+// MARK: - Login
+
 public extension AuthenticationValidationService {
     typealias Publisher = AnyPublisher<UserAccount, Swift.Error>
     
@@ -36,6 +38,8 @@ private extension AccountCacheStoreSaver {
         try? save(accountID)
     }
 }
+
+//MARK: - Scheduler
 
 extension Publisher {
     func dispatchOnMainQueue() -> AnyPublisher<Output, Failure> {
