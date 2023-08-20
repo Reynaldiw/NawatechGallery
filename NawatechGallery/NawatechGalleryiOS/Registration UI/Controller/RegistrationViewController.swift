@@ -39,7 +39,12 @@ public final class RegistrationViewController: UIViewController {
         }
     }
     
-    public var errorMessage: String? = nil
+    public var errorMessage: String? = nil {
+        didSet {
+            guard let errorMessage = errorMessage else { return }
+            displayError(errorMessage)
+        }
+    }
     
     public var register: ((RegistrationAuthenticationAccount) -> Void)?
     public var onSucceedRegistration: (() -> Void)?
@@ -67,6 +72,14 @@ public final class RegistrationViewController: UIViewController {
         return (fullnameField.text, usernameField.text, passwordField.text)
     }
     
+    private func displayError(_ message: String) {
+        let controller = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+            controller.dismiss(animated: true)
+        }))
+        
+        self.present(controller, animated: true)
+    }
     
     @IBAction private func didTapRegister(_ sender: Any) {
         let value = extractRegistrationFieldsValue()
