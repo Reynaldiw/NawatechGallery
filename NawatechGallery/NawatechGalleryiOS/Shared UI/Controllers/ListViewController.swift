@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching {
+public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
     
     private lazy var dataSource: UITableViewDiffableDataSource<Int, CellController> = {
         .init(tableView: tableView) { tableView, index, controller in
@@ -43,6 +43,14 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         } else {
             dataSource.apply(snapshot)
         }
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

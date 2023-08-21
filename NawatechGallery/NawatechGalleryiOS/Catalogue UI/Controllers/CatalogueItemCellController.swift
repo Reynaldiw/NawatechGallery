@@ -12,10 +12,6 @@ public protocol ListImageCellControllerDelegate {
     func didCancelRequestImage()
 }
 
-public struct CatalogueItemViewModel {
-    public let title: String
-}
-
 public final class CatalogueItemCellController: NSObject {
     private let viewModel: CatalogueItemViewModel
     private let delegate: ListImageCellControllerDelegate
@@ -75,6 +71,22 @@ extension CatalogueItemCellController: UITableViewDataSource, UITableViewDelegat
     
     private func releaseCellForReuse() {
         cell = nil
+    }
+}
+
+extension CatalogueItemCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
+    public typealias ResourceViewModel = UIImage
+    
+    public func display(_ viewModel: UIImage) {
+        
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        
     }
 }
 
