@@ -48,7 +48,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="TS5-MK-aLi" firstAttribute="leading" secondItem="hvD-Go-UB2" secondAttribute="leading" id="0po-HW-2ao"/>
                                                 <constraint firstAttribute="width" secondItem="hvD-Go-UB2" secondAttribute="height" multiplier="1:1" id="Lfz-ln-Zt3"/>
@@ -100,6 +100,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
