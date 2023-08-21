@@ -14,6 +14,7 @@ public final class ProfileViewController: UIViewController {
     @IBOutlet private(set) public var nameLabel: UILabel!
     
     public var retrieveProfile: (() -> Void)?
+    public var logout: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
