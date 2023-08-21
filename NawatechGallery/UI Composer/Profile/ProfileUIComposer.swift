@@ -16,15 +16,18 @@ final class ProfileUIComposer {
     static func profileComposedWith(
         loadProfile: @escaping () -> AnyPublisher<ProfileUserAccount, Error>,
         imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>,
+        imageUploader: @escaping (Data) -> AnyPublisher<Void, Error>,
         logout: @escaping () -> Void
     ) -> ProfileViewController {
-        let adapter = ProfilePresentationAdapter(loader: loadProfile)
-        
+        let profileAdapter = ProfilePresentationAdapter(loader: loadProfile)
         let profileController = makeProfileController(title: "My Profile")
-        profileController.retrieveProfile = adapter.loadResource
+        let uploadImageAdapter = UploadImageProfileAdapter(controller: profileController, imageUploader: imageUploader)
+        
+        profileController.retrieveProfile = profileAdapter.loadResource
+        profileController.uploadImage = uploadImageAdapter.upload
         profileController.logout = logout
         
-        adapter.presenter = LoadResourcePresenter(
+        profileAdapter.presenter = LoadResourcePresenter(
             resourceView: ProfileViewAdapter(
                 controller: profileController,
                 imageLoader: imageLoader),

@@ -57,3 +57,24 @@ extension FirestoreUserAccountClient: UserAccountStoreRetriever {
         }
     }
 }
+
+extension FirestoreUserAccountClient: UserAccountStoreReplacer {
+    public func update(_ key: String, with value: Any, in path: String) throws {
+        let group = DispatchGroup()
+        
+        var receivedError: Swift.Error?
+        
+        group.enter()
+        store
+            .collection("users")
+            .document(path)
+            .updateData([key: value]) { error in
+                receivedError = error
+                group.leave()
+            }
+        group.wait()
+        
+        guard let receivedError = receivedError else { return }
+        throw receivedError
+    }
+}

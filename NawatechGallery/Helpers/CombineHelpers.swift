@@ -105,6 +105,23 @@ public extension AccountCacheStoreRetriever {
     }
 }
 
+//MARK: Profile Image
+
+public extension ProfileImageStore {
+    typealias Publisher = AnyPublisher<URL, Swift.Error>
+    
+    func uploadPublisher(_ data: Data, named name: String) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.upload(data, named: name)
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
 //MARK: User Account Store
 
 public extension UserAccountStoreRetriever {
@@ -115,6 +132,21 @@ public extension UserAccountStoreRetriever {
             Future { completion in
                 completion(Result {
                     try self.retrieve(query)
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+public extension UserAccountStoreReplacer {
+    typealias Publisher = AnyPublisher<Void, Swift.Error>
+    
+    func updatePublisher(_ key: String, with value: Any, in path: String) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.update(key, with: value, in: path)
                 })
             }
         }

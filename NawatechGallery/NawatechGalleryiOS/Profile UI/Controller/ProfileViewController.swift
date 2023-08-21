@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Photos
+import PhotosUI
 
 public final class ProfileViewController: UIViewController, ResourceView, ResourceLoadingView, ResourceErrorView {
     
@@ -15,8 +17,11 @@ public final class ProfileViewController: UIViewController, ResourceView, Resour
     @IBOutlet private(set) public var nameLabel: UILabel!
     @IBOutlet private(set) public var logoutButton: UIButton!
     
+    private var selectedImagePicker: UIImage?
+    
     public var retrieveProfile: (() -> Void)?
     public var logout: (() -> Void)?
+    public var uploadImage: ((Data) -> Void)?
     public var delegate: ListImageCellControllerDelegate?
     
     private lazy var spinner: UIActivityIndicatorView = {
@@ -95,10 +100,84 @@ public final class ProfileViewController: UIViewController, ResourceView, Resour
         profileImageView.isHidden = false
     }
     
-    @IBAction private func didTapEditProfileImage(_ sender: Any) {}
+    @IBAction private func didTapEditProfileImage(_ sender: Any) {
+        if #available(iOS 14.0, *) {
+            openPHPicker()
+        } else {
+            openImagePicker()
+        }
+    }
     
     @IBAction func didTapLogout(_ sender: Any) {
         guard !isLoading else { return }
         logout?()
+    }
+}
+
+//MARK: Upload Image UI State
+
+extension ProfileViewController: UploadProfileImageSucceedView, UploadProfileImageLoadingView, UploadProfileImageErrorView {
+    public func succeed() {
+        guard let selectedImagePicker = selectedImagePicker else { return }
+        profileImageView.image = selectedImagePicker
+    }
+    
+    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+        profileImageView.isHidden = viewModel.isLoading
+        profileImageContainerView.isShimmering = viewModel.isLoading
+    }
+    
+    public func display(_ viewModel: AuthenticationErrorViewModel) {}
+}
+
+extension ProfileViewController: PHPickerViewControllerDelegate {
+    private func openPHPicker() {
+        var configuration = PHPickerConfiguration(photoLibrary: .shared())
+        configuration.selectionLimit = 1
+        configuration.filter = .images
+        
+        let pickerController = PHPickerViewController(configuration: configuration)
+        pickerController.delegate = self
+        
+        present(pickerController, animated: true)
+    }
+    
+    public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        
+        guard let provider = results.first?.itemProvider, provider.canLoadObject(ofClass: UIImage.self) else { return }
+        
+        provider.loadObject(ofClass: UIImage.self) { [weak self] object, error in
+            guard let image = object as? UIImage,
+                  let data = image.pngData()
+            else { return }
+            
+            DispatchQueue.main.async {
+                self?.selectedImagePicker = image
+                self?.uploadImage?(data)
+            }
+        }
+    }
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func openImagePicker() {
+        let pickerController = UIImagePickerController()
+        pickerController.sourceType = .photoLibrary
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        
+        present(pickerController, animated: true)
+    }
+    
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage,
+              let data = image.pngData()
+        else { return }
+        
+        selectedImagePicker = image
+        uploadImage?(data)
     }
 }

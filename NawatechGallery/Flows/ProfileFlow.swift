@@ -20,12 +20,16 @@ final class ProfileFlow {
         KeychainAccountCacheStore(storeKey: SharedKeys.accountKeychainKey)
     }()
     
-    private lazy var accountStoreRetriever: UserAccountStoreRetriever = {
+    private lazy var accountStore: UserAccountStoreRetriever & UserAccountStoreReplacer = {
         FirestoreUserAccountClient()
     }()
     
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+    }()
+    
+    private lazy var profileImageStore: ProfileImageStore = {
+       FirebaseStorageProfileImageStore()
     }()
     
     func start(
@@ -34,6 +38,7 @@ final class ProfileFlow {
         let profileController = ProfileUIComposer.profileComposedWith(
             loadProfile: loadProfile,
             imageLoader: loadImage(from:),
+            imageUploader: upload(_:),
             logout: { [weak self] in
                 self?.logout()
                 onLogout()
@@ -44,8 +49,9 @@ final class ProfileFlow {
     
     private func loadProfile() -> AnyPublisher<ProfileUserAccount, Error> {
         return accountCacheService.retrievePublisher()
-            .flatMap { [accountStoreRetriever] value in
-                accountStoreRetriever.retrievePublisher(.matched((value!, "id")))
+            .tryCompactMap { $0 }
+            .flatMap { [accountStore] value in
+                accountStore.retrievePublisher(.matched((value, "id")))
             }
             .tryMap(ProfileUserAccountMapper.map(_:))
             .subscribe(on: scheduler)
@@ -57,6 +63,20 @@ final class ProfileFlow {
             .getPublisher(from: url)
             .tryMap(GalleryImageDataMapper.map)
             .receive(on: scheduler)
+            .eraseToAnyPublisher()
+    }
+    
+    private func upload(_ data: Data) -> AnyPublisher<Void, Error> {
+        return accountCacheService
+            .retrievePublisher()
+            .tryCompactMap { $0 }
+            .flatMap { [profileImageStore, accountStore] accountID in
+                profileImageStore.uploadPublisher(data, named: accountID)
+                    .flatMap { [accountStore] url in
+                        accountStore.updatePublisher("profile_image_url", with: url.absoluteString, in: accountID)
+                    }
+            }
+            .subscribe(on: scheduler)
             .eraseToAnyPublisher()
     }
     

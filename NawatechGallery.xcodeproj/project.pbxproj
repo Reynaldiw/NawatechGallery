@@ -13,6 +13,8 @@
 		E1074BF72A93F019005BF21B /* ProfileImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BF62A93F019005BF21B /* ProfileImageStore.swift */; };
 		E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BF92A93F130005BF21B /* FirebaseStorageProfileImageStore.swift */; };
 		E1074BFC2A93F15A005BF21B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E1074BFB2A93F15A005BF21B /* FirebaseStorage */; };
+		E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */; };
+		E1074C002A940466005BF21B /* UserAccountStoreReplacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -121,6 +123,8 @@
 		E1074BF42A93B03D005BF21B /* SharedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedKeys.swift; sourceTree = "<group>"; };
 		E1074BF62A93F019005BF21B /* ProfileImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageStore.swift; sourceTree = "<group>"; };
 		E1074BF92A93F130005BF21B /* FirebaseStorageProfileImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageProfileImageStore.swift; sourceTree = "<group>"; };
+		E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageProfileAdapter.swift; sourceTree = "<group>"; };
+		E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreReplacer.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 			children = (
 				E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */,
 				E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */,
+				E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */,
 			);
 			path = "User Account";
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 			children = (
 				E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */,
 				E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */,
+				E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1072,6 +1078,7 @@
 				E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */,
 				E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
+				E1074C002A940466005BF21B /* UserAccountStoreReplacer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
@@ -1087,6 +1094,7 @@
 				E1891EC92A936D8D001F18FF /* CatalogueItemViewModel.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 				E1891EC22A936B10001F18FF /* LoadResourcePresentationAdapter.swift in Sources */,
+				E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
 				E1891ECB2A936FFD001F18FF /* CataloguePresenter.swift in Sources */,
 				E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */,
@@ -1255,6 +1263,7 @@
 				DEVELOPMENT_TEAM = YKPQ92PAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NawatechGallery/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow it to upload image profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1282,6 +1291,7 @@
 				DEVELOPMENT_TEAM = YKPQ92PAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NawatechGallery/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow it to upload image profile.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
