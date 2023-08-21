@@ -24,11 +24,16 @@ final class ProfileFlow {
         FirestoreUserAccountClient()
     }()
     
+    private lazy var httpClient: HTTPClient = {
+        URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+    }()
+    
     func start(
         onLogout: @escaping () -> Void
     ) -> ProfileViewController {
         let profileController = ProfileUIComposer.profileComposedWith(
             loadProfile: loadProfile,
+            imageLoader: loadImage(from:),
             logout: { [weak self] in
                 self?.logout()
                 onLogout()
@@ -44,6 +49,14 @@ final class ProfileFlow {
             }
             .tryMap(ProfileUserAccountMapper.map(_:))
             .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
+    }
+    
+    private func loadImage(from url: URL) -> AnyPublisher<Data, Error> {
+        return httpClient
+            .getPublisher(from: url)
+            .tryMap(GalleryImageDataMapper.map)
+            .receive(on: scheduler)
             .eraseToAnyPublisher()
     }
     

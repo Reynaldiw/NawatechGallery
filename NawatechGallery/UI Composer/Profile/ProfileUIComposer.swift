@@ -15,6 +15,7 @@ final class ProfileUIComposer {
     
     static func profileComposedWith(
         loadProfile: @escaping () -> AnyPublisher<ProfileUserAccount, Error>,
+        imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>,
         logout: @escaping () -> Void
     ) -> ProfileViewController {
         let adapter = ProfilePresentationAdapter(loader: loadProfile)
@@ -24,7 +25,9 @@ final class ProfileUIComposer {
         profileController.logout = logout
         
         adapter.presenter = LoadResourcePresenter(
-            resourceView: ProfileViewAdapter(controller: profileController),
+            resourceView: ProfileViewAdapter(
+                controller: profileController,
+                imageLoader: imageLoader),
             loadingView: WeakRefVirtualProxy(object: profileController),
             errorView: WeakRefVirtualProxy(object: profileController),
             mapper: { account in
