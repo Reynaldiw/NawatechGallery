@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class ProfileViewController: UIViewController {
+public final class ProfileViewController: UIViewController, ResourceLoadingView, ResourceErrorView {
     
     @IBOutlet private(set) public var profileImageView: UIImageView!
     @IBOutlet private(set) public var editProfileImageButton: UIButton!
@@ -29,6 +29,12 @@ public final class ProfileViewController: UIViewController {
         editProfileImageButton.isHidden = true
         nameLabel.isHidden = true
     }
+    
+    public func display(_ account: ProfileUserAccount) {}
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {}
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {}
     
     @IBAction private func didTapEditProfileImage(_ sender: Any) {}
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1074BF02A93AF19005BF21B /* ProfileViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -44,6 +45,7 @@
 		E1891EE92A938A42001F18FF /* UserAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */; };
 		E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */; };
 		E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */; };
+		E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -109,6 +111,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAdapter.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreRetriever.swift; sourceTree = "<group>"; };
 		E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountQuery.swift; sourceTree = "<group>"; };
 		E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserAccountClient.swift; sourceTree = "<group>"; };
+		E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -489,6 +493,15 @@
 			path = "User Account";
 			sourceTree = "<group>";
 		};
+		E1891EF12A93AAF1001F18FF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */,
+				E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,6 +621,7 @@
 		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EF12A93AAF1001F18FF /* Profile */,
 				E1891EBE2A9367E0001F18FF /* Catalogue */,
 				E18F0B012A914D81003CEC98 /* Registration */,
 				E18F0AFA2A91428E003CEC98 /* Login */,
@@ -991,6 +1005,7 @@
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
 				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
+				E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
@@ -1008,6 +1023,7 @@
 				E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */,
 				E1891EC72A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift in Sources */,
 				E1891EAD2A936164001F18FF /* CellController.swift in Sources */,
+				E1074BF02A93AF19005BF21B /* ProfileViewAdapter.swift in Sources */,
 				E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
