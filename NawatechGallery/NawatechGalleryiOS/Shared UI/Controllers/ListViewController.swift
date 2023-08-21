@@ -46,11 +46,12 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
     }
     
     public func display(_ viewModel: ResourceLoadingViewModel) {
-        
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
     
     public func display(_ viewModel: ResourceErrorViewModel) {
-        
+        guard let error = viewModel.error else { return }
+        print("Error ListViewController \(error.localizedDescription)")
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,3 +89,8 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
     }
 }
 
+extension UIRefreshControl {
+    func update(isRefreshing: Bool) {
+        isRefreshing ? beginRefreshing() : endRefreshing()
+    }
+}

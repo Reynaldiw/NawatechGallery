@@ -56,6 +56,38 @@ public extension RegistrationUserAccountService {
     }
 }
 
+//MARK: Motorcycle Catalogue
+
+public extension MotorycleCatalogueStore {
+    typealias Publisher = AnyPublisher<Data, Swift.Error>
+    
+    func retrievePublisher() -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.retrieve()
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+//MARK: HTTP Client
+
+public extension HTTPClient {
+    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Swift.Error>
+    
+    func getPublisher(from url: URL) -> Publisher {
+        return Deferred {
+            Future { completion in
+                get(from: url, completion: completion)
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
 //MARK: - Scheduler
 
 extension Publisher {

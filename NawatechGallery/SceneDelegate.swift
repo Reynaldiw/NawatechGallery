@@ -12,9 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private let authenticationFlow = AuthenticationFlow()
+    private let catalogue = MotorcycleCatalogueFlow()
     
     private lazy var loginNavigationController: UINavigationController = {
-        UINavigationController(rootViewController: authenticationFlow.start())
+        UINavigationController(rootViewController: catalogue.start())
     }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

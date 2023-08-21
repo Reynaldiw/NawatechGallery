@@ -78,15 +78,15 @@ extension CatalogueItemCellController: ResourceView, ResourceLoadingView, Resour
     public typealias ResourceViewModel = UIImage
     
     public func display(_ viewModel: UIImage) {
-        
+        cell?.catalogueImageView.setImageAnimated(viewModel)
     }
     
     public func display(_ viewModel: ResourceLoadingViewModel) {
-        
+        cell?.catalogueImageContainer.isShimmering = viewModel.isLoading
     }
     
     public func display(_ viewModel: ResourceErrorViewModel) {
-        
+        cell?.catalogueImageView.image = UIImage()
     }
 }
 
@@ -138,5 +138,19 @@ extension UIView {
     
     private func stopShimmering() {
         layer.mask = nil
+    }
+}
+
+extension UIImageView {
+    func setImageAnimated(_ newImage: UIImage?) {
+        image = newImage
+        
+        guard newImage != nil else { return }
+        
+        alpha = 0
+        
+        UIView.animate(withDuration: 0.25) {
+            self.alpha = 1
+        }
     }
 }

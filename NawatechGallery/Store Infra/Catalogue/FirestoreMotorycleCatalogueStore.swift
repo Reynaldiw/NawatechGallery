@@ -12,7 +12,7 @@ public final class FirestoreMotorycleCatalogueStore {
     
     private let firestore: Firestore
     
-    init(firestore: Firestore) {
+    public init(firestore: Firestore = Firestore.firestore()) {
         self.firestore = firestore
     }
     
