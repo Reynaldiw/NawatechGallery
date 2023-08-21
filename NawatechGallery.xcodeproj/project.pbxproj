@@ -21,6 +21,7 @@
 		E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E168041E2A8FA47A0051B8E5 /* Login.storyboard */; };
 		E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAA2A935E9E001F18FF /* ListViewController.swift */; };
 		E1891EAD2A936164001F18FF /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAC2A936164001F18FF /* CellController.swift */; };
+		E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -100,6 +101,7 @@
 		E168041E2A8FA47A0051B8E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E1891EAA2A935E9E001F18FF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E1891EAC2A936164001F18FF /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCell.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */,
+				E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
+				E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
