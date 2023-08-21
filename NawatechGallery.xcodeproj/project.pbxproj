@@ -22,6 +22,7 @@
 		E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAA2A935E9E001F18FF /* ListViewController.swift */; };
 		E1891EAD2A936164001F18FF /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAC2A936164001F18FF /* CellController.swift */; };
 		E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */; };
+		E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -102,6 +103,7 @@
 		E1891EAA2A935E9E001F18FF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		E1891EAC2A936164001F18FF /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCell.swift; sourceTree = "<group>"; };
+		E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCellController.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -310,6 +312,14 @@
 			children = (
 				E1891EAA2A935E9E001F18FF /* ListViewController.swift */,
 				E1891EAC2A936164001F18FF /* CellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1891EB02A936478001F18FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -527,6 +537,7 @@
 		E18F0B2D2A9211E3003CEC98 /* Catalogue UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EB02A936478001F18FF /* Controllers */,
 				E18F0B2E2A921234003CEC98 /* Views */,
 			);
 			path = "Catalogue UI";
@@ -807,6 +818,7 @@
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
 				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
 				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
 				E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */,
