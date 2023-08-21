@@ -19,7 +19,7 @@ public final class LoginUIComposer {
         onSucceedAuthenticate: @escaping () -> Void = { },
         onRegister: @escaping () -> Void = { },
         onSkipLogin: @escaping () -> Void = { }
-    ) {
+    ) -> LoginViewController {
         let presentationAdapter = LoginPresentationAdapter(authenticate: loginAuthenticate)
         
         let loginController = makeLoginViewController()
@@ -32,6 +32,8 @@ public final class LoginUIComposer {
             succeedView: WeakRefVirtualProxy(object: loginController),
             loadingView: WeakRefVirtualProxy(object: loginController),
             errorView: LoginErrorViewAdapter(controller: loginController))
+        
+        return loginController
     }
     
     private static func makeLoginViewController() -> LoginViewController {

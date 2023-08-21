@@ -2,7 +2,7 @@
 //  LoadResourcePresenter.swift
 //  NawatechGallery
 //
-//  Created by Reynaldi on 20/08/23.
+//  Created by Reynaldi on 21/08/23.
 //
 
 import Foundation

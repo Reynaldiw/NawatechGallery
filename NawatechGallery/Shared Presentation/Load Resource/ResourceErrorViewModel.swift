@@ -2,20 +2,20 @@
 //  ResourceErrorViewModel.swift
 //  NawatechGallery
 //
-//  Created by Reynaldi on 20/08/23.
+//  Created by Reynaldi on 21/08/23.
 //
 
 import Foundation
 
 public struct ResourceErrorViewModel {
-    public let error: Error?
+    public let error: Swift.Error?
     public let message: String?
     
-    public static var noError: ResourceErrorViewModel {
-        ResourceErrorViewModel(error: nil, message: nil)
+    static var noError: ResourceErrorViewModel {
+        return ResourceErrorViewModel(error: nil, message: nil)
     }
     
-    public static func error(_ error: Error, message: String) -> ResourceErrorViewModel {
-        ResourceErrorViewModel(error: error, message: message)
+    static func error(_ error: Error, message: String) -> ResourceErrorViewModel {
+        return ResourceErrorViewModel(error: error, message: message)
     }
 }

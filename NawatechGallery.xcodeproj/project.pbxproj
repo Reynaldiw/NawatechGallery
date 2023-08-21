@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
 		E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */; };
@@ -18,6 +19,25 @@
 		E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */; };
 		E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */; };
 		E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E168041E2A8FA47A0051B8E5 /* Login.storyboard */; };
+		E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAA2A935E9E001F18FF /* ListViewController.swift */; };
+		E1891EAD2A936164001F18FF /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAC2A936164001F18FF /* CellController.swift */; };
+		E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */; };
+		E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */; };
+		E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */; };
+		E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */; };
+		E1891EB92A93674D001F18FF /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */; };
+		E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */; };
+		E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */; };
+		E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EBF2A9367F4001F18FF /* CatalogueUIComposer.swift */; };
+		E1891EC22A936B10001F18FF /* LoadResourcePresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EC12A936B10001F18FF /* LoadResourcePresentationAdapter.swift */; };
+		E1891EC42A936B22001F18FF /* CatalogueViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EC32A936B22001F18FF /* CatalogueViewAdapter.swift */; };
+		E1891EC72A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EC62A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift */; };
+		E1891EC92A936D8D001F18FF /* CatalogueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EC82A936D8D001F18FF /* CatalogueItemViewModel.swift */; };
+		E1891ECB2A936FFD001F18FF /* CataloguePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ECA2A936FFD001F18FF /* CataloguePresenter.swift */; };
+		E1891ECD2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ECC2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift */; };
+		E1891ED02A93728B001F18FF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ECF2A93728B001F18FF /* HTTPClient.swift */; };
+		E1891ED32A937364001F18FF /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ED22A937364001F18FF /* URLSessionHTTPClient.swift */; };
+		E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -60,20 +80,16 @@
 		E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B332A92189C003CEC98 /* Cart.storyboard */; };
 		E18F0B372A922E1C003CEC98 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18F0B362A922E1C003CEC98 /* Profile.storyboard */; };
 		E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */; };
-		E18F0B3E2A9239C9003CEC98 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */; };
-		E18F0B402A924A60003CEC98 /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */; };
-		E18F0B422A924A6F003CEC98 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */; };
-		E18F0B442A924A7E003CEC98 /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */; };
-		E18F0B462A924A90003CEC98 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */; };
+		E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
 		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
-		E1A6D7BC2A8C8F1F0094F71C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BA2A8C8F1F0094F71C /* Main.storyboard */; };
 		E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */; };
 		E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */; };
 		E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */; };
 		E1A6D7E82A8C90780094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7E72A8C90780094F71C /* FirebaseFirestore */; };
 		E1A6D7EB2A8C94C20094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7EA2A8C94C20094F71C /* FirebaseFirestore */; };
+		E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +103,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
 		E1595A182A8FF9DA00B3DA3F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
@@ -98,6 +115,25 @@
 		E16804172A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredRegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E16804192A8F8DD80051B8E5 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
 		E168041E2A8FA47A0051B8E5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E1891EAA2A935E9E001F18FF /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		E1891EAC2A936164001F18FF /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCell.swift; sourceTree = "<group>"; };
+		E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCellController.swift; sourceTree = "<group>"; };
+		E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
+		E1891EBF2A9367F4001F18FF /* CatalogueUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueUIComposer.swift; sourceTree = "<group>"; };
+		E1891EC12A936B10001F18FF /* LoadResourcePresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresentationAdapter.swift; sourceTree = "<group>"; };
+		E1891EC32A936B22001F18FF /* CatalogueViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewAdapter.swift; sourceTree = "<group>"; };
+		E1891EC62A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleCatalogueItemPresenter.swift; sourceTree = "<group>"; };
+		E1891EC82A936D8D001F18FF /* CatalogueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemViewModel.swift; sourceTree = "<group>"; };
+		E1891ECA2A936FFD001F18FF /* CataloguePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CataloguePresenter.swift; sourceTree = "<group>"; };
+		E1891ECC2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotorcycleCatalogueFlow.swift; sourceTree = "<group>"; };
+		E1891ECF2A93728B001F18FF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		E1891ED22A937364001F18FF /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageDataMapper.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -140,21 +176,17 @@
 		E18F0B332A92189C003CEC98 /* Cart.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cart.storyboard; sourceTree = "<group>"; };
 		E18F0B362A922E1C003CEC98 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		E18F0B3A2A92328B003CEC98 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
-		E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
-		E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
-		E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
-		E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreAuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1A6D7BB2A8C8F1F0094F71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A6D7C02A8C8F200094F71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A6D7C22A8C8F200094F71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A6D7C72A8C8F200094F71C /* NawatechGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NawatechGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreMotorycleCatalogueStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +209,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E137FD862A9261D40018D48B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */,
+				E1891ECC2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
 		E1595A102A8FF74F00B3DA3F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +303,7 @@
 		E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EA82A935E82001F18FF /* Shared UI */,
 				E18F0AD12A91014C003CEC98 /* Registration UI */,
 				E168041C2A8F963D0051B8E5 /* Login UI */,
 				E18F0B2D2A9211E3003CEC98 /* Catalogue UI */,
@@ -286,6 +328,79 @@
 				E168041E2A8FA47A0051B8E5 /* Login.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E1891EA82A935E82001F18FF /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EA92A935E87001F18FF /* Controllers */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		E1891EA92A935E87001F18FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EAA2A935E9E001F18FF /* ListViewController.swift */,
+				E1891EAC2A936164001F18FF /* CellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1891EB02A936478001F18FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1891EB32A93667E001F18FF /* Load Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */,
+				E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */,
+				E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */,
+				E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */,
+				E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */,
+			);
+			path = "Load Resource";
+			sourceTree = "<group>";
+		};
+		E1891EBE2A9367E0001F18FF /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EBF2A9367F4001F18FF /* CatalogueUIComposer.swift */,
+				E1891EC32A936B22001F18FF /* CatalogueViewAdapter.swift */,
+			);
+			path = Catalogue;
+			sourceTree = "<group>";
+		};
+		E1891EC52A936D30001F18FF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EC62A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift */,
+				E1891EC82A936D8D001F18FF /* CatalogueItemViewModel.swift */,
+				E1891ECA2A936FFD001F18FF /* CataloguePresenter.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E1891ECE2A937280001F18FF /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */,
+				E1891ECF2A93728B001F18FF /* HTTPClient.swift */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		E1891ED12A93734C001F18FF /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E1891ED22A937364001F18FF /* URLSessionHTTPClient.swift */,
+			);
+			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
@@ -385,6 +500,7 @@
 		E18F0AE42A911235003CEC98 /* Shared Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EB32A93667E001F18FF /* Load Resource */,
 				E18F0AE52A9112A4003CEC98 /* Authentication */,
 				E18F0B3C2A923987003CEC98 /* Load Resource */,
 			);
@@ -407,9 +523,11 @@
 		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EBE2A9367E0001F18FF /* Catalogue */,
 				E18F0B012A914D81003CEC98 /* Registration */,
 				E18F0AFA2A91428E003CEC98 /* Login */,
 				E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */,
+				E1891EC12A936B10001F18FF /* LoadResourcePresentationAdapter.swift */,
 			);
 			path = "UI Composer";
 			sourceTree = "<group>";
@@ -462,6 +580,7 @@
 			children = (
 				E18F0B1A2A91DBFB003CEC98 /* Store */,
 				E18F0B142A91D939003CEC98 /* Feature */,
+				E1891EC52A936D30001F18FF /* Presentation */,
 			);
 			path = "Motorcycle Catalogue";
 			sourceTree = "<group>";
@@ -502,6 +621,7 @@
 		E18F0B2D2A9211E3003CEC98 /* Catalogue UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EB02A936478001F18FF /* Controllers */,
 				E18F0B2E2A921234003CEC98 /* Views */,
 			);
 			path = "Catalogue UI";
@@ -511,6 +631,7 @@
 			isa = PBXGroup;
 			children = (
 				E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */,
+				E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -556,16 +677,21 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		E18F0B3C2A923987003CEC98 /* Load Resource */ = {
+		E18F0B4A2A925B4C003CEC98 /* Store Infra */ = {
 			isa = PBXGroup;
 			children = (
-				E18F0B3D2A9239C9003CEC98 /* LoadResourcePresenter.swift */,
-				E18F0B3F2A924A60003CEC98 /* ResourceLoadingViewModel.swift */,
-				E18F0B412A924A6F003CEC98 /* ResourceLoadingView.swift */,
-				E18F0B432A924A7E003CEC98 /* ResourceErrorViewModel.swift */,
-				E18F0B452A924A90003CEC98 /* ResourceErrorView.swift */,
+				E1A7675C2A93567A0082DB5A /* Catalogue */,
+				E18F0B4B2A925E08003CEC98 /* Authentication */,
 			);
-			path = "Load Resource";
+			path = "Store Infra";
+			sourceTree = "<group>";
+		};
+		E18F0B4B2A925E08003CEC98 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		E1A6D7A82A8C8F1F0094F71C = {
@@ -590,17 +716,20 @@
 		E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E1891ED12A93734C001F18FF /* Shared API Infra */,
+				E1891ECE2A937280001F18FF /* Shared API */,
 				E18F0AE42A911235003CEC98 /* Shared Presentation */,
+				E18F0B4A2A925B4C003CEC98 /* Store Infra */,
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E18F0B132A91D8FD003CEC98 /* Motorcycle Catalogue */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
 				E18F0AF62A91414B003CEC98 /* UI Composer */,
+				E137FD862A9261D40018D48B /* Flows */,
 				E18F0AF72A91417A003CEC98 /* Helpers */,
 				E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */,
 				E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */,
 				E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */,
-				E1A6D7BA2A8C8F1F0094F71C /* Main.storyboard */,
 				E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */,
 				E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */,
 				E1A6D7C22A8C8F200094F71C /* Info.plist */,
@@ -625,6 +754,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1A7675C2A93567A0082DB5A /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */,
+			);
+			path = Catalogue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,7 +863,6 @@
 				E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */,
 				E18F0B372A922E1C003CEC98 /* Profile.storyboard in Resources */,
 				E168041F2A8FA47A0051B8E5 /* Login.storyboard in Resources */,
-				E1A6D7BC2A8C8F1F0094F71C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +893,9 @@
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
 				E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */,
+				E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */,
+				E1891ED02A93728B001F18FF /* HTTPClient.swift in Sources */,
+				E1891ECD2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
 				E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */,
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
@@ -767,31 +906,48 @@
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
-				E18F0B462A924A90003CEC98 /* ResourceErrorView.swift in Sources */,
+				E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
+				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
+				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
 				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
+				E1891EB92A93674D001F18FF /* ResourceLoadingViewModel.swift in Sources */,
+				E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */,
+				E1891EC72A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift in Sources */,
+				E1891EAD2A936164001F18FF /* CellController.swift in Sources */,
+				E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
-				E18F0B3E2A9239C9003CEC98 /* LoadResourcePresenter.swift in Sources */,
+				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E18F0B0B2A91D674003CEC98 /* AccountCacheStoreSaver.swift in Sources */,
+				E1891ED32A937364001F18FF /* URLSessionHTTPClient.swift in Sources */,
 				E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */,
+				E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B402A924A60003CEC98 /* ResourceLoadingViewModel.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
+				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E18F0B422A924A6F003CEC98 /* ResourceLoadingView.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
+				E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
+				E1891EC42A936B22001F18FF /* CatalogueViewAdapter.swift in Sources */,
 				E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */,
+				E1891EC92A936D8D001F18FF /* CatalogueItemViewModel.swift in Sources */,
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
+				E1891EC22A936B10001F18FF /* LoadResourcePresentationAdapter.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
+				E1891ECB2A936FFD001F18FF /* CataloguePresenter.swift in Sources */,
+				E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,14 +977,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1A6D7BA2A8C8F1F0094F71C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1A6D7BB2A8C8F1F0094F71C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -966,7 +1114,6 @@
 				INFOPLIST_FILE = NawatechGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -994,7 +1141,6 @@
 				INFOPLIST_FILE = NawatechGallery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

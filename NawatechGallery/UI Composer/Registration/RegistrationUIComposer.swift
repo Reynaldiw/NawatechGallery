@@ -17,7 +17,7 @@ public final class RegistrationUIComposer {
     public static func registerComposedWith(
         registerAuthenticate: @escaping (RegistrationAuthenticationAccount) -> AnyPublisher<Void, Error>,
         onSucceedRegistration: @escaping () -> Void = { }
-    ) {
+    ) -> RegistrationViewController {
         let presentationAdapter = RegistrationPresentationAdapter(authenticate: registerAuthenticate)
         
         let registrationController = makeRegistrationViewController()
@@ -28,6 +28,8 @@ public final class RegistrationUIComposer {
             succeedView: WeakRefVirtualProxy(object: registrationController),
             loadingView: WeakRefVirtualProxy(object: registrationController),
             errorView: RegistrationErrorViewAdapter(controller: registrationController))
+        
+        return registrationController
     }
     
     private static func makeRegistrationViewController() -> RegistrationViewController {

@@ -100,7 +100,7 @@ extension RegistrationViewController: AuthenticationSucceedView, AuthenticationL
 }
 
 extension RegistrationViewController: UITextFieldDelegate {
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldDidChangeSelection(_ textField: UITextField) {
         let (fullname, username, password) = extractRegistrationFieldsValue()
         updateLoginButtonUIState(isEnable: fullname?.isEmpty == false && username?.isEmpty == false && password?.isEmpty == false)
     }
