@@ -55,9 +55,9 @@ private extension RegistrationViewController {
         fullnameField.text = fullname
         usernameField.text = username
         passwordField.text = password
-        textFieldDidEndEditing(fullnameField)
-        textFieldDidEndEditing(usernameField)
-        textFieldDidEndEditing(passwordField)
+        textFieldDidChangeSelection(fullnameField)
+        textFieldDidChangeSelection(usernameField)
+        textFieldDidChangeSelection(passwordField)
     }
 }
 
