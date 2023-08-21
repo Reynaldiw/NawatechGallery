@@ -30,4 +30,7 @@ public final class ProfileViewController: UIViewController {
     }
     
     @IBAction private func didTapEditProfileImage(_ sender: Any) {}
+    
+    @IBAction func didTapLogout(_ sender: Any) {
+    }
 }

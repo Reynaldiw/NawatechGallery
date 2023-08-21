@@ -82,9 +82,31 @@
                                             <constraint firstAttribute="trailing" secondItem="l20-jK-FXR" secondAttribute="trailing" id="v9V-ss-bPg"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xuu-c5-7oV">
+                                        <rect key="frame" x="150" y="712.66666666666663" width="90" height="34.333333333333371"/>
+                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="K9q-aK-MyB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didTapLogout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O2c-tu-OBO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Xuu-c5-7oV" secondAttribute="bottom" constant="16" id="FHA-Z8-LOZ"/>
+                                    <constraint firstItem="Xuu-c5-7oV" firstAttribute="centerX" secondItem="5cc-vG-OxQ" secondAttribute="centerX" id="KOr-5i-SNM"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Z9c-Bm-VjN" secondAttribute="trailing" id="SEx-bu-JNq"/>
                                     <constraint firstItem="Z9c-Bm-VjN" firstAttribute="leading" secondItem="5cc-vG-OxQ" secondAttribute="leadingMargin" id="obk-ap-TBW"/>
                                     <constraint firstItem="Z9c-Bm-VjN" firstAttribute="centerY" secondItem="5cc-vG-OxQ" secondAttribute="centerY" constant="-70" id="uRy-5v-wXd"/>
@@ -114,6 +136,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
