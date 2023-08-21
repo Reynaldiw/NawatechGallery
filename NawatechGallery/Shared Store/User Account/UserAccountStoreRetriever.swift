@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol UserAccountStoreRetriever {
-    func retrieve(_ query: UserAccountQuery) throws -> [Data]
+    func retrieve(_ query: UserAccountQuery) throws -> Data
 }

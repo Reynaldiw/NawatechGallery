@@ -20,7 +20,7 @@ public final class FirestoreUserAccountClient {
 }
 
 extension FirestoreUserAccountClient: UserAccountStoreRetriever {
-    public func retrieve(_ query: UserAccountQuery) throws -> [Data] {
+    public func retrieve(_ query: UserAccountQuery) throws -> Data {
         let group = DispatchGroup()
         
         let collection: Query = store.collection("users")
@@ -30,7 +30,7 @@ extension FirestoreUserAccountClient: UserAccountStoreRetriever {
         default: break
         }
         
-        var result: ((snapshot: QuerySnapshot?, error: Error?))?
+        var result: ((snapshot: QuerySnapshot?, error: Error?))!
         
         group.enter()
         collection.getDocuments { snapshot, error in
@@ -38,19 +38,20 @@ extension FirestoreUserAccountClient: UserAccountStoreRetriever {
             group.leave()
         }
         group.wait()
-        
-        guard let result = result else { return [] }
-        
+                
         return try extract(snapshot: result.snapshot, error: result.error)
     }
     
-    private func extract(snapshot: QuerySnapshot?, error: Error?) throws -> [Data] {
+    private func extract(snapshot: QuerySnapshot?, error: Error?) throws -> Data {
         if let error = error {
             throw error
         } else if let snapshot = snapshot {
-            return try snapshot.documents
-                .map { $0.data() }
-                .map { try JSONSerialization.data(withJSONObject: $0) }
+            do {
+                return try JSONSerialization.data(
+                    withJSONObject: snapshot.documents.map { $0.data() })
+            } catch {
+                throw error
+            }
         } else {
             throw UnexpectedValuesRepresentation()
         }
