@@ -16,6 +16,8 @@
 		E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */; };
 		E1074C002A940466005BF21B /* UserAccountStoreReplacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */; };
 		E1074C022A941E15005BF21B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E1074C012A941E15005BF21B /* FirebaseStorage */; };
+		E1074C052A941F22005BF21B /* DetailCatalogue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1074C042A941F22005BF21B /* DetailCatalogue.storyboard */; };
+		E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C062A942B97005BF21B /* DetailCatalogueItemViewController.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -126,6 +128,8 @@
 		E1074BF92A93F130005BF21B /* FirebaseStorageProfileImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageProfileImageStore.swift; sourceTree = "<group>"; };
 		E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageProfileAdapter.swift; sourceTree = "<group>"; };
 		E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreReplacer.swift; sourceTree = "<group>"; };
+		E1074C042A941F22005BF21B /* DetailCatalogue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCatalogue.storyboard; sourceTree = "<group>"; };
+		E1074C062A942B97005BF21B /* DetailCatalogueItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueItemViewController.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */,
+				E1074C062A942B97005BF21B /* DetailCatalogueItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 			children = (
 				E18F0B2F2A92126C003CEC98 /* Catalogue.storyboard */,
 				E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */,
+				E1074C042A941F22005BF21B /* DetailCatalogue.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -998,6 +1004,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1074C052A941F22005BF21B /* DetailCatalogue.storyboard in Resources */,
 				E18F0B342A92189C003CEC98 /* Cart.storyboard in Resources */,
 				E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */,
 				E18F0AD42A910162003CEC98 /* Registration.storyboard in Resources */,
@@ -1086,6 +1093,7 @@
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
+				E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */,
