@@ -38,6 +38,7 @@
 		E1891ED02A93728B001F18FF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ECF2A93728B001F18FF /* HTTPClient.swift */; };
 		E1891ED32A937364001F18FF /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ED22A937364001F18FF /* URLSessionHTTPClient.swift */; };
 		E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */; };
+		E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -134,6 +135,7 @@
 		E1891ECF2A93728B001F18FF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		E1891ED22A937364001F18FF /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageDataMapper.swift; sourceTree = "<group>"; };
+		E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccount.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -403,6 +405,22 @@
 			path = "Shared API Infra";
 			sourceTree = "<group>";
 		};
+		E1891ED92A93852E001F18FF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EDB2A938541001F18FF /* Feature */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E1891EDB2A938541001F18FF /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,7 +520,6 @@
 			children = (
 				E1891EB32A93667E001F18FF /* Load Resource */,
 				E18F0AE52A9112A4003CEC98 /* Authentication */,
-				E18F0B3C2A923987003CEC98 /* Load Resource */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -722,6 +739,7 @@
 				E18F0B4A2A925B4C003CEC98 /* Store Infra */,
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
+				E1891ED92A93852E001F18FF /* Profile */,
 				E18F0B132A91D8FD003CEC98 /* Motorcycle Catalogue */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
 				E18F0AF62A91414B003CEC98 /* UI Composer */,
@@ -901,7 +919,6 @@
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
 				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
-				E18F0B442A924A7E003CEC98 /* ResourceErrorViewModel.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
@@ -909,6 +926,7 @@
 				E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
 				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
 				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
 				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
@@ -930,12 +948,10 @@
 				E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
-				E18F0B402A924A60003CEC98 /* ResourceLoadingViewModel.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
-				E18F0B422A924A6F003CEC98 /* ResourceLoadingView.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
