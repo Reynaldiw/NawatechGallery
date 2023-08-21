@@ -41,6 +41,7 @@
 		E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */; };
 		E1891EE02A9385FF001F18FF /* ProfileAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */; };
 		E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */; };
+		E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -140,6 +141,7 @@
 		E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccount.swift; sourceTree = "<group>"; };
 		E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountStoreRetriever.swift; sourceTree = "<group>"; };
 		E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapper.swift; sourceTree = "<group>"; };
+		E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapperTests.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -431,6 +433,22 @@
 			children = (
 				E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */,
 				E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		E1891EE32A938853001F18FF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EE42A93885D001F18FF /* Store */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E1891EE42A93885D001F18FF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -773,6 +791,7 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EE32A938853001F18FF /* Profile */,
 				E1595A132A8FF93200B3DA3F /* NawatechGalleryiOS */,
 				E168040D2A8F7DC80051B8E5 /* Registration */,
 				E18D795D2A8E56F5007DEEE1 /* Authentication */,
@@ -990,6 +1009,7 @@
 				E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */,
 				E18F0ADA2A9105BA003CEC98 /* RegistrationSnapshotTests.swift in Sources */,
 				E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */,
+				E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */,
 				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
 				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */,
 				E18F0B092A91C0E6003CEC98 /* KeychainAccountCacheStoreTests.swift in Sources */,
