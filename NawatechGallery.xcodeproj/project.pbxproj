@@ -70,6 +70,7 @@
 		E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */; };
 		E1A6D7E82A8C90780094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7E72A8C90780094F71C /* FirebaseFirestore */; };
 		E1A6D7EB2A8C94C20094F71C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1A6D7EA2A8C94C20094F71C /* FirebaseFirestore */; };
+		E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		E1A6D7C22A8C8F200094F71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1A6D7C72A8C8F200094F71C /* NawatechGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NawatechGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreMotorycleCatalogueStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,6 +560,7 @@
 		E18F0B4A2A925B4C003CEC98 /* Store Infra */ = {
 			isa = PBXGroup;
 			children = (
+				E1A7675C2A93567A0082DB5A /* Catalogue */,
 				E18F0B4B2A925E08003CEC98 /* Authentication */,
 			);
 			path = "Store Infra";
@@ -629,6 +632,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1A7675C2A93567A0082DB5A /* Catalogue */ = {
+			isa = PBXGroup;
+			children = (
+				E1A7675D2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift */,
+			);
+			path = Catalogue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -771,6 +782,7 @@
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
 				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
