@@ -88,6 +88,40 @@ public extension HTTPClient {
     }
 }
 
+//MARK: Account Cache Store
+
+public extension AccountCacheStoreRetriever {
+    typealias Publisher = AnyPublisher<String?, Swift.Error>
+    
+    func retrievePublisher() -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.retrieve()
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
+//MARK: User Account Store
+
+public extension UserAccountStoreRetriever {
+    typealias Publisher = AnyPublisher<Data, Swift.Error>
+    
+    func retrievePublisher(_ query: UserAccountQuery) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.retrieve(query)
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
 //MARK: - Scheduler
 
 extension Publisher {

@@ -11,12 +11,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
-    private let authenticationFlow = AuthenticationFlow()
-    private let catalogue = MotorcycleCatalogueFlow()
-    
-    private lazy var loginNavigationController: UINavigationController = {
-        UINavigationController(rootViewController: catalogue.start())
+    private lazy var accountCacheRetriever: AccountCacheStoreRetriever = {
+        KeychainAccountCacheStore(storeKey: SharedKeys.accountKeychainKey)
     }()
+    
+    private let authenticationFlow = AuthenticationFlow()
+    private let catalogueFlow = MotorcycleCatalogueFlow()
+    private let profileFlow = ProfileFlow()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -27,8 +28,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func configureWindow() {
-        window?.rootViewController = loginNavigationController
+        makeInitialRootViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    private func makeInitialRootViewController() {
+        let cacheAccountID = try? accountCacheRetriever.retrieve()
+        
+        if cacheAccountID != nil {
+            window?.rootViewController = UINavigationController(rootViewController: profileFlow.start(onLogout: makeInitialRootViewController))
+        } else {
+            window?.rootViewController = UINavigationController(rootViewController: authenticationFlow.start(onSucceedLogin: makeInitialRootViewController))
+        }
     }
 }
 

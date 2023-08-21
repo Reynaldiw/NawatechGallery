@@ -19,10 +19,6 @@ final class AuthenticationFlow {
         attributes: .concurrent
     ).eraseToAnyScheduler()
     
-    private var accountKeychainKey: String {
-        "account-keychain-key"
-    }
-    
     private lazy var loginValidationService: AuthenticationValidationService = {
         AuthenticationValidationService(
             store: makeAuthenticationStore(queryFieldKey: "username"))
@@ -33,12 +29,15 @@ final class AuthenticationFlow {
     }()
     
     private lazy var keychainAccountStore: AccountCacheStoreSaver = {
-        return KeychainAccountCacheStore(storeKey: accountKeychainKey)
+        return KeychainAccountCacheStore(storeKey: SharedKeys.accountKeychainKey)
     }()
     
-    func start() -> LoginViewController {
+    func start(
+        onSucceedLogin: @escaping () -> Void
+    ) -> LoginViewController {
         loginController = LoginUIComposer.loginComposedWith(
             loginAuthenticate: authenticateLogin(account:),
+            onSucceedAuthenticate: onSucceedLogin,
             onRegister: routeToRegistrationPage
         )
         

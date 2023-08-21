@@ -13,7 +13,7 @@ final class ProfileUIComposer {
     
     private typealias ProfilePresentationAdapter = LoadResourcePresentationAdapter<ProfileUserAccount, ProfileViewAdapter>
     
-    func profileComposedWith(
+    static func profileComposedWith(
         loadProfile: @escaping () -> AnyPublisher<ProfileUserAccount, Error>,
         logout: @escaping () -> Void
     ) -> ProfileViewController {
@@ -26,12 +26,15 @@ final class ProfileUIComposer {
         adapter.presenter = LoadResourcePresenter(
             resourceView: ProfileViewAdapter(controller: profileController),
             loadingView: WeakRefVirtualProxy(object: profileController),
-            errorView: WeakRefVirtualProxy(object: profileController))
+            errorView: WeakRefVirtualProxy(object: profileController),
+            mapper: { account in
+                return ProfileUserAccount(id: account.id, profileImageURL: account.profileImageURL, fullname: "Hi \(account.fullname)!")
+            })
         
         return profileController
     }
     
-    private func makeProfileController(title: String) -> ProfileViewController {
+    private static func makeProfileController(title: String) -> ProfileViewController {
         let bundle = Bundle(for: ProfileViewController.self)
         let storyboard = UIStoryboard(name: "Profile", bundle: bundle)
         let profileController = storyboard.instantiateInitialViewController() as! ProfileViewController

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E1074BF02A93AF19005BF21B /* ProfileViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */; };
+		E1074BF22A93AF7E005BF21B /* ProfileFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BF12A93AF7E005BF21B /* ProfileFlow.swift */; };
+		E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BF42A93B03D005BF21B /* SharedKeys.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -112,6 +114,8 @@
 
 /* Begin PBXFileReference section */
 		E1074BEF2A93AF19005BF21B /* ProfileViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAdapter.swift; sourceTree = "<group>"; };
+		E1074BF12A93AF7E005BF21B /* ProfileFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlow.swift; sourceTree = "<group>"; };
+		E1074BF42A93B03D005BF21B /* SharedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedKeys.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -225,11 +229,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1074BF32A93B023005BF21B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1074BF42A93B03D005BF21B /* SharedKeys.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E137FD862A9261D40018D48B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				E1074BF32A93B023005BF21B /* Helpers */,
 				E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */,
 				E1891ECC2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift */,
+				E1074BF12A93AF7E005BF21B /* ProfileFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -993,6 +1007,7 @@
 			files = (
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
 				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
+				E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */,
 				E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */,
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
+				E1074BF22A93AF7E005BF21B /* ProfileFlow.swift in Sources */,
 				E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,

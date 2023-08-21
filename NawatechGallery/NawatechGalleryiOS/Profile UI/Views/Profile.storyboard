@@ -124,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="editProfileImageButton" destination="FEa-90-DO4" id="Lu2-Ho-cDs"/>
+                        <outlet property="logoutButton" destination="Xuu-c5-7oV" id="F14-Ed-ahZ"/>
                         <outlet property="nameLabel" destination="MxA-aB-f99" id="7wh-cJ-T00"/>
                         <outlet property="profileImageView" destination="6L5-Uo-aqk" id="jxg-UA-wZ9"/>
                     </connections>
