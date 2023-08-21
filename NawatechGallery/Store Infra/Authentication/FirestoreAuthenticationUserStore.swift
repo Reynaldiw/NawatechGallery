@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-public final class FirestoreAuthenticationUserStore: AuthenticationUserStore {
+public final class FirestoreAuthenticationUserStore {
     
     private let firestore: Firestore
     private let queryFieldKey: String
@@ -22,6 +22,9 @@ public final class FirestoreAuthenticationUserStore: AuthenticationUserStore {
     
     public struct UnexpectedValuesRepresentation: Error {}
     
+}
+
+extension FirestoreAuthenticationUserStore: AuthenticationUserStore {
     public func retrieve(thatMatchedWith username: String) throws -> [[String : Any]] {
         let group = DispatchGroup()
         var receivedError: Error?
@@ -47,5 +50,42 @@ public final class FirestoreAuthenticationUserStore: AuthenticationUserStore {
         }
         
         return values
+    }
+}
+
+extension FirestoreAuthenticationUserStore: RegistrationUserAccountStore {
+    public func retrieve(thatMathedWithUsername username: String) -> StoredRegistrationUserAccount? {
+        guard let values = try? retrieve(thatMatchedWith: username) else { return nil }
+
+        return try? values
+            .map { try JSONSerialization.data(withJSONObject: $0) }
+            .map { try JSONDecoder().decode(StoredRegistrationUserAccount.self, from: $0) }
+            .first
+    }
+    
+    public func insert(_ user: StoredRegistrationUserAccount) throws {
+        do {
+            let group = DispatchGroup()
+            var receivedError: Error?
+            guard let value = try JSONSerialization.jsonObject(with: JSONEncoder().encode(user)) as? [String: Any] else { return }
+
+            group.enter()
+            firestore
+                .collection(collectionPath)
+                .document(user.id.uuidString)
+                .setData(value, merge: false) { error in
+                    if let error = error {
+                        receivedError = error
+                    }
+                    group.leave()
+                }
+            group.wait()
+            
+            if let receivedError = receivedError {
+                throw receivedError
+            }
+        } catch {
+            throw error
+        }
     }
 }

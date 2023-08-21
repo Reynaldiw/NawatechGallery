@@ -39,6 +39,23 @@ private extension AccountCacheStoreSaver {
     }
 }
 
+//MARK: Registration
+
+public extension RegistrationUserAccountService {
+    typealias Publisher = AnyPublisher<Void, Swift.Error>
+    
+    func registerPublisher(_ user: RegistrationUserAccount) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.register(user)
+                })
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+}
+
 //MARK: - Scheduler
 
 extension Publisher {

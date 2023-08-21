@@ -32,7 +32,7 @@ public final class RegistrationUserAccountService {
             id: idCreated(),
             profileImageURL: nil,
             fullname: user.fullname,
-            username: user.username,
+            username: user.username.lowercased(),
             password: user.password,
             createdAt: dateCreated())
         
