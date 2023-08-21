@@ -40,6 +40,7 @@
 		E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */; };
 		E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */; };
 		E1891EE02A9385FF001F18FF /* ProfileAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */; };
+		E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -138,6 +139,7 @@
 		E1891ED52A9374F7001F18FF /* GalleryImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageDataMapper.swift; sourceTree = "<group>"; };
 		E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccount.swift; sourceTree = "<group>"; };
 		E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountStoreRetriever.swift; sourceTree = "<group>"; };
+		E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapper.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */,
+				E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
+				E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E18F0B0B2A91D674003CEC98 /* AccountCacheStoreSaver.swift in Sources */,
