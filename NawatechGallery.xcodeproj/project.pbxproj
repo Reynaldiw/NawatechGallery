@@ -42,6 +42,9 @@
 		E1891EE02A9385FF001F18FF /* ProfileAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */; };
 		E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */; };
 		E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */; };
+		E1891EE92A938A42001F18FF /* UserAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */; };
+		E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */; };
+		E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -142,6 +145,9 @@
 		E1891EDF2A9385FF001F18FF /* ProfileAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountStoreRetriever.swift; sourceTree = "<group>"; };
 		E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapper.swift; sourceTree = "<group>"; };
 		E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapperTests.swift; sourceTree = "<group>"; };
+		E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreRetriever.swift; sourceTree = "<group>"; };
+		E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountQuery.swift; sourceTree = "<group>"; };
+		E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserAccountClient.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -451,6 +457,39 @@
 				E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		E1891EE72A938A24001F18FF /* Shared Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EED2A938AF6001F18FF /* User Account */,
+			);
+			path = "Shared Store";
+			sourceTree = "<group>";
+		};
+		E1891EEC2A938AE9001F18FF /* Shared Store Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EEE2A938B00001F18FF /* User Account */,
+			);
+			path = "Shared Store Infra";
+			sourceTree = "<group>";
+		};
+		E1891EED2A938AF6001F18FF /* User Account */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */,
+				E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */,
+			);
+			path = "User Account";
+			sourceTree = "<group>";
+		};
+		E1891EEE2A938B00001F18FF /* User Account */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */,
+			);
+			path = "User Account";
 			sourceTree = "<group>";
 		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
@@ -765,6 +804,8 @@
 		E1A6D7B32A8C8F1F0094F71C /* NawatechGallery */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EEC2A938AE9001F18FF /* Shared Store Infra */,
+				E1891EE72A938A24001F18FF /* Shared Store */,
 				E1891ED12A93734C001F18FF /* Shared API Infra */,
 				E1891ECE2A937280001F18FF /* Shared API */,
 				E18F0AE42A911235003CEC98 /* Shared Presentation */,
@@ -940,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
+				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
 				E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */,
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
@@ -957,6 +999,7 @@
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
 				E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */,
+				E1891EE92A938A42001F18FF /* UserAccountStoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
 				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
@@ -973,6 +1016,7 @@
 				E1891EE02A9385FF001F18FF /* ProfileAccountStoreRetriever.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
+				E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
