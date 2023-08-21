@@ -23,6 +23,11 @@
 		E1891EAD2A936164001F18FF /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAC2A936164001F18FF /* CellController.swift */; };
 		E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */; };
 		E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */; };
+		E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */; };
+		E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */; };
+		E1891EB92A93674D001F18FF /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */; };
+		E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */; };
+		E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
 		E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */; };
@@ -104,6 +109,11 @@
 		E1891EAC2A936164001F18FF /* CellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		E1891EAE2A93628A001F18FF /* CatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCell.swift; sourceTree = "<group>"; };
 		E1891EB12A936490001F18FF /* CatalogueItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemCellController.swift; sourceTree = "<group>"; };
+		E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
 		E18D79652A8EA5B2007DEEE1 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
@@ -324,6 +334,18 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		E1891EB32A93667E001F18FF /* Load Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E1891EB42A93668E001F18FF /* LoadResourcePresenter.swift */,
+				E1891EB62A93673C001F18FF /* ResourceLoadingView.swift */,
+				E1891EB82A93674D001F18FF /* ResourceLoadingViewModel.swift */,
+				E1891EBA2A93675B001F18FF /* ResourceErrorView.swift */,
+				E1891EBC2A936767001F18FF /* ResourceErrorViewModel.swift */,
+			);
+			path = "Load Resource";
+			sourceTree = "<group>";
+		};
 		E18D795D2A8E56F5007DEEE1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +443,7 @@
 		E18F0AE42A911235003CEC98 /* Shared Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E1891EB32A93667E001F18FF /* Load Resource */,
 				E18F0AE52A9112A4003CEC98 /* Authentication */,
 			);
 			path = "Shared Presentation";
@@ -807,6 +830,7 @@
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
 				E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */,
+				E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
 				E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */,
 				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
@@ -818,9 +842,11 @@
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
+				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
 				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
 				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
 				E18F0B032A914DC6003CEC98 /* RegistrationUIComposer.swift in Sources */,
+				E1891EB92A93674D001F18FF /* ResourceLoadingViewModel.swift in Sources */,
 				E1891EAB2A935E9E001F18FF /* ListViewController.swift in Sources */,
 				E1891EAD2A936164001F18FF /* CellController.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
@@ -836,8 +862,10 @@
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
+				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
+				E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */,
 				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
 				E18F0B3B2A92328B003CEC98 /* ProfileViewController.swift in Sources */,
