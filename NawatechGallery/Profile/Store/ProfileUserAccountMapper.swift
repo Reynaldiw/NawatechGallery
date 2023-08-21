@@ -33,9 +33,9 @@ public final class ProfileUserAccountMapper {
     }
     
     public static func map(_ data: Data) throws -> ProfileUserAccount {
-        guard let storedProfileAccount = try? JSONDecoder().decode(StoredProfileUserAccount.self, from: data) else {
-            throw Error.invalidData
-        }
+        guard let accounts = try? JSONDecoder().decode([StoredProfileUserAccount].self, from: data),
+              let storedProfileAccount = accounts.first
+        else { throw Error.invalidData }
         
         return storedProfileAccount.model
     }
