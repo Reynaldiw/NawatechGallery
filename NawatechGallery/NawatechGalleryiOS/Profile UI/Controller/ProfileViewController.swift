@@ -72,6 +72,10 @@ public final class ProfileViewController: UIViewController, ResourceView, Resour
         nameLabel.isHidden = false
         editProfileImageButton.isHidden = false
         logoutButton.isHidden = false
+        
+        if delegate == nil {
+            profileImageView.isHidden = false
+        } 
     }
         
     public func display(_ viewModel: ResourceLoadingViewModel) {
