@@ -39,6 +39,9 @@
 		E1074C462A94EF20005BF21B /* CartCatalogueItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C452A94EF20005BF21B /* CartCatalogueItemCellController.swift */; };
 		E1074C4A2A94F04F005BF21B /* CartCatalogueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */; };
 		E1074C4E2A94F109005BF21B /* CartCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C4D2A94F109005BF21B /* CartCatalogueItem.swift */; };
+		E1074C512A94F1AE005BF21B /* CartUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C502A94F1AE005BF21B /* CartUIComposer.swift */; };
+		E1074C532A94F3F2005BF21B /* CartCatalogueItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C522A94F3F2005BF21B /* CartCatalogueItemPresenter.swift */; };
+		E1074C552A94F421005BF21B /* CartResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -172,6 +175,9 @@
 		E1074C452A94EF20005BF21B /* CartCatalogueItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemCellController.swift; sourceTree = "<group>"; };
 		E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemViewModel.swift; sourceTree = "<group>"; };
 		E1074C4D2A94F109005BF21B /* CartCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItem.swift; sourceTree = "<group>"; };
+		E1074C502A94F1AE005BF21B /* CartUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUIComposer.swift; sourceTree = "<group>"; };
+		E1074C522A94F3F2005BF21B /* CartCatalogueItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemPresenter.swift; sourceTree = "<group>"; };
+		E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -396,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */,
+				E1074C522A94F3F2005BF21B /* CartCatalogueItemPresenter.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -406,6 +413,15 @@
 				E1074C4D2A94F109005BF21B /* CartCatalogueItem.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		E1074C4F2A94F1A4005BF21B /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C502A94F1AE005BF21B /* CartUIComposer.swift */,
+				E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		E137FD862A9261D40018D48B /* Flows */ = {
@@ -808,6 +824,7 @@
 		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
 			isa = PBXGroup;
 			children = (
+				E1074C4F2A94F1A4005BF21B /* Cart */,
 				E1891EF12A93AAF1001F18FF /* Profile */,
 				E1891EBE2A9367E0001F18FF /* Catalogue */,
 				E18F0B012A914D81003CEC98 /* Registration */,
@@ -1208,11 +1225,13 @@
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
 				E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */,
 				E1074C3C2A94EC22005BF21B /* UITableView+DequeueCell.swift in Sources */,
+				E1074C512A94F1AE005BF21B /* CartUIComposer.swift in Sources */,
 				E1074C092A942D96005BF21B /* DetailCatalogueUIComposer.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
+				E1074C532A94F3F2005BF21B /* CartCatalogueItemPresenter.swift in Sources */,
 				E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */,
 				E1891EE92A938A42001F18FF /* StoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
@@ -1221,6 +1240,7 @@
 				E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */,
 				E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */,
 				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
+				E1074C552A94F421005BF21B /* CartResourceViewAdapter.swift in Sources */,
 				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
 				E1074C462A94EF20005BF21B /* CartCatalogueItemCellController.swift in Sources */,
 				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,

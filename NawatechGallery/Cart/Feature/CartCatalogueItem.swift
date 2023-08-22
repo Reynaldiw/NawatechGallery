@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CartCatalogueItem: Equatable {
+public struct CartCatalogueItem: Equatable, Hashable {
     public let orderID: UUID
     public let catalogueID: UUID
     public let catalogueImageURL: URL

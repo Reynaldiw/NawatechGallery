@@ -1,0 +1,37 @@
+//
+//  CartCatalogueItemPresenter.swift
+//  NawatechGallery
+//
+//  Created by Reynaldi on 22/08/23.
+//
+
+import Foundation
+
+public final class CartCatalogueItemPresenter {
+    public static var title: String {
+        "My Cart"
+    }
+    
+    public static func map(_ cartItem: CartCatalogueItem) -> CartCatalogueItemViewModel {
+        let price = convert(cartItem.price)
+        let totalPrice = convert(cartItem.price * cartItem.quantity)
+        let quantity = "Quantity \(cartItem.quantity)"
+        return CartCatalogueItemViewModel(
+            name: cartItem.name,
+            price: price,
+            quantity: quantity,
+            totalPrice: totalPrice)
+    }
+    
+    private static func convert(_ price: Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale(identifier: "id_ID") // Set the locale to Indonesian for Rupiah
+        
+        if let formattedString = formatter.string(from: NSNumber(value: price)) {
+            return formattedString
+        } else {
+            return "Rp\(price)"
+        }
+    }
+}
