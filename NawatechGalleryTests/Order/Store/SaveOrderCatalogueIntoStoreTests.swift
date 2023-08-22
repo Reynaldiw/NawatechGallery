@@ -27,6 +27,14 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
         XCTAssertEqual(store.messages, [.save(name: orderID.uuidString)])
     }
     
+    func test_save_deliversErrorOnInsertionError() throws {
+        let anyError = NSError(domain: "any-error", code: 0)
+        let store = StoreSaverStub(error: anyError)
+        let sut = StoreOrderCatalogueSaver(store: store, orderID: UUID())
+        
+        XCTAssertThrowsError(try sut.save(UUID()))
+    }
+    
     //MARK: - Helpers
     
     private class StoreSaverStub: StoreSaver {
@@ -37,8 +45,18 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
         
         private(set) var messages: [Message] = []
         
+        private var error: Error?
+        
+        init(error: Error? = nil) {
+            self.error = error
+        }
+        
         func save(_ value: [String : Any], namedWith name: String) throws {
             messages.append(.save(name: name))
+            
+            if let error = error {
+                throw error
+            }
         }
     }
 }
