@@ -19,8 +19,7 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
     
     func test_save_requestsValueInsertion() {
         let orderID = UUID()
-        let store = StoreSaverStub()
-        let sut = StoreOrderCatalogueSaver(store: store, orderID: orderID)
+        let (sut, store) = makeSUT(orderID: orderID)
         
         try? sut.save(UUID())
         
@@ -28,21 +27,29 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
     }
     
     func test_save_deliversErrorOnInsertionError() throws {
-        let anyError = NSError(domain: "any-error", code: 0)
-        let store = StoreSaverStub(error: anyError)
-        let sut = StoreOrderCatalogueSaver(store: store, orderID: UUID())
+        let storeError = NSError(domain: "any-error", code: 0)
+        let (sut, _) = makeSUT(error: storeError)
         
         XCTAssertThrowsError(try sut.save(UUID()))
     }
     
     func test_save_didNotDeliversErrorOnSuccessfulInsertion() {
-        let store = StoreSaverStub(error: nil)
-        let sut = StoreOrderCatalogueSaver(store: store, orderID: UUID())
+        let (sut, _) = makeSUT()
         
         XCTAssertNoThrow(try sut.save(UUID()))
     }
     
     //MARK: - Helpers
+    
+    private func makeSUT(
+        orderID: UUID = UUID(),
+        error: Error? = nil
+    ) -> (sut: StoreOrderCatalogueSaver, store: StoreSaverStub) {
+        let store = StoreSaverStub(error: error)
+        let sut = StoreOrderCatalogueSaver(store: store, orderID: orderID)
+        
+        return (sut, store)
+    }
     
     private class StoreSaverStub: StoreSaver {
         
