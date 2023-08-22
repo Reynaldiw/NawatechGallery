@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "28D251A0-E97B-4CFE-A998-24710A1D524C"
+            uuid = "F42444A8-1B1E-4518-963C-A812AED940AA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NawatechGallery/Store Infra/Catalogue/FirestoreMotorycleCatalogueStore.swift"
+            filePath = "NawatechGallery/Shared Presentation/Load Resource/LoadResourcePresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "retrieve()"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "didFinishLoading(with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

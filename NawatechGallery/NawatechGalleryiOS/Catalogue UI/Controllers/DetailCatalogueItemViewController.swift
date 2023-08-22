@@ -71,6 +71,7 @@ extension DetailCatalogueItemViewController: ResourceView {
     public typealias ResourceViewModel = UIImage
     
     public func display(_ viewModel: UIImage) {
+        itemImageView.isHidden = false
         itemImageView.setImageAnimated(viewModel)
     }
     

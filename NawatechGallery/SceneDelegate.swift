@@ -36,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let cacheAccountID = try? accountCacheRetriever.retrieve()
         
         if cacheAccountID != nil {
-            window?.rootViewController = UINavigationController(rootViewController: profileFlow.start(onLogout: makeInitialRootViewController))
+            window?.rootViewController = UINavigationController(rootViewController: catalogueFlow.start())
         } else {
             window?.rootViewController = UINavigationController(rootViewController: authenticationFlow.start(onSucceedLogin: makeInitialRootViewController))
         }

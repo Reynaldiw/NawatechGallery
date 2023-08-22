@@ -10,6 +10,8 @@ import Combine
 
 final class MotorcycleCatalogueFlow {
     
+    private var listCatalogueController: ListViewController?
+    
     private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
         label: "com.reynaldi.catalogue.infra.queue",
         qos: .userInitiated,
@@ -25,9 +27,22 @@ final class MotorcycleCatalogueFlow {
     }()
     
     func start() -> ListViewController {
-        return CatalogueUIComposer.catalogueComposedWith(
+        listCatalogueController = CatalogueUIComposer.catalogueComposedWith(
             catalogueLoader: loadCatalogue,
+            imageLoader: loadImage(from:),
+            selection: showDetailCatalogueItem(_:))
+            
+        return listCatalogueController!
+    }
+    
+    private func showDetailCatalogueItem(_ item: MotorcycleCatalogueItem) {
+        let detailCatalogue = DetailCatalogueUIComposer.detailComposedWith(
+            detailLoader: { [loadDetail] in
+                loadDetail(item)
+            },
             imageLoader: loadImage(from:))
+        
+        listCatalogueController?.show(detailCatalogue, sender: self)
     }
     
     private func loadCatalogue() -> AnyPublisher<[MotorcycleCatalogueItem], Error> {
@@ -44,5 +59,20 @@ final class MotorcycleCatalogueFlow {
             .tryMap(GalleryImageDataMapper.map)
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
+    }
+    
+    private func loadDetail(_ item: MotorcycleCatalogueItem) -> AnyPublisher<DetailCatalogueItemViewModel, Error> {
+        return Deferred {
+            Future { completion in
+                completion(.success(
+                    DetailCatalogueItemViewModel(
+                        imageURL: item.imageURL,
+                        title: item.name,
+                        detail: item.detail,
+                        price: "Rp120.000.000",
+                        cartButtonEnable: true, cartButtonText: "Add to cart")))
+            }
+        }
+        .eraseToAnyPublisher()
     }
 }
