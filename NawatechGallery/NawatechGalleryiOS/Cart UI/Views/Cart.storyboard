@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartItemCell" rowHeight="211" id="weA-jc-Y7f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCatalogueItemCell" rowHeight="211" id="weA-jc-Y7f" customClass="CartCatalogueItemCell" customModule="NawatechGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="211"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="weA-jc-Y7f" id="g3S-2N-Qem">
@@ -130,13 +130,29 @@
                                         <constraint firstItem="hyA-Ea-LyC" firstAttribute="top" secondItem="g3S-2N-Qem" secondAttribute="topMargin" priority="999" constant="8" id="wpD-JN-HFk"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="itemImageContainerView" destination="WBz-fP-xPO" id="Pot-Yb-dqJ"/>
+                                    <outlet property="itemImageView" destination="pxf-t9-2Jo" id="iFh-Vm-uAK"/>
+                                    <outlet property="itemPriceLabel" destination="sTe-zk-mNu" id="t6n-Dt-8Pv"/>
+                                    <outlet property="itemStepper" destination="RyQ-dj-T1I" id="TE7-rr-9F6"/>
+                                    <outlet property="quantityLabel" destination="lDk-Lv-8lH" id="1NK-zH-M3y"/>
+                                    <outlet property="titleLabel" destination="E0l-gG-U1C" id="coc-Ns-c1E"/>
+                                    <outlet property="totalItemPrice" destination="RJu-aR-OE5" id="W4v-Kq-iSo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="HmR-Mb-Upu" id="cgL-QB-9BI"/>
                             <outlet property="delegate" destination="HmR-Mb-Upu" id="vhs-Ip-rmR"/>
+                            <outlet property="prefetchDataSource" destination="HmR-Mb-Upu" id="LI1-Tm-CZn"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Zss-7e-HXI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh" destination="HmR-Mb-Upu" eventType="valueChanged" id="Rlf-Tu-hYw"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpV-Rg-V3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
