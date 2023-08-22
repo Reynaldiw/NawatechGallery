@@ -12,19 +12,19 @@ import Foundation
 public final class RegistrationUIComposer {
     private init() {}
     
-    private typealias RegistrationPresentationAdapter = AuthenticateAccountPresentationAdapter<RegistrationAuthenticationAccount>
+    private typealias RegistrationPresentationAdapter = SendResourcePresentationAdapter<RegistrationAuthenticationAccount>
     
     public static func registerComposedWith(
         registerAuthenticate: @escaping (RegistrationAuthenticationAccount) -> AnyPublisher<Void, Error>,
         onSucceedRegistration: @escaping () -> Void = { }
     ) -> RegistrationViewController {
-        let presentationAdapter = RegistrationPresentationAdapter(authenticate: registerAuthenticate)
+        let presentationAdapter = RegistrationPresentationAdapter(sender: registerAuthenticate)
         
         let registrationController = makeRegistrationViewController()
-        registrationController.register = presentationAdapter.authenticate
+        registrationController.register = presentationAdapter.send
         registrationController.onSucceedRegistration = onSucceedRegistration
         
-        presentationAdapter.presenter = AuthenticateAccountPresenter(
+        presentationAdapter.presenter = SendResourcePresenter(
             succeedView: WeakRefVirtualProxy(object: registrationController),
             loadingView: WeakRefVirtualProxy(object: registrationController),
             errorView: RegistrationErrorViewAdapter(controller: registrationController))

@@ -89,12 +89,12 @@ public final class RegistrationViewController: UIViewController {
     }
 }
 
-extension RegistrationViewController: AuthenticationSucceedView, AuthenticationLoadingView {
+extension RegistrationViewController: SendResourceSucceedView, SendResourceLoadingView {
     public func succeed() {
         onSucceedRegistration?()
     }
     
-    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+    public func display(_ viewModel: SendResourceLoadingViewModel) {
         isLoading = viewModel.isLoading
     }
 }

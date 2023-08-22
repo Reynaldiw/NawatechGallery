@@ -99,12 +99,12 @@ public final class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: AuthenticationSucceedView, AuthenticationLoadingView {
+extension LoginViewController: SendResourceSucceedView, SendResourceLoadingView {
     public func succeed() {
         onSucceedAuthenticate?()
     }
     
-    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+    public func display(_ viewModel: SendResourceLoadingViewModel) {
         isLoading = viewModel.isLoading
     }
 }

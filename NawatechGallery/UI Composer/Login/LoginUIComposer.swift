@@ -12,7 +12,7 @@ import Foundation
 public final class LoginUIComposer {
     private init() {}
     
-    private typealias LoginPresentationAdapter = AuthenticateAccountPresentationAdapter<LoginAuthenticationAccount>
+    private typealias LoginPresentationAdapter = SendResourcePresentationAdapter<LoginAuthenticationAccount>
     
     public static func loginComposedWith(
         loginAuthenticate: @escaping (LoginAuthenticationAccount) -> AnyPublisher<Void, Error>,
@@ -20,15 +20,15 @@ public final class LoginUIComposer {
         onRegister: @escaping () -> Void = { },
         onSkipLogin: @escaping () -> Void = { }
     ) -> LoginViewController {
-        let presentationAdapter = LoginPresentationAdapter(authenticate: loginAuthenticate)
+        let presentationAdapter = LoginPresentationAdapter(sender: loginAuthenticate)
         
         let loginController = makeLoginViewController()
-        loginController.authenticate = presentationAdapter.authenticate
+        loginController.authenticate = presentationAdapter.send
         loginController.onSucceedAuthenticate = onSucceedAuthenticate
         loginController.onSkipLogin = onSkipLogin
         loginController.onRegister = onRegister
         
-        presentationAdapter.presenter = AuthenticateAccountPresenter(
+        presentationAdapter.presenter = SendResourcePresenter(
             succeedView: WeakRefVirtualProxy(object: loginController),
             loadingView: WeakRefVirtualProxy(object: loginController),
             errorView: LoginErrorViewAdapter(controller: loginController))

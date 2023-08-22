@@ -8,14 +8,14 @@
 import Foundation
 import Combine
 
-typealias UploadProfileImageLoadingView = AuthenticationLoadingView
-typealias UploadProfileImageSucceedView = AuthenticationSucceedView
-typealias UploadProfileImageErrorView = AuthenticationErrorView
+typealias UploadProfileImageLoadingView = SendResourceLoadingView
+typealias UploadProfileImageSucceedView = SendResourceSucceedView
+typealias UploadProfileImageErrorView = SendResourceErrorView
 
 final class UploadImageProfileAdapter {
     
-    private typealias PresentationAdapter = AuthenticateAccountPresentationAdapter<Data>
-    private typealias Presenter = AuthenticateAccountPresenter
+    private typealias PresentationAdapter = SendResourcePresentationAdapter<Data>
+    private typealias Presenter = SendResourcePresenter
     
     private weak var controller: ProfileViewController?
     private let imageUploader: (Data) -> AnyPublisher<Void, Error>
@@ -26,7 +26,7 @@ final class UploadImageProfileAdapter {
     }
     
     private lazy var adapter: PresentationAdapter = {
-        PresentationAdapter(authenticate: imageUploader)
+        PresentationAdapter(sender: imageUploader)
     }()
 
     func upload(_ data: Data) {
@@ -37,12 +37,6 @@ final class UploadImageProfileAdapter {
             loadingView: controller,
             errorView: controller)
         
-        adapter.upload(data)
-    }
-}
-
-extension AuthenticateAccountPresentationAdapter where Account == Data {
-    func upload(_ data: Data) {
-        self.authenticate(data)
+        adapter.send(data)
     }
 }

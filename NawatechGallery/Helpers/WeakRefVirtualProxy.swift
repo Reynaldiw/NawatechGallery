@@ -15,13 +15,13 @@ final class WeakRefVirtualProxy<T: AnyObject> {
     }
 }
 
-extension WeakRefVirtualProxy: AuthenticationLoadingView where T: AuthenticationLoadingView {
-    func display(_ viewModel: AuthenticationLoadingViewModel) {
+extension WeakRefVirtualProxy: SendResourceLoadingView where T: SendResourceLoadingView {
+    func display(_ viewModel: SendResourceLoadingViewModel) {
         object?.display(viewModel)
     }
 }
 
-extension WeakRefVirtualProxy: AuthenticationSucceedView where T: AuthenticationSucceedView {
+extension WeakRefVirtualProxy: SendResourceSucceedView where T: SendResourceSucceedView {
     func succeed() {
         object?.succeed()
     }

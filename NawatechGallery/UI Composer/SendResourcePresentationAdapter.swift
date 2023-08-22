@@ -1,5 +1,5 @@
 //
-//  AuthenticateAccountPresentationAdapter.swift
+//  SendResourcePresentationAdapter.swift
 //  NawatechGallery
 //
 //  Created by Reynaldi on 20/08/23.
@@ -8,25 +8,25 @@
 import Combine
 import Foundation
 
-final class AuthenticateAccountPresentationAdapter<Account> {
+final class SendResourcePresentationAdapter<Resource> {
     
-    private let authenticate: (Account) -> AnyPublisher<Void, Error>
+    private let sender: (Resource) -> AnyPublisher<Void, Error>
     private var cancellable: Cancellable?
     private var isLoading = false
     
-    var presenter: AuthenticateAccountPresenter?
+    var presenter: SendResourcePresenter?
     
-    init(authenticate: @escaping (Account) -> AnyPublisher<Void, Error>) {
-        self.authenticate = authenticate
+    init(sender: @escaping (Resource) -> AnyPublisher<Void, Error>) {
+        self.sender = sender
     }
     
-    func authenticate(_ account: Account) {
+    func send(_ resource: Resource) {
         guard !isLoading else { return }
         
         presenter?.didStartLoading()
         isLoading = true
         
-        cancellable = authenticate(account)
+        cancellable = sender(resource)
             .dispatchOnMainQueue()
             .sink { [weak self] completion in
                 switch completion {

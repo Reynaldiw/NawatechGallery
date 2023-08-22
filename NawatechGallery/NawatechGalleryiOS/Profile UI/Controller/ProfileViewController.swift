@@ -122,12 +122,12 @@ extension ProfileViewController: UploadProfileImageSucceedView, UploadProfileIma
         profileImageView.image = selectedImagePicker
     }
     
-    public func display(_ viewModel: AuthenticationLoadingViewModel) {
+    public func display(_ viewModel: SendResourceLoadingViewModel) {
         profileImageView.isHidden = viewModel.isLoading
         profileImageContainerView.isShimmering = viewModel.isLoading
     }
     
-    public func display(_ viewModel: AuthenticationErrorViewModel) {}
+    public func display(_ viewModel: SendResourceErrorViewModel) {}
 }
 
 extension ProfileViewController: PHPickerViewControllerDelegate {

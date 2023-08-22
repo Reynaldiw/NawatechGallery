@@ -81,13 +81,13 @@
 		E18F0AE12A9109DD003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */; };
 		E18F0AE22A9109DD003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */; };
 		E18F0AE32A9109DD003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png in Resources */ = {isa = PBXBuildFile; fileRef = E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */; };
-		E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */; };
-		E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */; };
-		E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */; };
-		E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */; };
-		E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */; };
-		E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */; };
-		E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */; };
+		E18F0AE72A9112F2003CEC98 /* SendResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE62A9112F2003CEC98 /* SendResourcePresenter.swift */; };
+		E18F0AE92A913DB1003CEC98 /* SendResourceSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AE82A913DB1003CEC98 /* SendResourceSucceedView.swift */; };
+		E18F0AEB2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEA2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift */; };
+		E18F0AED2A913DD0003CEC98 /* SendResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEC2A913DD0003CEC98 /* SendResourceLoadingView.swift */; };
+		E18F0AEF2A913DE7003CEC98 /* SendResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AEE2A913DE7003CEC98 /* SendResourceErrorViewModel.swift */; };
+		E18F0AF12A913E1B003CEC98 /* SendResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF02A913E1B003CEC98 /* SendResourceErrorView.swift */; };
+		E18F0AF52A913F0F003CEC98 /* SendResourcePresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF42A913F0F003CEC98 /* SendResourcePresentationAdapter.swift */; };
 		E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AF82A91418C003CEC98 /* CombineHelpers.swift */; };
 		E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AFB2A9142A1003CEC98 /* LoginUIComposer.swift */; };
 		E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0AFD2A914688003CEC98 /* WeakRefVirtualProxy.swift */; };
@@ -202,13 +202,13 @@
 		E18F0ADD2A9109DC003CEC98 /* REGISTRATION_INITIAL_SETUP_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_INITIAL_SETUP_light.png; sourceTree = "<group>"; };
 		E18F0ADE2A9109DC003CEC98 /* REGISTRATION_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
 		E18F0ADF2A9109DC003CEC98 /* REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = REGISTRATION_NOT_ALL_FIELDS_FILLED_light.png; sourceTree = "<group>"; };
-		E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateAccountPresenter.swift; sourceTree = "<group>"; };
-		E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSucceedView.swift; sourceTree = "<group>"; };
-		E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingViewModel.swift; sourceTree = "<group>"; };
-		E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLoadingView.swift; sourceTree = "<group>"; };
-		E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorViewModel.swift; sourceTree = "<group>"; };
-		E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorView.swift; sourceTree = "<group>"; };
-		E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateAccountPresentationAdapter.swift; sourceTree = "<group>"; };
+		E18F0AE62A9112F2003CEC98 /* SendResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourcePresenter.swift; sourceTree = "<group>"; };
+		E18F0AE82A913DB1003CEC98 /* SendResourceSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourceSucceedView.swift; sourceTree = "<group>"; };
+		E18F0AEA2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		E18F0AEC2A913DD0003CEC98 /* SendResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourceLoadingView.swift; sourceTree = "<group>"; };
+		E18F0AEE2A913DE7003CEC98 /* SendResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourceErrorViewModel.swift; sourceTree = "<group>"; };
+		E18F0AF02A913E1B003CEC98 /* SendResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourceErrorView.swift; sourceTree = "<group>"; };
+		E18F0AF42A913F0F003CEC98 /* SendResourcePresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendResourcePresentationAdapter.swift; sourceTree = "<group>"; };
 		E18F0AF82A91418C003CEC98 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		E18F0AFB2A9142A1003CEC98 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E18F0AFD2A914688003CEC98 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
@@ -692,22 +692,22 @@
 			isa = PBXGroup;
 			children = (
 				E1891EB32A93667E001F18FF /* Load Resource */,
-				E18F0AE52A9112A4003CEC98 /* Authentication */,
+				E18F0AE52A9112A4003CEC98 /* Send Resource */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
 		};
-		E18F0AE52A9112A4003CEC98 /* Authentication */ = {
+		E18F0AE52A9112A4003CEC98 /* Send Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E18F0AE62A9112F2003CEC98 /* AuthenticateAccountPresenter.swift */,
-				E18F0AE82A913DB1003CEC98 /* AuthenticationSucceedView.swift */,
-				E18F0AEA2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift */,
-				E18F0AEC2A913DD0003CEC98 /* AuthenticationLoadingView.swift */,
-				E18F0AEE2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift */,
-				E18F0AF02A913E1B003CEC98 /* AuthenticationErrorView.swift */,
+				E18F0AE62A9112F2003CEC98 /* SendResourcePresenter.swift */,
+				E18F0AE82A913DB1003CEC98 /* SendResourceSucceedView.swift */,
+				E18F0AEA2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift */,
+				E18F0AEC2A913DD0003CEC98 /* SendResourceLoadingView.swift */,
+				E18F0AEE2A913DE7003CEC98 /* SendResourceErrorViewModel.swift */,
+				E18F0AF02A913E1B003CEC98 /* SendResourceErrorView.swift */,
 			);
-			path = Authentication;
+			path = "Send Resource";
 			sourceTree = "<group>";
 		};
 		E18F0AF62A91414B003CEC98 /* UI Composer */ = {
@@ -717,7 +717,7 @@
 				E1891EBE2A9367E0001F18FF /* Catalogue */,
 				E18F0B012A914D81003CEC98 /* Registration */,
 				E18F0AFA2A91428E003CEC98 /* Login */,
-				E18F0AF42A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift */,
+				E18F0AF42A913F0F003CEC98 /* SendResourcePresentationAdapter.swift */,
 				E1891EC12A936B10001F18FF /* LoadResourcePresentationAdapter.swift */,
 			);
 			path = "UI Composer";
@@ -1094,17 +1094,17 @@
 				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
 				E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */,
 				E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */,
-				E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */,
+				E18F0AE92A913DB1003CEC98 /* SendResourceSucceedView.swift in Sources */,
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
-				E18F0AEB2A913DC2003CEC98 /* AuthenticationLoadingViewModel.swift in Sources */,
-				E18F0AEF2A913DE7003CEC98 /* AuthenticationErrorViewModel.swift in Sources */,
+				E18F0AEB2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift in Sources */,
+				E18F0AEF2A913DE7003CEC98 /* SendResourceErrorViewModel.swift in Sources */,
 				E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */,
 				E1891ED02A93728B001F18FF /* HTTPClient.swift in Sources */,
 				E1891ECD2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift in Sources */,
 				E18D796C2A8EAD4F007DEEE1 /* StoredUserAccount.swift in Sources */,
 				E18F0B242A91E4B9003CEC98 /* MotorycleCatalogueItemsMapper.swift in Sources */,
-				E18F0AF12A913E1B003CEC98 /* AuthenticationErrorView.swift in Sources */,
-				E18F0AE72A9112F2003CEC98 /* AuthenticateAccountPresenter.swift in Sources */,
+				E18F0AF12A913E1B003CEC98 /* SendResourceErrorView.swift in Sources */,
+				E18F0AE72A9112F2003CEC98 /* SendResourcePresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
 				E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */,
 				E1074C092A942D96005BF21B /* DetailCatalogueUIComposer.swift in Sources */,
@@ -1148,14 +1148,14 @@
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */,
-				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
+				E18F0AF52A913F0F003CEC98 /* SendResourcePresentationAdapter.swift in Sources */,
 				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
 				E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */,
 				E1074C0F2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
 				E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */,
 				E1891EBD2A936767001F18FF /* ResourceErrorViewModel.swift in Sources */,
-				E18F0AED2A913DD0003CEC98 /* AuthenticationLoadingView.swift in Sources */,
+				E18F0AED2A913DD0003CEC98 /* SendResourceLoadingView.swift in Sources */,
 				E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */,
 				E1891EC42A936B22001F18FF /* CatalogueViewAdapter.swift in Sources */,
 				E1074BF72A93F019005BF21B /* ProfileImageStore.swift in Sources */,

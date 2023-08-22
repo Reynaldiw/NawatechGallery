@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol AuthenticationLoadingView {
-    func display(_ viewModel: AuthenticationLoadingViewModel)
+public protocol SendResourceLoadingView {
+    func display(_ viewModel: SendResourceLoadingViewModel)
 }

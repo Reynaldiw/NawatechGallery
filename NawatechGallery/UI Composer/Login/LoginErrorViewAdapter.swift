@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LoginErrorViewAdapter: AuthenticationErrorView {
+final class LoginErrorViewAdapter: SendResourceErrorView {
     
     public weak var controller: LoginViewController?
     
@@ -23,7 +23,7 @@ final class LoginErrorViewAdapter: AuthenticationErrorView {
         "Incorrect username"
     }
     
-    func display(_ viewModel: AuthenticationErrorViewModel) {
+    func display(_ viewModel: SendResourceErrorViewModel) {
         guard let error = viewModel.error else { return }
         guard let validationError = error as? AuthenticationValidationService.Error else {
             return displayDefaultErrorMessage(viewModel)
@@ -38,7 +38,7 @@ final class LoginErrorViewAdapter: AuthenticationErrorView {
         }
     }
     
-    private func displayDefaultErrorMessage(_ viewModel: AuthenticationErrorViewModel) {
-        controller?.errorMessage = viewModel.message ?? AuthenticateAccountPresenter.authenticateError
+    private func displayDefaultErrorMessage(_ viewModel: SendResourceErrorViewModel) {
+        controller?.errorMessage = viewModel.message ?? SendResourcePresenter.sendResourceError
     }
 }
