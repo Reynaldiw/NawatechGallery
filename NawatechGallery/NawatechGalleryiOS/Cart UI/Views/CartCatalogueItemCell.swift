@@ -14,7 +14,6 @@ public final class CartCatalogueItemCell: UITableViewCell {
     @IBOutlet private(set) public var titleLabel: UILabel!
     @IBOutlet private(set) public var itemPriceLabel: UILabel!
     @IBOutlet private(set) public var quantityLabel: UILabel!
-    @IBOutlet private(set) public var itemStepper: UIStepper!
     @IBOutlet private(set) public var totalItemPrice: UILabel!
     
     var onReuse: (() -> Void)?
