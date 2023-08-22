@@ -154,6 +154,22 @@ public extension StoreModifier {
     }
 }
 
+//MARK: - Order Store Saver Usecase
+
+public extension StoreOrderCatalogueSaver {
+    typealias Publisher = AnyPublisher<Void, Swift.Error>
+    
+    func savePublisher(_ catalogueID: UUID) -> Publisher {
+        return Deferred {
+            Future { completion in
+                completion(Result {
+                    try self.save(catalogueID)
+                })
+            }
+        }.eraseToAnyPublisher()
+    }
+}
+
 //MARK: - Scheduler
 
 extension Publisher {
