@@ -35,6 +35,13 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
         XCTAssertThrowsError(try sut.save(UUID()))
     }
     
+    func test_save_didNotDeliversErrorOnSuccessfulInsertion() {
+        let store = StoreSaverStub(error: nil)
+        let sut = StoreOrderCatalogueSaver(store: store, orderID: UUID())
+        
+        XCTAssertNoThrow(try sut.save(UUID()))
+    }
+    
     //MARK: - Helpers
     
     private class StoreSaverStub: StoreSaver {
