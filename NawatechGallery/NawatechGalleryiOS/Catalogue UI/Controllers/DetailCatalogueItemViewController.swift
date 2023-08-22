@@ -106,14 +106,32 @@ extension DetailCatalogueItemViewController: ResourceLoadingView, ResourceErrorV
 
 extension DetailCatalogueItemViewController: SendResourceSucceedView, SendResourceLoadingView, SendResourceErrorView {
     public func succeed() {
-        
+        showMessage(title: "Succeed", message: "Succeed add to cart!") { [loadDetail] _ in
+            loadDetail?()
+        }
     }
     
     public func display(_ viewModel: SendResourceLoadingViewModel) {
-        
+        isLoading = viewModel.isLoading
     }
     
     public func display(_ viewModel: SendResourceErrorViewModel) {
+        guard let errorMessage = viewModel.message else { return }
+        showMessage(title: "Error", message: errorMessage, actionTitle: "Try again!") { [addToCart] _ in
+            addToCart?()
+        }
+    }
+    
+    private func showMessage(
+        title: String,
+        message: String,
+        actionTitle: String = "Ok",
+        actionHandler: ((UIAlertAction) -> Void)? = nil
+    ) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .cancel, handler: actionHandler)
+        controller.addAction(action)
         
+        present(controller, animated: true)
     }
 }
