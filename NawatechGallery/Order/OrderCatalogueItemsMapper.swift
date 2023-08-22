@@ -16,8 +16,8 @@ public final class OrderCatalogueItemsMapper {
             case quantity
         }
         
-        let id: String
-        let catalogueID: String
+        let id: UUID
+        let catalogueID: UUID
         let quantity: Int
         
         var model: OrderCatalogueItem {

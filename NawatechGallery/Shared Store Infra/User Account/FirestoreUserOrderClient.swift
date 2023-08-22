@@ -19,7 +19,7 @@ public final class FirestoreUserOrderClient {
             .collection("orders")
     }()
     
-    init(store: Firestore, userID: UUID) {
+    init(store: Firestore = Firestore.firestore(), userID: UUID) {
         self.store = store
         self.userID = userID
     }

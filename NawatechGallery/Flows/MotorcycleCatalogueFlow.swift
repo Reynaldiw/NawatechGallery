@@ -26,6 +26,10 @@ final class MotorcycleCatalogueFlow {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
     }()
     
+    private lazy var accountCacheStore: AccountCacheStoreRetriever = {
+        KeychainAccountCacheStore(storeKey: SharedKeys.accountKeychainKey)
+    }()
+    
     func start() -> ListViewController {
         listCatalogueController = CatalogueUIComposer.catalogueComposedWith(
             catalogueLoader: loadCatalogue,
@@ -62,17 +66,30 @@ final class MotorcycleCatalogueFlow {
     }
     
     private func loadDetail(_ item: MotorcycleCatalogueItem) -> AnyPublisher<DetailCatalogueItemViewModel, Error> {
-        return Deferred {
-            Future { completion in
-                completion(.success(
-                    DetailCatalogueItemViewModel(
-                        imageURL: item.imageURL,
-                        title: item.name,
-                        detail: item.detail,
-                        price: "Rp120.000.000",
-                        cartButtonEnable: true, cartButtonText: "Add to cart")))
-            }
+        guard let idString = try? accountCacheStore.retrieve(),
+              let id = UUID(uuidString: idString)
+        else {
+            return Fail(error: NSError(domain: "Error retrieving user ID", code: 0))
+                .eraseToAnyPublisher()
         }
-        .eraseToAnyPublisher()
+        
+        return makeOrderStoreClient(with: id)
+            .retrievePublisher(.matched((item.id.uuidString, "catalogue_item_id")))
+            .tryMap(OrderCatalogueItemsMapper.map)
+            .map { orders in
+                DetailCatalogueItemViewModel(
+                    imageURL: item.imageURL,
+                    title: item.name,
+                    detail: item.detail,
+                    price: MotorcycleCatalogueItemPresenter.convert(item.price),
+                    cartButtonEnable: orders.isEmpty,
+                    cartButtonText: DetailCatalogueItemPresenter.cartButtonText(orders.isEmpty))
+            }
+            .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
+    }
+    
+    private func makeOrderStoreClient(with userID: UUID) -> StoreRetriever {
+        FirestoreUserOrderClient(userID: userID)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct OrderCatalogueItem {
-    public let id: String
-    public let catalogueID: String
+    public let id: UUID
+    public let catalogueID: UUID
     public let quantity: Int
 }

@@ -122,7 +122,7 @@ public extension ProfileImageStore {
     }
 }
 
-//MARK: User Account Store
+//MARK: Shared Store
 
 public extension StoreRetriever {
     typealias Publisher = AnyPublisher<Data, Swift.Error>
