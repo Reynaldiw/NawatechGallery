@@ -29,7 +29,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="358" height="178.66666666666666"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                                 <constraints>
                                                     <constraint firstItem="Zir-zk-T0V" firstAttribute="top" secondItem="x1L-Xq-6uv" secondAttribute="top" id="CS5-Bu-LvM"/>
                                                     <constraint firstAttribute="bottom" secondItem="Zir-zk-T0V" secondAttribute="bottom" id="ImJ-ui-UDX"/>
@@ -63,7 +63,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="K25-n7-R07" firstAttribute="leading" secondItem="uGa-t7-Pi4" secondAttribute="leadingMargin" constant="8" id="Al0-H7-Nm7"/>
                                             <constraint firstItem="B2b-Xy-duN" firstAttribute="top" secondItem="x1L-Xq-6uv" secondAttribute="bottom" constant="16" id="BUQ-Nw-mW7"/>
@@ -160,6 +160,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
