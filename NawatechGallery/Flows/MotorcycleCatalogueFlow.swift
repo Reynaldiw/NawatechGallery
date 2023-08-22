@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import FirebaseFirestore
 
 final class MotorcycleCatalogueFlow {
     
@@ -104,14 +105,23 @@ final class MotorcycleCatalogueFlow {
     }
     
     private func makeOrderStoreClient(with userID: UUID) -> StoreRetriever {
-        FirestoreUserOrderClient(userID: userID)
+        SharedFirestoreClient(
+            collectionReference: Firestore.firestore()
+                .collection("users")
+                .document(userID.uuidString)
+                .collection("orders")
+        )
     }
     
     private func makeOrderStoreSaverClient() -> StoreSaver? {
-        guard let idString = try? accountCacheStore.retrieve(),
-              let id = UUID(uuidString: idString)
+        guard let id = try? accountCacheStore.retrieve()
         else { return nil }
         
-        return FirestoreUserOrderClient(userID: id)
+        return SharedFirestoreClient(
+            collectionReference: Firestore.firestore()
+                .collection("users")
+                .document(id)
+                .collection("orders")
+        )
     }
 }

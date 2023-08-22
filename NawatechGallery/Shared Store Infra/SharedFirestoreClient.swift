@@ -63,3 +63,23 @@ extension SharedFirestoreClient: StoreModifier {
         throw receivedError
     }
 }
+
+extension SharedFirestoreClient: StoreSaver {
+    public func save(_ value: [String : Any], namedWith name: String) throws {
+        let group = DispatchGroup()
+        
+        var receivedError: Swift.Error?
+        
+        group.enter()
+        collectionReference
+            .document(name)
+            .setData(value) { error in
+                receivedError = error
+                group.leave()
+            }
+        group.wait()
+        
+        guard let receivedError = receivedError else { return }
+        throw receivedError
+    }
+}

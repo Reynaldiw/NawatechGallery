@@ -22,7 +22,6 @@
 		E1074C0B2A943134005BF21B /* DetailCatalogueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0A2A943134005BF21B /* DetailCatalogueItemViewModel.swift */; };
 		E1074C0D2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */; };
 		E1074C0F2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */; };
-		E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */; };
 		E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */; };
 		E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */; };
 		E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1D2A94B670005BF21B /* StoreSaver.swift */; };
@@ -159,7 +158,6 @@
 		E1074C0A2A943134005BF21B /* DetailCatalogueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueItemViewModel.swift; sourceTree = "<group>"; };
 		E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueImageViewAdapter.swift; sourceTree = "<group>"; };
-		E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserOrderClient.swift; sourceTree = "<group>"; };
 		E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItem.swift; sourceTree = "<group>"; };
 		E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapper.swift; sourceTree = "<group>"; };
 		E1074C1D2A94B670005BF21B /* StoreSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSaver.swift; sourceTree = "<group>"; };
@@ -692,18 +690,9 @@
 		E1891EEC2A938AE9001F18FF /* Shared Store Infra */ = {
 			isa = PBXGroup;
 			children = (
-				E1891EEE2A938B00001F18FF /* User Account */,
 				E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */,
 			);
 			path = "Shared Store Infra";
-			sourceTree = "<group>";
-		};
-		E1891EEE2A938B00001F18FF /* User Account */ = {
-			isa = PBXGroup;
-			children = (
-				E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */,
-			);
-			path = "User Account";
 			sourceTree = "<group>";
 		};
 		E1891EF12A93AAF1001F18FF /* Profile */ = {
@@ -1305,7 +1294,6 @@
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 				E1891EC22A936B10001F18FF /* LoadResourcePresentationAdapter.swift in Sources */,
 				E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */,
-				E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */,
 				E1074C232A94BFC1005BF21B /* DetailCatalogueItemPresenter.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
 				E1891ECB2A936FFD001F18FF /* CataloguePresenter.swift in Sources */,

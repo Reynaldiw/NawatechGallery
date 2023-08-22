@@ -81,7 +81,12 @@ final class CartCatalogueFlow {
     }
     
     private func makeOrderStoreClient(with userID: UUID) -> StoreRetriever {
-        FirestoreUserOrderClient(userID: userID)
+        SharedFirestoreClient(
+            collectionReference: Firestore.firestore()
+                .collection("users")
+                .document(userID.uuidString)
+                .collection("orders")
+        )
     }
     
     private func loadImage(from url: URL) -> AnyPublisher<Data, Error> {
