@@ -12,6 +12,13 @@ public final class FirestoreMotorycleCatalogueStore {
     
     private let firestore: Firestore
     
+    private lazy var collection: CollectionReference = {
+        firestore
+            .collection("catalogue")
+            .document("motorcycle")
+            .collection("items")
+    }()
+    
     public init(firestore: Firestore = Firestore.firestore()) {
         self.firestore = firestore
     }
@@ -22,34 +29,18 @@ public final class FirestoreMotorycleCatalogueStore {
 extension FirestoreMotorycleCatalogueStore: MotorycleCatalogueStore {
     public func retrieve() throws -> Data {
         let group = DispatchGroup()
-        var receivedError: Error?
-        var values: [[String: Any]] = []
+        var result: Result<[[String: Any]], Error>!
         
         group.enter()
-        firestore
-            .collection("catalogue")
-            .document("motorcycle")
-            .collection("items")
-            .getDocuments { snapshot, error in
-                if let error = error  {
-                    receivedError = error
-                } else if let snapshot = snapshot {
-                    values = snapshot.documents.map { $0.data() }
-                } else {
-                    receivedError = UnexpectedValuesRepresentation()
-                }
-                group.leave()
-            }
+        collection.getDocuments { snapshot, error in
+            result = Result(catching: {
+                try snapshot?.documents.map { $0.data() } ?? { throw error ?? UnexpectedValuesRepresentation() }()
+                
+            })
+            group.leave()
+        }
         group.wait()
         
-        do {
-            if let receivedError = receivedError {
-                throw receivedError
-            }
-            
-            return try JSONSerialization.data(withJSONObject: values)
-        } catch {
-            throw error
-        }
+        return try JSONSerialization.data(withJSONObject: result.get())
     }
 }
