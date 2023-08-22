@@ -52,8 +52,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let cartViewModel = MainTabBarViewModel(
             controller: UINavigationController(rootViewController: cartFlow.start()),
-            imageSelected: UIImage(named: "tabbar_profile_selected")!,
-            imageNotSelected: UIImage(named: "tabbar_profile_notselected")!)
+            imageSelected: UIImage(named: "tabbar_cart_selected")!,
+            imageNotSelected: UIImage(named: "tabbar_cart_notselected")!)
         
         let profileViewModel = MainTabBarViewModel(
             controller: profileFlow.start(onLogout: onLogout),
