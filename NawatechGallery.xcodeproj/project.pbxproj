@@ -43,6 +43,8 @@
 		E1074C552A94F421005BF21B /* CartResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */; };
 		E1074C5A2A94F788005BF21B /* CartCatalogueFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C592A94F788005BF21B /* CartCatalogueFlow.swift */; };
 		E1074C5C2A94FEBF005BF21B /* SharedFirestoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */; };
+		E1074C622A95479D005BF21B /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C612A95479D005BF21B /* MainTabBarViewController.swift */; };
+		E1074C642A954AF7005BF21B /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C632A954AF7005BF21B /* MainTabBarViewModel.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -178,6 +180,8 @@
 		E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E1074C592A94F788005BF21B /* CartCatalogueFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueFlow.swift; sourceTree = "<group>"; };
 		E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFirestoreClient.swift; sourceTree = "<group>"; };
+		E1074C612A95479D005BF21B /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		E1074C632A954AF7005BF21B /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -430,6 +434,15 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		E1074C602A954757005BF21B /* Tab Bar UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C612A95479D005BF21B /* MainTabBarViewController.swift */,
+				E1074C632A954AF7005BF21B /* MainTabBarViewModel.swift */,
+			);
+			path = "Tab Bar UI";
+			sourceTree = "<group>";
+		};
 		E137FD862A9261D40018D48B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,6 +547,7 @@
 				E18F0B2D2A9211E3003CEC98 /* Catalogue UI */,
 				E18F0B312A921866003CEC98 /* Cart UI */,
 				E18F0B352A922E0D003CEC98 /* Profile UI */,
+				E1074C602A954757005BF21B /* Tab Bar UI */,
 			);
 			path = NawatechGalleryiOS;
 			sourceTree = "<group>";
@@ -1212,6 +1226,7 @@
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift in Sources */,
 				E18F0AEF2A913DE7003CEC98 /* SendResourceErrorViewModel.swift in Sources */,
+				E1074C622A95479D005BF21B /* MainTabBarViewController.swift in Sources */,
 				E1891EB72A93673C001F18FF /* ResourceLoadingView.swift in Sources */,
 				E1891ED02A93728B001F18FF /* HTTPClient.swift in Sources */,
 				E1891ECD2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift in Sources */,
@@ -1235,6 +1250,7 @@
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
 				E1074C4E2A94F109005BF21B /* CartCatalogueItem.swift in Sources */,
 				E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */,
+				E1074C642A954AF7005BF21B /* MainTabBarViewModel.swift in Sources */,
 				E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */,
 				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
 				E1074C552A94F421005BF21B /* CartResourceViewAdapter.swift in Sources */,
