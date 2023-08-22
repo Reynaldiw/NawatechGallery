@@ -56,13 +56,17 @@ final class StoredUserAccountUseCaseTests: XCTestCase {
         date: @escaping () -> Date = Date.init,
         id: @escaping () -> UUID = UUID.init,
         error: Error? = nil,
-        existingUser: StoredRegistrationUserAccount? = nil
+        existingUser: StoredRegistrationUserAccount? = nil,
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> (sut: RegistrationUserAccountService, store: UserAccountStoreStub) {
         let store = UserAccountStoreStub(error: error, existingUser: existingUser)
         let sut = RegistrationUserAccountService(
             store: store,
             dateCreated: date,
             idCreated: id)
+        trackForMemoryLeaks(store, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
     

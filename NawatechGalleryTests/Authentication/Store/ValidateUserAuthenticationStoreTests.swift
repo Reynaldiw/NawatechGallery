@@ -59,11 +59,14 @@ final class ValidateUserAuthenticationStoreTests: XCTestCase {
     
     private func makeSUT(
         errorStore: Error? = nil,
-        storedUsers: [[String: Any]] = []
+        storedUsers: [[String: Any]] = [],
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> (sut: AuthenticationValidationService, store: AuthenticationUserStoreStub) {
         let store = AuthenticationUserStoreStub(storedUsers: storedUsers, error: errorStore)
         let sut = AuthenticationValidationService(store: store)
-        
+        trackForMemoryLeaks(store, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
     

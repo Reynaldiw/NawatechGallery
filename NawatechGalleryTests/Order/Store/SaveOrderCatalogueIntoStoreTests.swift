@@ -11,8 +11,7 @@ import NawatechGallery
 final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
     
     func test_save_doesNotSaveUponSUTCreation() {
-        let store = StoreSaverStub()
-        let sut = StoreOrderCatalogueSaver(store: store)
+        let (_, store) = makeSUT()
         
         XCTAssertEqual(store.messages, [])
     }
@@ -43,11 +42,14 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
     
     private func makeSUT(
         orderID: UUID = UUID(),
-        error: Error? = nil
+        error: Error? = nil,
+        file: StaticString = #file,
+        line: UInt = #line
     ) -> (sut: StoreOrderCatalogueSaver, store: StoreSaverStub) {
         let store = StoreSaverStub(error: error)
         let sut = StoreOrderCatalogueSaver(store: store, orderID: orderID)
-        
+        trackForMemoryLeaks(store, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, store)
     }
     
