@@ -23,6 +23,8 @@
 		E1074C0D2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */; };
 		E1074C0F2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */; };
 		E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */; };
+		E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */; };
+		E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -140,6 +142,8 @@
 		E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueImageViewAdapter.swift; sourceTree = "<group>"; };
 		E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserOrderClient.swift; sourceTree = "<group>"; };
+		E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItem.swift; sourceTree = "<group>"; };
+		E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapper.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -279,6 +283,31 @@
 				E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		E1074C152A94B45D005BF21B /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C192A94B4EA005BF21B /* Store */,
+				E1074C162A94B469005BF21B /* Feature */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		E1074C162A94B469005BF21B /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */,
+			);
+			name = Feature;
+			sourceTree = "<group>";
+		};
+		E1074C192A94B4EA005BF21B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */,
+			);
+			name = Store;
 			sourceTree = "<group>";
 		};
 		E137FD862A9261D40018D48B /* Flows */ = {
@@ -883,6 +912,7 @@
 				E16804102A8F8CBA0051B8E5 /* Registration */,
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E1891ED92A93852E001F18FF /* Profile */,
+				E1074C152A94B45D005BF21B /* Order */,
 				E18F0B132A91D8FD003CEC98 /* Motorcycle Catalogue */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
 				E18F0AF62A91414B003CEC98 /* UI Composer */,
@@ -1056,6 +1086,7 @@
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
 				E1074C0D2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift in Sources */,
 				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
+				E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */,
 				E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */,
 				E18F0AE92A913DB1003CEC98 /* AuthenticationSucceedView.swift in Sources */,
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
@@ -1080,6 +1111,7 @@
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
 				E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */,
+				E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */,
 				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
 				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
 				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
