@@ -12,6 +12,10 @@ public final class FirestoreUserAccountClient {
     
     private let store: Firestore
     
+    private lazy var collection: CollectionReference = {
+        store.collection("users")
+    }()
+    
     init(store: Firestore = Firestore.firestore()) {
         self.store = store
     }
@@ -22,39 +26,25 @@ public final class FirestoreUserAccountClient {
 extension FirestoreUserAccountClient: StoreRetriever {
     public func retrieve(_ query: StoreQuery) throws -> Data {
         let group = DispatchGroup()
+        let collection = self.collection
         
-        let collection: Query = store.collection("users")
-        switch query {
-        case .matched(let (value, key)):
+        if case let .matched((value, key)) = query {
             collection.whereField(key, isEqualTo: value)
-        default: break
         }
         
-        var result: ((snapshot: QuerySnapshot?, error: Error?))!
+        var result: Result<[[String: Any]], Error>!
         
         group.enter()
         collection.getDocuments { snapshot, error in
-            result = (snapshot, error)
+            result = Result(catching: {
+                try snapshot?.documents.map { $0.data() } ?? { throw error ?? UnexpectedValuesRepresentation() }()
+                
+            })
             group.leave()
         }
         group.wait()
-                
-        return try extract(snapshot: result.snapshot, error: result.error)
-    }
-    
-    private func extract(snapshot: QuerySnapshot?, error: Error?) throws -> Data {
-        if let error = error {
-            throw error
-        } else if let snapshot = snapshot {
-            do {
-                return try JSONSerialization.data(
-                    withJSONObject: snapshot.documents.map { $0.data() })
-            } catch {
-                throw error
-            }
-        } else {
-            throw UnexpectedValuesRepresentation()
-        }
+        
+        return try JSONSerialization.data(withJSONObject: result.get())
     }
 }
 
