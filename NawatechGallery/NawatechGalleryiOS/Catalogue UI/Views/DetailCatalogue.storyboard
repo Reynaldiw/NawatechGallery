@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00p-G5-rgL">
-                                <rect key="frame" x="0.0" y="47" width="390" height="939"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="955"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGa-t7-Pi4" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="549.66666666666663"/>
@@ -92,16 +92,19 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="4Dt-nX-Uew"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-XM-del">
-                                <rect key="frame" x="0.0" y="994" width="390" height="72"/>
+                                <rect key="frame" x="0.0" y="1010" width="390" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU3-ZZ-SOf">
                                         <rect key="frame" x="16" y="16" width="358" height="40"/>
                                         <color key="backgroundColor" systemColor="systemTealColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Add to cart">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bvz-z6-kRA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Add to cart">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
@@ -115,9 +118,8 @@
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="gU3-ZZ-SOf" secondAttribute="trailing" constant="8" id="Qax-xv-Tax"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="gU3-ZZ-SOf" secondAttribute="bottom" constant="8" id="eaV-PU-2R3"/>
                                     <constraint firstItem="gU3-ZZ-SOf" firstAttribute="leading" secondItem="sfZ-XM-del" secondAttribute="leadingMargin" constant="8" id="uA0-cB-OxO"/>
-                                    <constraint firstAttribute="height" constant="72" id="uXZ-g3-kj4"/>
+                                    <constraint firstAttribute="height" constant="90" id="uXZ-g3-kj4"/>
                                     <constraint firstItem="gU3-ZZ-SOf" firstAttribute="top" secondItem="sfZ-XM-del" secondAttribute="topMargin" constant="8" id="uy0-kM-KC1"/>
                                 </constraints>
                             </view>
@@ -127,10 +129,10 @@
                         <constraints>
                             <constraint firstItem="sfZ-XM-del" firstAttribute="top" secondItem="00p-G5-rgL" secondAttribute="bottom" constant="8" id="EA6-AJ-Gu5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sfZ-XM-del" secondAttribute="trailing" id="K20-F8-lwY"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sfZ-XM-del" secondAttribute="bottom" id="Tam-eD-LUL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="00p-G5-rgL" secondAttribute="trailing" id="U7T-pU-0Z5"/>
                             <constraint firstItem="00p-G5-rgL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h6W-vy-oXz"/>
                             <constraint firstItem="sfZ-XM-del" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="iIm-We-VAY"/>
+                            <constraint firstAttribute="bottom" secondItem="sfZ-XM-del" secondAttribute="bottom" id="om3-sF-Fjv"/>
                             <constraint firstItem="00p-G5-rgL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="tpa-4R-IEn"/>
                         </constraints>
                     </view>
