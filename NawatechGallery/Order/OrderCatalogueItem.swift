@@ -7,8 +7,14 @@
 
 import Foundation
 
-public struct OrderCatalogueItem {
+public struct OrderCatalogueItem: Equatable {
     public let id: UUID
     public let catalogueID: UUID
     public let quantity: Int
+    
+    public init(id: UUID, catalogueID: UUID, quantity: Int) {
+        self.id = id
+        self.catalogueID = catalogueID
+        self.quantity = quantity
+    }
 }

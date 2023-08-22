@@ -27,6 +27,7 @@
 		E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */; };
 		E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1D2A94B670005BF21B /* StoreSaver.swift */; };
 		E1074C232A94BFC1005BF21B /* DetailCatalogueItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C222A94BFC1005BF21B /* DetailCatalogueItemPresenter.swift */; };
+		E1074C272A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -148,6 +149,7 @@
 		E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapper.swift; sourceTree = "<group>"; };
 		E1074C1D2A94B670005BF21B /* StoreSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSaver.swift; sourceTree = "<group>"; };
 		E1074C222A94BFC1005BF21B /* DetailCatalogueItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueItemPresenter.swift; sourceTree = "<group>"; };
+		E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapperTests.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -312,6 +314,22 @@
 				E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */,
 			);
 			name = Store;
+			sourceTree = "<group>";
+		};
+		E1074C242A94C991005BF21B /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C252A94C99C005BF21B /* Store */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		E1074C252A94C99C005BF21B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		E137FD862A9261D40018D48B /* Flows */ = {
@@ -938,6 +956,7 @@
 		E1A6D7CA2A8C8F200094F71C /* NawatechGalleryTests */ = {
 			isa = PBXGroup;
 			children = (
+				E1074C242A94C991005BF21B /* Order */,
 				E1891EE32A938853001F18FF /* Profile */,
 				E1595A132A8FF93200B3DA3F /* NawatechGalleryiOS */,
 				E168040D2A8F7DC80051B8E5 /* Registration */,
@@ -1182,6 +1201,7 @@
 				E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */,
 				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
 				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */,
+				E1074C272A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift in Sources */,
 				E18F0B092A91C0E6003CEC98 /* KeychainAccountCacheStoreTests.swift in Sources */,
 				E1595A192A8FF9DB00B3DA3F /* XCTestCase+Snapshot.swift in Sources */,
 				E168040F2A8F7E080051B8E5 /* StoredUserAccountUseCaseTests.swift in Sources */,
