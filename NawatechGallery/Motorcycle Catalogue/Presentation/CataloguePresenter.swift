@@ -9,6 +9,6 @@ import Foundation
 
 public final class CataloguePresenter {
     public static var title: String {
-        return "Catalogue Motorcycle"
+        return "Catalogue"
     }
 }

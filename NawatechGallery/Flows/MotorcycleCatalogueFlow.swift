@@ -47,6 +47,7 @@ final class MotorcycleCatalogueFlow {
             },
             orderSaver: saveOrder(_:),
             imageLoader: loadImage(from:))
+        detailCatalogue.hidesBottomBarWhenPushed = true
         
         listCatalogueController?.show(detailCatalogue, sender: self)
     }
