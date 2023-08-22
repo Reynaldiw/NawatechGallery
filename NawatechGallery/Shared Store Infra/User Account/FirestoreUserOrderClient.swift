@@ -11,9 +11,15 @@ import FirebaseFirestore
 public final class FirestoreUserOrderClient {
     
     private let store: Firestore
-    private let userID: String
+    private let userID: UUID
     
-    init(store: Firestore, userID: String) {
+    private lazy var collection: CollectionReference = {
+        store.collection("users")
+            .document(userID.uuidString)
+            .collection("orders")
+    }()
+    
+    init(store: Firestore, userID: UUID) {
         self.store = store
         self.userID = userID
     }
@@ -24,11 +30,6 @@ public final class FirestoreUserOrderClient {
 extension FirestoreUserOrderClient: StoreRetriever {
     public func retrieve(_ query: StoreQuery) throws -> Data {
         let group = DispatchGroup()
-        
-        let collection: Query = store
-            .collection("users")
-            .document(userID)
-            .collection("orders")
         
         switch query {
         case .matched(let (value, key)):
@@ -61,5 +62,25 @@ extension FirestoreUserOrderClient: StoreRetriever {
         } else {
             throw UnexpectedValuesRepresentation()
         }
+    }
+}
+
+extension FirestoreUserOrderClient: StoreSaver {
+    public func save(_ value: [String : Any], namedWith name: String) throws {
+        let group = DispatchGroup()
+        var receivedError: Swift.Error?
+
+        group.enter()
+        collection.document(name)
+            .setData(value, merge: false) { error in
+                if let error = error {
+                    receivedError = error
+                }
+                group.leave()
+            }
+        group.wait()
+        
+        guard let receivedError = receivedError else { return }
+        throw receivedError
     }
 }

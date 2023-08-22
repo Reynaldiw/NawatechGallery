@@ -25,6 +25,7 @@
 		E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */; };
 		E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */; };
 		E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */; };
+		E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C1D2A94B670005BF21B /* StoreSaver.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -144,6 +145,7 @@
 		E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserOrderClient.swift; sourceTree = "<group>"; };
 		E1074C172A94B4AE005BF21B /* OrderCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItem.swift; sourceTree = "<group>"; };
 		E1074C1A2A94B548005BF21B /* OrderCatalogueItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapper.swift; sourceTree = "<group>"; };
+		E1074C1D2A94B670005BF21B /* StoreSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSaver.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				E1891EE82A938A42001F18FF /* StoreRetriever.swift */,
 				E1891EEA2A938AD5001F18FF /* StoreQuery.swift */,
 				E1074BFF2A940466005BF21B /* StoreModifier.swift */,
+				E1074C1D2A94B670005BF21B /* StoreSaver.swift */,
 			);
 			path = "Shared Store";
 			sourceTree = "<group>";
@@ -1141,6 +1144,7 @@
 				E1074C002A940466005BF21B /* StoreModifier.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
+				E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,
 				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
 				E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */,
