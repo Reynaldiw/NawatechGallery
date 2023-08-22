@@ -17,17 +17,28 @@ final class SaveOrderCatalogueIntoStoreTests: XCTestCase {
         XCTAssertEqual(store.messages, [])
     }
     
+    func test_save_requestsValueInsertion() {
+        let orderID = UUID()
+        let store = StoreSaverStub()
+        let sut = StoreOrderCatalogueSaver(store: store, orderID: orderID)
+        
+        try? sut.save(UUID())
+        
+        XCTAssertEqual(store.messages, [.save(name: orderID.uuidString)])
+    }
+    
     //MARK: - Helpers
     
     private class StoreSaverStub: StoreSaver {
         
         enum Message: Equatable {
-            case save(value: [String: AnyHashable], name: String)
+            case save(name: String)
         }
         
         private(set) var messages: [Message] = []
         
         func save(_ value: [String : Any], namedWith name: String) throws {
+            messages.append(.save(name: name))
         }
     }
 }
