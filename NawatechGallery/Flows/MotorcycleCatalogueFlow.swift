@@ -44,7 +44,7 @@ final class MotorcycleCatalogueFlow {
             detailLoader: { [loadDetail] in
                 loadDetail(item)
             },
-            orderSaver: { _ in return Fail(error: NSError(domain: "Error dummy test", code: 0)).eraseToAnyPublisher() },
+            orderSaver: saveOrder(_:),
             imageLoader: loadImage(from:))
         
         listCatalogueController?.show(detailCatalogue, sender: self)
@@ -91,7 +91,27 @@ final class MotorcycleCatalogueFlow {
             .eraseToAnyPublisher()
     }
     
+    private func saveOrder(_ catalogueID: UUID) -> AnyPublisher<Void, Error> {
+        guard let client = makeOrderStoreSaverClient() else {
+            return Fail(error: NSError(domain: "Failed to generate store saver", code: 0))
+                .eraseToAnyPublisher()
+        }
+        let storeSaver = StoreOrderCatalogueSaver(store: client)
+        
+        return storeSaver.savePublisher(catalogueID)
+            .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
+    }
+    
     private func makeOrderStoreClient(with userID: UUID) -> StoreRetriever {
         FirestoreUserOrderClient(userID: userID)
+    }
+    
+    private func makeOrderStoreSaverClient() -> StoreSaver? {
+        guard let idString = try? accountCacheStore.retrieve(),
+              let id = UUID(uuidString: idString)
+        else { return nil }
+        
+        return FirestoreUserOrderClient(userID: id)
     }
 }
