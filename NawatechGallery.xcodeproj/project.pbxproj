@@ -36,6 +36,8 @@
 		E1074C3C2A94EC22005BF21B /* UITableView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3B2A94EC22005BF21B /* UITableView+DequeueCell.swift */; };
 		E1074C3E2A94EC61005BF21B /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3D2A94EC61005BF21B /* UIView+Shimmering.swift */; };
 		E1074C402A94EC7C005BF21B /* UIImageView+ImageAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */; };
+		E1074C462A94EF20005BF21B /* CartCatalogueItemCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C452A94EF20005BF21B /* CartCatalogueItemCellController.swift */; };
+		E1074C4A2A94F04F005BF21B /* CartCatalogueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -166,6 +168,8 @@
 		E1074C3B2A94EC22005BF21B /* UITableView+DequeueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueCell.swift"; sourceTree = "<group>"; };
 		E1074C3D2A94EC61005BF21B /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageAnimated.swift"; sourceTree = "<group>"; };
+		E1074C452A94EF20005BF21B /* CartCatalogueItemCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemCellController.swift; sourceTree = "<group>"; };
+		E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemViewModel.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -367,6 +371,30 @@
 				E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E1074C442A94EF07005BF21B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C452A94EF20005BF21B /* CartCatalogueItemCellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E1074C472A94F035005BF21B /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C482A94F045005BF21B /* Presentation */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		E1074C482A94F045005BF21B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C492A94F04F005BF21B /* CartCatalogueItemViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		E137FD862A9261D40018D48B /* Flows */ = {
@@ -887,6 +915,7 @@
 		E18F0B312A921866003CEC98 /* Cart UI */ = {
 			isa = PBXGroup;
 			children = (
+				E1074C442A94EF07005BF21B /* Controllers */,
 				E18F0B322A921871003CEC98 /* Views */,
 			);
 			path = "Cart UI";
@@ -976,6 +1005,7 @@
 				E18D79602A8EA51C007DEEE1 /* Authentication */,
 				E1891ED92A93852E001F18FF /* Profile */,
 				E1074C152A94B45D005BF21B /* Order */,
+				E1074C472A94F035005BF21B /* Cart */,
 				E18F0B132A91D8FD003CEC98 /* Motorcycle Catalogue */,
 				E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */,
 				E18F0AF62A91414B003CEC98 /* UI Composer */,
@@ -1180,6 +1210,7 @@
 				E1074C1B2A94B548005BF21B /* OrderCatalogueItemsMapper.swift in Sources */,
 				E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */,
 				E1891EB52A93668E001F18FF /* LoadResourcePresenter.swift in Sources */,
+				E1074C462A94EF20005BF21B /* CartCatalogueItemCellController.swift in Sources */,
 				E1891EB22A936490001F18FF /* CatalogueItemCellController.swift in Sources */,
 				E1074C2B2A94D22E005BF21B /* StoredOrderCatalogueItem.swift in Sources */,
 				E1A7675E2A9356860082DB5A /* FirestoreMotorycleCatalogueStore.swift in Sources */,
@@ -1189,6 +1220,7 @@
 				E1891EC72A936D52001F18FF /* MotorcycleCatalogueItemPresenter.swift in Sources */,
 				E1891EAD2A936164001F18FF /* CellController.swift in Sources */,
 				E1074BF02A93AF19005BF21B /* ProfileViewAdapter.swift in Sources */,
+				E1074C4A2A94F04F005BF21B /* CartCatalogueItemViewModel.swift in Sources */,
 				E1074C292A94D08F005BF21B /* StoreOrderCatalogueSaver.swift in Sources */,
 				E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
