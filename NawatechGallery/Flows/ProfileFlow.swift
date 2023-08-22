@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import FirebaseFirestore
 
 final class ProfileFlow {
     
@@ -21,7 +22,7 @@ final class ProfileFlow {
     }()
     
     private lazy var accountStore: StoreRetriever & StoreModifier = {
-        FirestoreUserAccountClient()
+        SharedFirestoreClient(collectionReference: Firestore.firestore().collection("users"))
     }()
     
     private lazy var httpClient: HTTPClient = {

@@ -43,3 +43,23 @@ extension SharedFirestoreClient: StoreRetriever {
         return try JSONSerialization.data(withJSONObject: result.get())
     }
 }
+
+extension SharedFirestoreClient: StoreModifier {
+    public func update(_ key: String, with value: Any, in path: String) throws {
+        let group = DispatchGroup()
+        
+        var receivedError: Swift.Error?
+        
+        group.enter()
+        collectionReference
+            .document(path)
+            .updateData([key: value]) { error in
+                receivedError = error
+                group.leave()
+            }
+        group.wait()
+        
+        guard let receivedError = receivedError else { return }
+        throw receivedError
+    }
+}

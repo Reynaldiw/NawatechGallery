@@ -80,7 +80,6 @@
 		E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */; };
 		E1891EE92A938A42001F18FF /* StoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE82A938A42001F18FF /* StoreRetriever.swift */; };
 		E1891EEB2A938AD5001F18FF /* StoreQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEA2A938AD5001F18FF /* StoreQuery.swift */; };
-		E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */; };
 		E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
 		E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */; };
@@ -218,7 +217,6 @@
 		E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapperTests.swift; sourceTree = "<group>"; };
 		E1891EE82A938A42001F18FF /* StoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRetriever.swift; sourceTree = "<group>"; };
 		E1891EEA2A938AD5001F18FF /* StoreQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreQuery.swift; sourceTree = "<group>"; };
-		E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserAccountClient.swift; sourceTree = "<group>"; };
 		E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E18D79622A8EA541007DEEE1 /* AuthenticationUserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUserStore.swift; sourceTree = "<group>"; };
@@ -703,7 +701,6 @@
 		E1891EEE2A938B00001F18FF /* User Account */ = {
 			isa = PBXGroup;
 			children = (
-				E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */,
 				E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */,
 			);
 			path = "User Account";
@@ -1222,7 +1219,6 @@
 			files = (
 				E18D796A2A8EAC4E007DEEE1 /* AuthenticationUserBody.swift in Sources */,
 				E1074C0D2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift in Sources */,
-				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
 				E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */,
 				E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */,
 				E1074C5C2A94FEBF005BF21B /* SharedFirestoreClient.swift in Sources */,
