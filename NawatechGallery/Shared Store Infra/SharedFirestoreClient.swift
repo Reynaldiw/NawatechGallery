@@ -20,23 +20,32 @@ public final class SharedFirestoreClient {
 }
 
 extension SharedFirestoreClient: StoreRetriever {
+    
     public func retrieve(_ query: StoreQuery) throws -> Data {
         let group = DispatchGroup()
-        let collection = self.collectionReference
-        
-        if case let .matched((value, key)) = query {
-            collection.whereField(key, isEqualTo: value)
-        }
-        
         var result: Result<[[String: Any]], Error>!
         
-        group.enter()
-        collection.getDocuments { snapshot, error in
-            result = Result(catching: {
-                try snapshot?.documents.map { $0.data() } ?? { throw error ?? UnexpectedValuesRepresentation() }()
-                
-            })
-            group.leave()
+        switch query {
+        case let .matched((value, key)):
+            group.enter()
+            collectionReference
+                .whereField(key, isEqualTo: value)
+                .getDocuments { snapshot, error in
+                    result = Result(catching: {
+                        try snapshot?.documents.map { $0.data() } ?? { throw error ?? UnexpectedValuesRepresentation() }()
+                    })
+                    group.leave()
+                }
+        default:
+            group.enter()
+            collectionReference
+                .getDocuments { snapshot, error in
+                    result = Result(catching: {
+                        try snapshot?.documents.map { $0.data() } ?? { throw error ?? UnexpectedValuesRepresentation() }()
+                        
+                    })
+                    group.leave()
+                }
         }
         group.wait()
         

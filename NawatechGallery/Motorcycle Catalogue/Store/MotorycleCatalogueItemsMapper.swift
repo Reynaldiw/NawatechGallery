@@ -11,18 +11,19 @@ public final class MotorycleCatalogueItemsMapper {
     private struct StoredMotorycleCatalogueItem: Decodable {
         
         private enum CodingKeys: String, CodingKey {
-            case id, name, detail, price
+            case name, detail, price
+            case itemID = "item_id"
             case imageURL = "image_url"
         }
         
-        let id: UUID
+        let itemID: UUID
         let imageURL: URL
         let name: String
         let detail: String
         let price: Int
         
         var item: MotorcycleCatalogueItem {
-            MotorcycleCatalogueItem(id: id, imageURL: imageURL, name: name, detail: detail, price: price)
+            MotorcycleCatalogueItem(id: itemID, imageURL: imageURL, name: name, detail: detail, price: price)
         }
     }
     

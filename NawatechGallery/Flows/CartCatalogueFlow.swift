@@ -58,9 +58,9 @@ final class CartCatalogueFlow {
             .flatMap { [firestoreClient] orderItems in
                 Publishers.MergeMany(
                     orderItems.map { item in
-                        firestoreClient.retrievePublisher(.matched((item.catalogueID.uuidString, "id")))
+                        firestoreClient.retrievePublisher(.all)
                             .tryMap(MotorycleCatalogueItemsMapper.map(_:))
-                            .compactMap { $0.first }
+                            .compactMap { $0.first(where: { $0.id.uuidString == item.catalogueID.uuidString }) }
                             .map { catalogueItem in
                                 CartCatalogueItem(
                                     orderID: item.id,
@@ -70,11 +70,9 @@ final class CartCatalogueFlow {
                                     price: catalogueItem.price,
                                     quantity: item.quantity)
                             }
-                            .eraseToAnyPublisher()
                     }
                 )
                 .collect()
-                .eraseToAnyPublisher()
             }
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
