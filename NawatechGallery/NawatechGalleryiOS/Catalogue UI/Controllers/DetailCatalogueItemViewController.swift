@@ -37,6 +37,7 @@ public final class DetailCatalogueItemViewController: UIViewController {
     }
     
     public var loadDetail: (() -> Void)?
+    public var addToCart: (() -> Void)?
     public var delegate: ListImageCellControllerDelegate?
 
     public override func viewDidLoad() {
@@ -60,7 +61,9 @@ public final class DetailCatalogueItemViewController: UIViewController {
         addToCartButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
     
-    @IBAction private func didTapAddToCart(_ sender: Any) {}
+    @IBAction private func didTapAddToCart(_ sender: Any) {
+        addToCart?()
+    }
     
     deinit {
         delegate?.didCancelRequestImage()
@@ -99,4 +102,18 @@ extension DetailCatalogueItemViewController: ResourceLoadingView, ResourceErrorV
     }
     
     public func display(_ viewModel: ResourceErrorViewModel) {}
+}
+
+extension DetailCatalogueItemViewController: SendResourceSucceedView, SendResourceLoadingView, SendResourceErrorView {
+    public func succeed() {
+        
+    }
+    
+    public func display(_ viewModel: SendResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: SendResourceErrorViewModel) {
+        
+    }
 }

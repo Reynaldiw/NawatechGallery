@@ -15,6 +15,12 @@ final class WeakRefVirtualProxy<T: AnyObject> {
     }
 }
 
+extension WeakRefVirtualProxy: SendResourceErrorView where T: SendResourceErrorView {
+    func display(_ viewModel: SendResourceErrorViewModel) {
+        object?.display(viewModel)
+    }
+}
+
 extension WeakRefVirtualProxy: SendResourceLoadingView where T: SendResourceLoadingView {
     func display(_ viewModel: SendResourceLoadingViewModel) {
         object?.display(viewModel)

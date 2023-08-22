@@ -15,6 +15,7 @@ final class DetailCatalogueUIComposer {
     
     static func detailComposedWith(
         detailLoader: @escaping () -> AnyPublisher<DetailCatalogueItemViewModel, Error>,
+        orderSaver: @escaping (UUID) -> AnyPublisher<Void, Error>,
         imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>
     ) -> DetailCatalogueItemViewController {
         let adapter = DetailCataloguePresentationAdapter(loader: detailLoader)
@@ -25,6 +26,7 @@ final class DetailCatalogueUIComposer {
         adapter.presenter = LoadResourcePresenter(
             resourceView: DetailCatalogueResourceViewAdapter(
                 controller: detailController,
+                orderSaver: orderSaver,
                 imageLoader: imageLoader),
             loadingView: WeakRefVirtualProxy(object: detailController),
             errorView: WeakRefVirtualProxy(object: detailController)

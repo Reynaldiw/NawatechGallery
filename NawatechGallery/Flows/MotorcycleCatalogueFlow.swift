@@ -44,6 +44,7 @@ final class MotorcycleCatalogueFlow {
             detailLoader: { [loadDetail] in
                 loadDetail(item)
             },
+            orderSaver: { _ in return Fail(error: NSError(domain: "Error dummy test", code: 0)).eraseToAnyPublisher() },
             imageLoader: loadImage(from:))
         
         listCatalogueController?.show(detailCatalogue, sender: self)
@@ -78,6 +79,7 @@ final class MotorcycleCatalogueFlow {
             .tryMap(OrderCatalogueItemsMapper.map)
             .map { orders in
                 DetailCatalogueItemViewModel(
+                    id: item.id,
                     imageURL: item.imageURL,
                     title: item.name,
                     detail: item.detail,
