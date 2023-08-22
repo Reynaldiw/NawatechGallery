@@ -20,7 +20,7 @@ final class ProfileFlow {
         KeychainAccountCacheStore(storeKey: SharedKeys.accountKeychainKey)
     }()
     
-    private lazy var accountStore: UserAccountStoreRetriever & UserAccountStoreReplacer = {
+    private lazy var accountStore: StoreRetriever & StoreModifier = {
         FirestoreUserAccountClient()
     }()
     

@@ -14,7 +14,7 @@
 		E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BF92A93F130005BF21B /* FirebaseStorageProfileImageStore.swift */; };
 		E1074BFC2A93F15A005BF21B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E1074BFB2A93F15A005BF21B /* FirebaseStorage */; };
 		E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */; };
-		E1074C002A940466005BF21B /* UserAccountStoreReplacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */; };
+		E1074C002A940466005BF21B /* StoreModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074BFF2A940466005BF21B /* StoreModifier.swift */; };
 		E1074C022A941E15005BF21B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E1074C012A941E15005BF21B /* FirebaseStorage */; };
 		E1074C052A941F22005BF21B /* DetailCatalogue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1074C042A941F22005BF21B /* DetailCatalogue.storyboard */; };
 		E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C062A942B97005BF21B /* DetailCatalogueItemViewController.swift */; };
@@ -56,8 +56,8 @@
 		E1891EDD2A938553001F18FF /* ProfileUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */; };
 		E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */; };
 		E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */; };
-		E1891EE92A938A42001F18FF /* UserAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */; };
-		E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */; };
+		E1891EE92A938A42001F18FF /* StoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EE82A938A42001F18FF /* StoreRetriever.swift */; };
+		E1891EEB2A938AD5001F18FF /* StoreQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEA2A938AD5001F18FF /* StoreQuery.swift */; };
 		E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */; };
 		E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */; };
 		E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */; };
@@ -131,7 +131,7 @@
 		E1074BF62A93F019005BF21B /* ProfileImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageStore.swift; sourceTree = "<group>"; };
 		E1074BF92A93F130005BF21B /* FirebaseStorageProfileImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageProfileImageStore.swift; sourceTree = "<group>"; };
 		E1074BFD2A9400AE005BF21B /* UploadImageProfileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageProfileAdapter.swift; sourceTree = "<group>"; };
-		E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreReplacer.swift; sourceTree = "<group>"; };
+		E1074BFF2A940466005BF21B /* StoreModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModifier.swift; sourceTree = "<group>"; };
 		E1074C042A941F22005BF21B /* DetailCatalogue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailCatalogue.storyboard; sourceTree = "<group>"; };
 		E1074C062A942B97005BF21B /* DetailCatalogueItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueItemViewController.swift; sourceTree = "<group>"; };
 		E1074C082A942D96005BF21B /* DetailCatalogueUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueUIComposer.swift; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 		E1891EDC2A938553001F18FF /* ProfileUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccount.swift; sourceTree = "<group>"; };
 		E1891EE12A9386C3001F18FF /* ProfileUserAccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapper.swift; sourceTree = "<group>"; };
 		E1891EE52A93886D001F18FF /* ProfileUserAccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserAccountMapperTests.swift; sourceTree = "<group>"; };
-		E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStoreRetriever.swift; sourceTree = "<group>"; };
-		E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountQuery.swift; sourceTree = "<group>"; };
+		E1891EE82A938A42001F18FF /* StoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRetriever.swift; sourceTree = "<group>"; };
+		E1891EEA2A938AD5001F18FF /* StoreQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreQuery.swift; sourceTree = "<group>"; };
 		E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserAccountClient.swift; sourceTree = "<group>"; };
 		E1891EF22A93AB10001F18FF /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
 		E18D795E2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateUserAuthenticationStoreTests.swift; sourceTree = "<group>"; };
@@ -523,7 +523,9 @@
 		E1891EE72A938A24001F18FF /* Shared Store */ = {
 			isa = PBXGroup;
 			children = (
-				E1891EED2A938AF6001F18FF /* User Account */,
+				E1891EE82A938A42001F18FF /* StoreRetriever.swift */,
+				E1891EEA2A938AD5001F18FF /* StoreQuery.swift */,
+				E1074BFF2A940466005BF21B /* StoreModifier.swift */,
 			);
 			path = "Shared Store";
 			sourceTree = "<group>";
@@ -534,16 +536,6 @@
 				E1891EEE2A938B00001F18FF /* User Account */,
 			);
 			path = "Shared Store Infra";
-			sourceTree = "<group>";
-		};
-		E1891EED2A938AF6001F18FF /* User Account */ = {
-			isa = PBXGroup;
-			children = (
-				E1891EE82A938A42001F18FF /* UserAccountStoreRetriever.swift */,
-				E1891EEA2A938AD5001F18FF /* UserAccountQuery.swift */,
-				E1074BFF2A940466005BF21B /* UserAccountStoreReplacer.swift */,
-			);
-			path = "User Account";
 			sourceTree = "<group>";
 		};
 		E1891EEE2A938B00001F18FF /* User Account */ = {
@@ -1081,7 +1073,7 @@
 				E18F0AD72A910421003CEC98 /* RegistrationViewController.swift in Sources */,
 				E18F0B0D2A91D6C2003CEC98 /* AccountCacheStoreRetriever.swift in Sources */,
 				E1891EC02A9367F4001F18FF /* CatalogueUIComposer.swift in Sources */,
-				E1891EE92A938A42001F18FF /* UserAccountStoreRetriever.swift in Sources */,
+				E1891EE92A938A42001F18FF /* StoreRetriever.swift in Sources */,
 				E18F0B122A91D745003CEC98 /* AccountCacheStoreRemover.swift in Sources */,
 				E18F0AFE2A914688003CEC98 /* WeakRefVirtualProxy.swift in Sources */,
 				E1074BFA2A93F130005BF21B /* FirebaseStorageProfileImageStore.swift in Sources */,
@@ -1099,7 +1091,7 @@
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
-				E1891EEB2A938AD5001F18FF /* UserAccountQuery.swift in Sources */,
+				E1891EEB2A938AD5001F18FF /* StoreQuery.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,
 				E1074BF22A93AF7E005BF21B /* ProfileFlow.swift in Sources */,
 				E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */,
@@ -1111,7 +1103,7 @@
 				E18F0B1C2A91DC19003CEC98 /* MotorycleCatalogueStore.swift in Sources */,
 				E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */,
 				E18F0AFC2A9142A1003CEC98 /* LoginUIComposer.swift in Sources */,
-				E1074C002A940466005BF21B /* UserAccountStoreReplacer.swift in Sources */,
+				E1074C002A940466005BF21B /* StoreModifier.swift in Sources */,
 				E18F0AF92A91418C003CEC98 /* CombineHelpers.swift in Sources */,
 				E18F0B052A914F28003CEC98 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* AuthenticateAccountPresentationAdapter.swift in Sources */,

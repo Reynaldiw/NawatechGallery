@@ -124,10 +124,10 @@ public extension ProfileImageStore {
 
 //MARK: User Account Store
 
-public extension UserAccountStoreRetriever {
+public extension StoreRetriever {
     typealias Publisher = AnyPublisher<Data, Swift.Error>
     
-    func retrievePublisher(_ query: UserAccountQuery) -> Publisher {
+    func retrievePublisher(_ query: StoreQuery) -> Publisher {
         return Deferred {
             Future { completion in
                 completion(Result {
@@ -139,7 +139,7 @@ public extension UserAccountStoreRetriever {
     }
 }
 
-public extension UserAccountStoreReplacer {
+public extension StoreModifier {
     typealias Publisher = AnyPublisher<Void, Swift.Error>
     
     func updatePublisher(_ key: String, with value: Any, in path: String) -> Publisher {

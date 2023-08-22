@@ -19,8 +19,8 @@ public final class FirestoreUserAccountClient {
     private struct UnexpectedValuesRepresentation: Swift.Error {}
 }
 
-extension FirestoreUserAccountClient: UserAccountStoreRetriever {
-    public func retrieve(_ query: UserAccountQuery) throws -> Data {
+extension FirestoreUserAccountClient: StoreRetriever {
+    public func retrieve(_ query: StoreQuery) throws -> Data {
         let group = DispatchGroup()
         
         let collection: Query = store.collection("users")
@@ -58,7 +58,7 @@ extension FirestoreUserAccountClient: UserAccountStoreRetriever {
     }
 }
 
-extension FirestoreUserAccountClient: UserAccountStoreReplacer {
+extension FirestoreUserAccountClient: StoreModifier {
     public func update(_ key: String, with value: Any, in path: String) throws {
         let group = DispatchGroup()
         
