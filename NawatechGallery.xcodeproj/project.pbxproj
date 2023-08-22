@@ -42,6 +42,8 @@
 		E1074C512A94F1AE005BF21B /* CartUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C502A94F1AE005BF21B /* CartUIComposer.swift */; };
 		E1074C532A94F3F2005BF21B /* CartCatalogueItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C522A94F3F2005BF21B /* CartCatalogueItemPresenter.swift */; };
 		E1074C552A94F421005BF21B /* CartResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */; };
+		E1074C5A2A94F788005BF21B /* CartCatalogueFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C592A94F788005BF21B /* CartCatalogueFlow.swift */; };
+		E1074C5C2A94FEBF005BF21B /* SharedFirestoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -178,6 +180,8 @@
 		E1074C502A94F1AE005BF21B /* CartUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUIComposer.swift; sourceTree = "<group>"; };
 		E1074C522A94F3F2005BF21B /* CartCatalogueItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemPresenter.swift; sourceTree = "<group>"; };
 		E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResourceViewAdapter.swift; sourceTree = "<group>"; };
+		E1074C592A94F788005BF21B /* CartCatalogueFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueFlow.swift; sourceTree = "<group>"; };
+		E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFirestoreClient.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -392,6 +396,7 @@
 		E1074C472A94F035005BF21B /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				E1074C562A94F742005BF21B /* Store */,
 				E1074C4C2A94F0E7005BF21B /* Feature */,
 				E1074C482A94F045005BF21B /* Presentation */,
 			);
@@ -424,6 +429,13 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		E1074C562A94F742005BF21B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		E137FD862A9261D40018D48B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +443,7 @@
 				E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */,
 				E1891ECC2A9370DA001F18FF /* MotorcycleCatalogueFlow.swift */,
 				E1074BF12A93AF7E005BF21B /* ProfileFlow.swift */,
+				E1074C592A94F788005BF21B /* CartCatalogueFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -682,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				E1891EEE2A938B00001F18FF /* User Account */,
+				E1074C5B2A94FEBF005BF21B /* SharedFirestoreClient.swift */,
 			);
 			path = "Shared Store Infra";
 			sourceTree = "<group>";
@@ -1211,6 +1225,7 @@
 				E1891EF02A938B95001F18FF /* FirestoreUserAccountClient.swift in Sources */,
 				E1074C182A94B4AE005BF21B /* OrderCatalogueItem.swift in Sources */,
 				E1074BF52A93B03D005BF21B /* SharedKeys.swift in Sources */,
+				E1074C5C2A94FEBF005BF21B /* SharedFirestoreClient.swift in Sources */,
 				E18F0AE92A913DB1003CEC98 /* SendResourceSucceedView.swift in Sources */,
 				E18F0B102A91D6E6003CEC98 /* KeychainAccountCacheStore.swift in Sources */,
 				E18F0AEB2A913DC2003CEC98 /* SendResourceLoadingViewModel.swift in Sources */,
@@ -1257,6 +1272,7 @@
 				E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */,
 				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
+				E1074C5A2A94F788005BF21B /* CartCatalogueFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
 				E1891EEB2A938AD5001F18FF /* StoreQuery.swift in Sources */,
 				E16804162A8F8D340051B8E5 /* RegistrationUserAccountStore.swift in Sources */,

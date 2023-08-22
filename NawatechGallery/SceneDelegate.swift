@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let authenticationFlow = AuthenticationFlow()
     private let catalogueFlow = MotorcycleCatalogueFlow()
     private let profileFlow = ProfileFlow()
+    private let cartFlow = CartCatalogueFlow()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -36,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let cacheAccountID = try? accountCacheRetriever.retrieve()
         
         if cacheAccountID != nil {
-            window?.rootViewController = UINavigationController(rootViewController: catalogueFlow.start())
+            window?.rootViewController = UINavigationController(rootViewController: cartFlow.start())
         } else {
             window?.rootViewController = UINavigationController(rootViewController: authenticationFlow.start(onSucceedLogin: makeInitialRootViewController))
         }

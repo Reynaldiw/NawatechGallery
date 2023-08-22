@@ -21,6 +21,7 @@ public final class CartUIComposer {
         let adapter = CartPresentationAdapter(loader: cartLoader)
         
         let cartController = makeCartViewController(title: CartCatalogueItemPresenter.title)
+        cartController.onRefresh = adapter.loadResource
         
         adapter.presenter = LoadResourcePresenter(
             resourceView: CartResourceViewAdapter(
