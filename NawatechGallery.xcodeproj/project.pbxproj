@@ -22,6 +22,7 @@
 		E1074C0B2A943134005BF21B /* DetailCatalogueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0A2A943134005BF21B /* DetailCatalogueItemViewModel.swift */; };
 		E1074C0D2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */; };
 		E1074C0F2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */; };
+		E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -138,6 +139,7 @@
 		E1074C0A2A943134005BF21B /* DetailCatalogueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueItemViewModel.swift; sourceTree = "<group>"; };
 		E1074C0C2A9435A7005BF21B /* DetailCatalogueResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E1074C0E2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCatalogueImageViewAdapter.swift; sourceTree = "<group>"; };
+		E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserOrderClient.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				E1891EEF2A938B95001F18FF /* FirestoreUserAccountClient.swift */,
+				E1074C122A944845005BF21B /* FirestoreUserOrderClient.swift */,
 			);
 			path = "User Account";
 			sourceTree = "<group>";
@@ -1122,6 +1125,7 @@
 				E18D79662A8EA5B2007DEEE1 /* UserAccount.swift in Sources */,
 				E1891EC22A936B10001F18FF /* LoadResourcePresentationAdapter.swift in Sources */,
 				E1074BFE2A9400AE005BF21B /* UploadImageProfileAdapter.swift in Sources */,
+				E1074C132A944845005BF21B /* FirestoreUserOrderClient.swift in Sources */,
 				E18F0B162A91D967003CEC98 /* MotorcycleCatalogueItem.swift in Sources */,
 				E1891ECB2A936FFD001F18FF /* CataloguePresenter.swift in Sources */,
 				E1891EAF2A93628A001F18FF /* CatalogueItemCell.swift in Sources */,
