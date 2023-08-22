@@ -125,7 +125,6 @@
 		E18F0B4D2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F0B4C2A925E39003CEC98 /* FirestoreAuthenticationUserStore.swift */; };
 		E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */; };
 		E1A6D7B72A8C8F1F0094F71C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */; };
-		E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */; };
 		E1A6D7BE2A8C8F200094F71C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */; };
 		E1A6D7C12A8C8F200094F71C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */; };
 		E1A6D7E52A8C8F6E0094F71C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1A6D7E42A8C8F6E0094F71C /* GoogleService-Info.plist */; };
@@ -262,7 +261,6 @@
 		E1A6D7B12A8C8F1F0094F71C /* NawatechGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NawatechGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1A6D7C02A8C8F200094F71C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1A6D7C22A8C8F200094F71C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1041,7 +1039,6 @@
 				E18F0AF72A91417A003CEC98 /* Helpers */,
 				E1A6D7B42A8C8F1F0094F71C /* AppDelegate.swift */,
 				E1A6D7B62A8C8F1F0094F71C /* SceneDelegate.swift */,
-				E1A6D7B82A8C8F1F0094F71C /* ViewController.swift */,
 				E1A6D7BD2A8C8F200094F71C /* Assets.xcassets */,
 				E1A6D7BF2A8C8F200094F71C /* LaunchScreen.storyboard */,
 				E1A6D7C22A8C8F200094F71C /* Info.plist */,
@@ -1255,7 +1252,6 @@
 				E1074C4A2A94F04F005BF21B /* CartCatalogueItemViewModel.swift in Sources */,
 				E1074C292A94D08F005BF21B /* StoreOrderCatalogueSaver.swift in Sources */,
 				E1891ED62A9374F7001F18FF /* GalleryImageDataMapper.swift in Sources */,
-				E1A6D7B92A8C8F1F0094F71C /* ViewController.swift in Sources */,
 				E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */,
 				E1074C5A2A94F788005BF21B /* CartCatalogueFlow.swift in Sources */,
 				E16804132A8F8CE70051B8E5 /* RegistrationUserAccount.swift in Sources */,
