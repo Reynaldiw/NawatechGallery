@@ -33,6 +33,9 @@
 		E1074C2D2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C2C2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift */; };
 		E1074C302A94D8CC005BF21B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C2F2A94D8CC005BF21B /* XCTestCase+MemoryLeakTracking.swift */; };
 		E1074C362A94E7E6005BF21B /* CartCatalogueItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C352A94E7E6005BF21B /* CartCatalogueItemCell.swift */; };
+		E1074C3C2A94EC22005BF21B /* UITableView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3B2A94EC22005BF21B /* UITableView+DequeueCell.swift */; };
+		E1074C3E2A94EC61005BF21B /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3D2A94EC61005BF21B /* UIView+Shimmering.swift */; };
+		E1074C402A94EC7C005BF21B /* UIImageView+ImageAnimated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -160,6 +163,9 @@
 		E1074C2C2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOrderCatalogueIntoStoreTests.swift; sourceTree = "<group>"; };
 		E1074C2F2A94D8CC005BF21B /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		E1074C352A94E7E6005BF21B /* CartCatalogueItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCatalogueItemCell.swift; sourceTree = "<group>"; };
+		E1074C3B2A94EC22005BF21B /* UITableView+DequeueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueCell.swift"; sourceTree = "<group>"; };
+		E1074C3D2A94EC61005BF21B /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
+		E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageAnimated.swift"; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -353,6 +359,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E1074C3A2A94EC08005BF21B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1074C3B2A94EC22005BF21B /* UITableView+DequeueCell.swift */,
+				E1074C3D2A94EC61005BF21B /* UIView+Shimmering.swift */,
+				E1074C3F2A94EC7C005BF21B /* UIImageView+ImageAnimated.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E137FD862A9261D40018D48B /* Flows */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +465,7 @@
 		E168041B2A8F96300051B8E5 /* NawatechGalleryiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E1074C3A2A94EC08005BF21B /* Helpers */,
 				E1891EA82A935E82001F18FF /* Shared UI */,
 				E18F0AD12A91014C003CEC98 /* Registration UI */,
 				E168041C2A8F963D0051B8E5 /* Login UI */,
@@ -1149,6 +1166,7 @@
 				E18F0AE72A9112F2003CEC98 /* SendResourcePresenter.swift in Sources */,
 				E18F0B002A914AC4003CEC98 /* LoginErrorViewAdapter.swift in Sources */,
 				E1891EF32A93AB10001F18FF /* ProfileUIComposer.swift in Sources */,
+				E1074C3C2A94EC22005BF21B /* UITableView+DequeueCell.swift in Sources */,
 				E1074C092A942D96005BF21B /* DetailCatalogueUIComposer.swift in Sources */,
 				E18D79632A8EA541007DEEE1 /* AuthenticationUserStore.swift in Sources */,
 				E16804182A8F8D510051B8E5 /* StoredRegistrationUserAccount.swift in Sources */,
@@ -1181,6 +1199,7 @@
 				E1074BF22A93AF7E005BF21B /* ProfileFlow.swift in Sources */,
 				E1891EE22A9386C3001F18FF /* ProfileUserAccountMapper.swift in Sources */,
 				E168041A2A8F8DD80051B8E5 /* RegistrationUserAccountService.swift in Sources */,
+				E1074C3E2A94EC61005BF21B /* UIView+Shimmering.swift in Sources */,
 				E18D796E2A8EAD60007DEEE1 /* AuthenticationValidationService.swift in Sources */,
 				E18F0B0B2A91D674003CEC98 /* AccountCacheStoreSaver.swift in Sources */,
 				E1074C0B2A943134005BF21B /* DetailCatalogueItemViewModel.swift in Sources */,
@@ -1194,6 +1213,7 @@
 				E1074C1E2A94B670005BF21B /* StoreSaver.swift in Sources */,
 				E18F0AF52A913F0F003CEC98 /* SendResourcePresentationAdapter.swift in Sources */,
 				E1891EBB2A93675B001F18FF /* ResourceErrorView.swift in Sources */,
+				E1074C402A94EC7C005BF21B /* UIImageView+ImageAnimated.swift in Sources */,
 				E1074C072A942B97005BF21B /* DetailCatalogueItemViewController.swift in Sources */,
 				E1074C0F2A943640005BF21B /* DetailCatalogueImageViewAdapter.swift in Sources */,
 				E1A6D7B52A8C8F1F0094F71C /* AppDelegate.swift in Sources */,
