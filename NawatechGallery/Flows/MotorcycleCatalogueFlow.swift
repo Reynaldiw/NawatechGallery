@@ -80,14 +80,15 @@ final class MotorcycleCatalogueFlow {
             .retrievePublisher(.matched((item.id.uuidString, "catalogue_item_id")))
             .tryMap(OrderCatalogueItemsMapper.map)
             .map { orders in
-                DetailCatalogueItemViewModel(
+                let isEnableAddToCart = orders.filter { $0.catalogueID.uuidString == item.id.uuidString }.isEmpty == true
+                return DetailCatalogueItemViewModel(
                     id: item.id,
                     imageURL: item.imageURL,
                     title: item.name,
                     detail: item.detail,
                     price: MotorcycleCatalogueItemPresenter.convert(item.price),
-                    cartButtonEnable: orders.isEmpty,
-                    cartButtonText: DetailCatalogueItemPresenter.cartButtonText(orders.isEmpty))
+                    cartButtonEnable: isEnableAddToCart,
+                    cartButtonText: DetailCatalogueItemPresenter.cartButtonText(isEnableAddToCart))
             }
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
