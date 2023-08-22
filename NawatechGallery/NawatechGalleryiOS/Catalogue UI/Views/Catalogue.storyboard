@@ -14,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nH3-Tf-RLK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CatalogueItemCell" rowHeight="400" id="IvL-4z-I9d" customClass="CatalogueItemCell" customModule="NawatechGallery" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="400"/>
@@ -66,6 +66,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="hvD-Go-UB2" firstAttribute="top" secondItem="06n-qW-oiK" secondAttribute="topMargin" constant="8" id="3tk-vq-rzt"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="hvD-Go-UB2" secondAttribute="bottom" constant="8" id="HN9-Um-pze"/>
@@ -73,6 +74,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="hvD-Go-UB2" secondAttribute="trailing" id="r6R-Il-lSB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="catalogueImageContainer" destination="hvD-Go-UB2" id="2ox-6A-L3K"/>
                                     <outlet property="catalogueImageView" destination="TS5-MK-aLi" id="4DD-Ff-p4h"/>
@@ -102,9 +104,6 @@
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

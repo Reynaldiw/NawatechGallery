@@ -27,12 +27,13 @@ public final class MainTabBarViewController: UITabBarController {
     }
 
     private func configureView() {
+        tabBar.backgroundColor = .white
         setViewControllers(viewModels.map { $0.controller }, animated: true)
         
         guard let tabBarItems = tabBar.items, tabBarItems.count == viewModels.count else { return }
         tabBarItems.enumerated().forEach { (index, item) in
-            item.image = viewModels[index].imageNotSelected
-            item.selectedImage = viewModels[index].imageSelected
+            item.image = viewModels[index].imageNotSelected.withRenderingMode(.alwaysOriginal)
+            item.selectedImage = viewModels[index].imageSelected.withRenderingMode(.alwaysOriginal)
         }
     }
 }
