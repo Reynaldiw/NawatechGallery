@@ -30,6 +30,7 @@
 		E1074C272A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */; };
 		E1074C292A94D08F005BF21B /* StoreOrderCatalogueSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C282A94D08F005BF21B /* StoreOrderCatalogueSaver.swift */; };
 		E1074C2B2A94D22E005BF21B /* StoredOrderCatalogueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C2A2A94D22E005BF21B /* StoredOrderCatalogueItem.swift */; };
+		E1074C2D2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1074C2C2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift */; };
 		E137FD882A9261EE0018D48B /* AuthenticationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */; };
 		E1595A122A8FF75F00B3DA3F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */; };
 		E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */; };
@@ -154,6 +155,7 @@
 		E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCatalogueItemsMapperTests.swift; sourceTree = "<group>"; };
 		E1074C282A94D08F005BF21B /* StoreOrderCatalogueSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreOrderCatalogueSaver.swift; sourceTree = "<group>"; };
 		E1074C2A2A94D22E005BF21B /* StoredOrderCatalogueItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredOrderCatalogueItem.swift; sourceTree = "<group>"; };
+		E1074C2C2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOrderCatalogueIntoStoreTests.swift; sourceTree = "<group>"; };
 		E137FD872A9261EE0018D48B /* AuthenticationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlow.swift; sourceTree = "<group>"; };
 		E1595A112A8FF75F00B3DA3F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E1595A152A8FF96300B3DA3F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				E1074C262A94C9A9005BF21B /* OrderCatalogueItemsMapperTests.swift */,
+				E1074C2C2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -1206,6 +1209,7 @@
 				E18F0B222A91DE16003CEC98 /* MotorycleCatalogueItemsMapperTests.swift in Sources */,
 				E18F0ADA2A9105BA003CEC98 /* RegistrationSnapshotTests.swift in Sources */,
 				E1595A162A8FF96300B3DA3F /* LoginSnapshotTests.swift in Sources */,
+				E1074C2D2A94D35E005BF21B /* SaveOrderCatalogueIntoStoreTests.swift in Sources */,
 				E1891EE62A93886D001F18FF /* ProfileUserAccountMapperTests.swift in Sources */,
 				E1595A1B2A8FFA4500B3DA3F /* UIViewController+Snapshot.swift in Sources */,
 				E18D795F2A8E57B5007DEEE1 /* ValidateUserAuthenticationStoreTests.swift in Sources */,
