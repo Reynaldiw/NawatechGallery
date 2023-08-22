@@ -9,22 +9,6 @@ import Foundation
 
 public final class OrderCatalogueItemsMapper {
     
-    private struct StoredOrderCatalogueItem: Decodable {
-        enum CodingKeys: String, CodingKey {
-            case id = "order_id"
-            case catalogueID = "catalogue_item_id"
-            case quantity
-        }
-        
-        let id: UUID
-        let catalogueID: UUID
-        let quantity: Int
-        
-        var model: OrderCatalogueItem {
-            OrderCatalogueItem(id: id, catalogueID: catalogueID, quantity: quantity)
-        }
-    }
-    
     public enum Error: Swift.Error {
         case invalidData
     }
