@@ -43,7 +43,7 @@ public final class LoginViewController: UIViewController {
     public var errorMessage: String? = nil {
         didSet {
             guard let errorMessage = errorMessage else { return }
-            displayError(errorMessage)
+            showMessage(title: "Error", message: errorMessage)
         }
     }
         
@@ -74,8 +74,8 @@ public final class LoginViewController: UIViewController {
         return (usernameField.text, passwordField.text)
     }
     
-    private func displayError(_ message: String) {
-        let controller = UIAlertController(title: "Error!", message: message, preferredStyle: .alert)
+    private func showMessage(title: String, message: String) {
+        let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
             controller.dismiss(animated: true)
         }))
@@ -95,7 +95,7 @@ public final class LoginViewController: UIViewController {
     }
     
     @IBAction private func didTapSkipLogin(_ sender: Any) {
-        onSkipLogin?()
+        showMessage(title: "Under Development", message: "Sorry, currently this feature not available, will coming soon..")
     }
 }
 
