@@ -44,19 +44,19 @@ Path orders: user/orders/{orderID}
 
 [
   {
-			"id": "(Formatted-UUID)",
-			"fullname": "(Any string value))",
-			"username": "(Any string value)",
-      "password": "(Any string value)",
-      "created_at": (Date Time interval -> Number)
-			"image_url": "URL string",
-      "orders": [
-          {
-              "catalogue_item_id": "(Formatted-UUID)",
-              "order_id": "(Formatted-UUID)",
-              "quantity": number,
-          }
-      ]
+		"id": "(Formatted-UUID)",
+		"fullname": "(Any string value))",
+		"username": "(Any string value)",
+		"password": "(Any string value)",
+    "created_at": (Date Time interval -> Number)
+		"image_url": "URL string",
+		"orders": [
+		  {
+        "catalogue_item_id": "(Formatted-UUID)",
+        "order_id": "(Formatted-UUID)",  
+        "quantity": number,
+      }
+    ]
   }
 ]
 ```
@@ -72,11 +72,11 @@ Path catalogue/motorcycle/items/{itemID}
 
 [
   {
-			"item_id": "(Formatted-UUID)",
-			"name": "(Any string value))",
-			"detail": "(Any string value)",
-      "image_url": "URL string",
-      "price": Number,
+		"item_id": "(Formatted-UUID)",
+		"name": "(Any string value))",
+		"detail": "(Any string value)",
+		"image_url": "URL string",
+    "price": Number,
   }
 ]
 ```
