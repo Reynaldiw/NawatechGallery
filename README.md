@@ -22,13 +22,13 @@ Because the project is using `Firebase`, the Bundle ID and the configuration fil
 
 ### Use existing `Firebase` project configuration
 1. Clone this project
-2. Make sure the bundle identifier is `com.reynaldiwijaya.NawatechGallery` and also `GoogleService-Info.plist` file
+2. Make sure the bundle identifier is `com.reynaldiwijaya.NawatechGallery` and also in `GoogleService-Info.plist` file.
 
 ### Use your `Firebase` project configuration
-1. Clone this project
-2. Change the bundle identifier that matche with your Firebase project
+1. Clone this project.
+2. Change the bundle identifier that match with your Firebase project.
 3. Change the `GoogleService-Info.plist` with yours.
-4. Configure the `FirebaseStore` for the `users` and `catalogue`
+4. Configure the `FirebaseStore` for the `users` and `catalogue`.
 
 ---
 
