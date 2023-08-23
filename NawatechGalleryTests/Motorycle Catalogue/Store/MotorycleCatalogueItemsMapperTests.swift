@@ -51,7 +51,7 @@ final class MotorycleCatalogueItemsMapperTests: XCTestCase {
     private func makeItem(id: UUID, image: URL, name: String, detail: String, price: Int) -> (model: MotorcycleCatalogueItem, value: [String: Any]) {
         let model = MotorcycleCatalogueItem(id: id, imageURL: image, name: name, detail: detail, price: price)
         let value: [String: Any] = [
-            "id": id.uuidString,
+            "item_id": id.uuidString,
             "image_url": image.absoluteString,
             "name": name,
             "detail": detail,
