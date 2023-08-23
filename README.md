@@ -40,8 +40,6 @@ Because the project is using `Firebase`, the Bundle ID and the configuration fil
 Path user:  users/{userID}
 Path orders: user/orders/{orderID}
 
-2xx RESPONSE
-
 [
   {
 	"id": "(Formatted-UUID)",
@@ -65,8 +63,6 @@ Path orders: user/orders/{orderID}
 
 ```
 Path catalogue/motorcycle/items/{itemID}
-
-2xx RESPONSE
 
 [
   {
