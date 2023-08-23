@@ -85,7 +85,7 @@ Path catalogue/motorcycle/items/{itemID}
 
 ### Unit Test
 
-Somehome when run the unit test will failed/crash because `Firebase` configuration. To solve this, can delete this in the `AppDelegate`
+Somehome when run the unit test will failed/crash because `Firebase` configuration. To solve this, can delete this code below in the `AppDelegate`. And after test should put it back to running the app.
 
 ```
 FirebaseApp.configure()
