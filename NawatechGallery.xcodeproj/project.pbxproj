@@ -394,7 +394,6 @@
 		E1074C472A94F035005BF21B /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				E1074C562A94F742005BF21B /* Store */,
 				E1074C4C2A94F0E7005BF21B /* Feature */,
 				E1074C482A94F045005BF21B /* Presentation */,
 			);
@@ -425,13 +424,6 @@
 				E1074C542A94F421005BF21B /* CartResourceViewAdapter.swift */,
 			);
 			path = Cart;
-			sourceTree = "<group>";
-		};
-		E1074C562A94F742005BF21B /* Store */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		E1074C602A954757005BF21B /* Tab Bar UI */ = {
